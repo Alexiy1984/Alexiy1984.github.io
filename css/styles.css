@@ -57,7 +57,78 @@ nav a {
 	text-decoration: none;
 	text-transform: uppercase;
 }
+/**************************************************************************************************************************************/
+/*Большой текст страницы Home*/
+.HomeMainText {
+	background: #e2e2e2;
+	margin-top: 30px;
+	padding: 40px 40px 170px 40px;
+}
 
+.HomeMainText h1 {
+	margin: 0;
+	padding: 0;
+	color: #5a5a5a;
+	font: 42px 'Oswald',sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.HomeMainText h2 {
+	margin: 0;
+	padding: 0;
+	font: 20px 'Oswald',sans-serif;
+	font-weight: 300;
+}
+/**************************************************************************************************************************************/
+/*Меню под большим текстом страницы Home*/
+.MainPageMenu {
+	background-color: #f3f3f3;
+	border:1px solid #e7e7e7;
+}
+
+.MainPageMenu ol {
+	margin: 0;
+	padding: 0;
+	counter-reset: Newconter;
+}
+
+.MainPageMenu li {
+	display: inline-block;
+	list-style-position: inside;
+	font:14px 'Oswald',sans-serif;
+	padding: 15px 40px;
+}
+
+.MainPageMenu a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #8f8f8f;
+	margin: 0px;
+	padding: 0px;
+}
+
+.MainPageMenu a:before {
+	content:counter(Newconter);
+  counter-increment:Newconter;
+  background: #8f8f8f;
+  color: #fff;
+  padding: 0 8px;
+  margin: 0 10px;
+}
+
+.MainPageMenu a:hover {
+	color: #29c5e6;
+}  
+
+.MainPageMenu a:hover:before {
+	background: #29c5e6;
+}      
+
+.MainPageMenu li:hover {
+	color: #29c5e6;
+}
+/**************************************************************************************************************************************/
 aside {
 	width: 250px;
 	float: left;
@@ -186,7 +257,7 @@ section figcaption {
 	max-width: 960px;
 	margin:auto;
 }
-
+/**************************************************************************************************************************************/
 /*Top-menu*/
 .top-menu li {
 	display: inline-block;
@@ -209,6 +280,7 @@ section figcaption {
 	background-color:#29c5e6;
 }
 
+/**************************************************************************************************************************************/
 /*About-us*/
 .about-us {
 	background: url(../images/h1-bg.png);
@@ -225,7 +297,38 @@ section figcaption {
 	padding: 0 10px;
 	text-transform: uppercase;
 }
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*About-mini*/
+.about-us-mini {
+	background: url(../images/h1-bg.png);
+	/*padding-left: 20px;*/
+	margin:30px 0;
+}
 
+.about-us-mini h3 {
+	display: inline-block;
+	color: #7e7e7e;
+	font:14px/14px 'Oswald',sans-serif;
+	background: url(../images/bg.png);
+	margin:0;
+	padding: 0 10px 0 5px;
+	text-transform: uppercase;
+}
+.about-us-mini img {
+	/*vertical-align: middle;*/
+	/*float: left;*/
+	display: inline-block; 
+	margin: auto;
+	width: 15px;
+	height: 15px;
+}
+
+.biglogos {
+	display:block; 
+	margin:0 auto;
+}
+
+/**************************************************************************************************************************************/
 /*aside-menu*/
 .aside-menu li {
 	display: block;
@@ -242,7 +345,7 @@ section figcaption {
 
 .subli li{
 	list-style-type: none;
-	padding-left: 12px; 
+	padding-left: 20px; 
 }
 
 .aside-menu a {
@@ -255,7 +358,8 @@ section figcaption {
 .aside-menu a:hover {
 	color: #29c5e6;
 }
-
+/**************************************************************************************************************************************/
+/*footer*/
 footer {
 	margin: 40px 0 0 0;
 	background-color: #7e7e7e;
