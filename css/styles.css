@@ -1,0 +1,331 @@
+/*styles.css*/
+
+/*Default css*/
+body {
+	background: url(../images/bg.png);
+	border-top:5px solid #7e7e7e;
+	font:12px Tahoma,sans-serif;
+	color:#8f8f8f;
+	margin: 0;
+}
+
+header {
+padding: 30px 0;
+}
+
+form[method="get"] {
+	float: right;
+}
+
+input {
+	color:#b2b2b2;
+	background-color:#f3f3f3;
+	padding:0 10px;
+	border:1px solid #e7e7e7;
+	height:30px;
+	vertical-align: top;
+}
+
+button {
+	color:#fff ;
+	background-color:#29c5e6;
+	border:none;
+	height:32px;
+	font-family:'Oswald',sans-serif;
+	padding:0 10px;
+	text-transform: uppercase;
+}
+
+/*Navigation*/
+nav {
+	background-color: #f3f3f3;
+	border:1px solid #e7e7e7;
+}
+
+nav ul {
+	margin:0;
+	padding: 0;
+}
+
+nav li {
+	font:14px 'Oswald',sans-serif;
+	padding: 10px;
+	list-style-position: inside;
+}
+
+nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+aside {
+	width: 250px;
+	float: left;
+}
+
+aside h2 {
+	background-color: #29c5e6;
+	font:14px 'Oswald',sans-serif;
+	color: #fff;
+	padding:10px;
+	margin:30px 0 0 0;
+	text-transform: uppercase;
+}
+
+aside p {
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;
+	margin:0;
+	padding: 10px;
+}
+
+aside img {
+	width:228px;
+	height:180px;
+}
+
+section {
+	margin-left: 280px;
+}
+
+blockquote {
+	margin: 0;
+	background-color: #29c5e6;
+	padding:10px 20px;
+	font-family: 'Oswald',sans-serif;
+	font-weight: 300;
+}
+
+blockquote p {
+	color: #fff;
+	font-size: 33px;
+	margin: 0;
+	font-style: italic;
+	line-height: 1;
+	font-weight: 300;
+}
+
+blockquote cite {
+	display: block;
+	text-align: right;
+	font-style: normal;
+	font-size: 20px;
+	margin: 0;
+	color: #1d8ea6;
+}
+
+figure {
+	margin: 0;
+	display: inline-block;
+}
+
+figure img {
+	border: 1px solid #fff;
+	outline: 1px solid #c9c9c9;
+	width:320px;
+	height:175px;
+
+}
+
+section figure + figure {
+	margin-left: 28px;
+} 
+
+section h1 {
+	background-color: #29c5e6;
+	font:30px 'Oswald',sans-serif;
+	color: #fff;
+	padding: 8px 10px;
+	margin:30px 0 20px 0;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+section h2 {
+	font:16px 'Oswald',sans-serif;
+	color: #8f8f8f;
+	padding: 10px 0;
+	margin: 0;
+	font-weight: 300;
+}
+
+section h3 {
+	font:14px 'Oswald',sans-serif;
+	color: #29c5e6;
+	padding: 0;
+	margin: 0;
+	font-weight: 300;
+}
+
+section div {
+	margin: 20px 0;
+}
+
+section figcaption {
+	display: block;
+	text-transform: uppercase;
+	font:12px 'Oswald',sans-serif;
+	text-align: center;
+}	
+
+.figurecont {
+	margin: 10px 0;
+	padding:0;
+}
+
+.figurecont img{
+	width: 96px;
+	height: 96px;
+}
+
+.figurecont figure + figure {
+	margin-left: 43px;
+} 
+
+.wrapper {
+	max-width: 960px;
+	margin:auto;
+}
+
+/*Top-menu*/
+.top-menu li {
+	display: inline-block;
+	padding: 10px 0;
+	margin:0; 
+}
+
+.top-menu li a {
+	color:#b2b2b2;
+	padding: 10px 30px;
+	margin: 0;
+}
+
+.top-menu li:hover {
+	
+}
+
+.top-menu li a:hover {
+	color: #fff;
+	background-color:#29c5e6;
+}
+
+/*About-us*/
+.about-us {
+	background: url(../images/h1-bg.png);
+	padding-left: 20px;
+	margin:30px 0;
+}
+
+.about-us h1 {
+	display: inline-block;
+	color: #7e7e7e;
+	font:40px/40px 'Oswald',sans-serif;
+	background: url(../images/bg.png);
+	margin:0;
+	padding: 0 10px;
+	text-transform: uppercase;
+}
+
+/*aside-menu*/
+.aside-menu li {
+	display: block;
+	font-weight: 300;
+	list-style-type: square;
+	border-top:1px solid #e7e7e7;
+	padding: 0px;
+	margin: 0px;
+}
+
+.aside-menu li:first-child {
+	border: none;
+}
+
+.subli li{
+	list-style-type: none;
+	padding-left: 12px; 
+}
+
+.aside-menu a {
+	display: list-item;
+	color: #8f8f8f;
+	margin: 0px;
+	padding: 10px;
+}
+
+.aside-menu a:hover {
+	color: #29c5e6;
+}
+
+footer {
+	margin: 40px 0 0 0;
+	background-color: #7e7e7e;
+	color: #fff;
+	padding: 0 0 15px 0;
+}
+
+.footerwrap {
+	position: relative;
+	padding: 0;
+	margin: 10px auto;
+	max-width: 960px;
+
+}
+
+.footerwrap div {
+	vertical-align: top;
+	display: inline-block;
+	padding: 0 10px;
+} 
+
+.firstcol {
+
+	width: 300px;
+	float: left;
+}
+
+.secondcol {
+	width: 150px;
+}
+
+.thirdcol {
+	width: 130px;
+}
+
+.fourthcol {
+	float: right;
+}
+
+footer h2 {
+	font: 14px'Oswald',sans-serif;
+	text-transform: uppercase;
+}
+
+footer p {
+	font: 11px'Oswald',sans-serif;
+}
+
+.thirdcol img {
+	width: 110px;
+}
+
+.fourthcol img{
+	position: relative;
+	margin-top: 30px;
+}
+
+footer ul{
+	margin: 0 20px 0 0;
+	padding: 0;
+	display: inline-block;
+}
+
+footer li {
+	list-style: none;
+	display: block;
+	margin: 0 0 5px 0;
+} 
+
+footer a {
+	text-decoration: none;
+	color: #fff;
+}
