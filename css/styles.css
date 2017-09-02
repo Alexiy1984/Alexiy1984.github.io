@@ -328,20 +328,41 @@ section figcaption {
 /*Общая обертка под основной контент страницы Home*/
 .figcontainer {
  margin: 50px 10px;
+ padding: 0;
+}
+
+.figcontainer h4{
+	font: 12px 'Oswald',sans-serif;
+	color: #525252;
+}
+
+.figcontainer a{
+	color: #525252;
+}
+
+.TEAM h4{
+	font: 12px 'Oswald',sans-serif;
+	color: #525252;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
 }
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*Обертка двухколоночная*/
 .twocol {
-	margin: 0;
+	margin: auto;
 }
 
 .twocol div {
 	display: inline-block;
 	margin: 0;
 	width: 458px;
+	padding: 0;
+	vertical-align: top;
 }
 
 .twocol figure {
+	position: relative;
 	margin: 15px 0;
 	display: inline-block;
 }
@@ -356,7 +377,12 @@ section figcaption {
 .twocol p {
 	padding: 0;
 	margin: 0;
+	text-align: justify;
 }	
+
+.twocol div{
+	position: relative;
+}
 
 .twocol div + div{
 	margin-left: 20px;
@@ -364,17 +390,42 @@ section figcaption {
 /*------------------------------------------------------------------------------------------------------------------------------------*/
 /*Обертка трехколоночная*/
 .threecol {
-	margin: 0;
+	margin: auto;
 }
 
 .threecol div {
 	display: inline-block;
 	margin: 0;
 	width: 300px;
+	padding: 0;
+	vertical-align: top;
 }
+
+.threecol figure {
+	margin: 15px 0;
+	display: inline-block;
+}
+
+.threecol img {
+	display: inline-block;
+	margin: 0 10px 10px 0px;
+	width: 40px;
+	height: 40px;
+	float: left;
+}
+
+.threecol p {
+	padding: 0;
+	margin: 0;
+	text-align: justify;
+}	
 
 .threecol div + div{
 	margin-left: 15px;
+}
+
+.threecol figure div + div {
+	margin: 0;
 }
 
 /**************************************************************************************************************************************/
@@ -458,6 +509,7 @@ footer {
 footer h2 {
 	font: 14px'Oswald',sans-serif;
 	text-transform: uppercase;
+	border-bottom: 1px solid #fff; 
 }
 
 footer p {
