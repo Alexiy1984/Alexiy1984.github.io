@@ -311,21 +311,70 @@ section figcaption {
 	font:14px/14px 'Oswald',sans-serif;
 	background: url(../images/bg.png);
 	margin:0;
-	padding: 0 10px 0 5px;
+	padding-right: 10px;
 	text-transform: uppercase;
 }
-.about-us-mini img {
-	/*vertical-align: middle;*/
-	/*float: left;*/
-	display: inline-block; 
-	margin: auto;
-	width: 15px;
-	height: 15px;
+
+.about-us-mini h3:before {
+	content: '\2B1B' ;
+	font-size: 27px; 
+	padding-right: 10px;
+	margin: 0;
+	vertical-align: text-top;
+	color: #29c5e6;
 }
 
-.biglogos {
-	display:block; 
-	margin:0 auto;
+/**************************************************************************************************************************************/
+/*Общая обертка под основной контент страницы Home*/
+.figcontainer {
+ margin: 50px 10px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*Обертка двухколоночная*/
+.twocol {
+	margin: 0;
+}
+
+.twocol div {
+	display: inline-block;
+	margin: 0;
+	width: 458px;
+}
+
+.twocol figure {
+	margin: 15px 0;
+	display: inline-block;
+}
+
+.twocol img {
+	display: inline-block;
+	margin: 0 15px 15px 0px;
+	width: 136px;
+	height: 136px;
+	float: left;
+}
+.twocol p {
+	padding: 0;
+	margin: 0;
+}	
+
+.twocol div + div{
+	margin-left: 20px;
+}
+/*------------------------------------------------------------------------------------------------------------------------------------*/
+/*Обертка трехколоночная*/
+.threecol {
+	margin: 0;
+}
+
+.threecol div {
+	display: inline-block;
+	margin: 0;
+	width: 300px;
+}
+
+.threecol div + div{
+	margin-left: 15px;
 }
 
 /**************************************************************************************************************************************/
@@ -357,6 +406,13 @@ section figcaption {
 
 .aside-menu a:hover {
 	color: #29c5e6;
+}
+
+/**************************************************************************************************************************************/
+/*Большие лого*/
+.biglogos {
+	display:block; 
+	margin:0 auto;
 }
 /**************************************************************************************************************************************/
 /*footer*/
