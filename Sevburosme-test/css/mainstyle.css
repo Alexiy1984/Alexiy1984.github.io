@@ -1,0 +1,88 @@
+html {
+ min-height: 100%
+}
+body {
+ min-height: 100%
+}  
+
+.toprow {
+	margin-bottom: 0;
+}
+
+.jumbotron {
+	background: linear-gradient(to top, #01405d, #026ea0 );
+	color: #fff;
+	margin-bottom: 0;
+	padding: 10px 0;
+	font-family: 'Merriweather', serif;
+}
+
+.navbar{
+	font-family: 'Merriweather', serif;
+	text-transform: uppercase;
+}
+
+.mainheader {
+	line-height: 1.25;
+	padding: 0;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+.aside-header {
+	font-family: 'Merriweather', serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.navbar-color {
+	background: linear-gradient(to bottom, #01405d, #026ea0 );
+}
+
+.navbar-color2 {
+	background: linear-gradient(to top, #808080, #C0C0C0 );
+	margin-bottom: 0;
+}
+
+#navbar1 a {
+	color: #fff;
+	font-weight: 600;
+}
+
+#navbar1 a:hover {
+	color: #000;
+}
+
+#navbar1 .dropdown-menu a {
+	color: #000;
+	font-weight: 500;
+}
+
+footer {
+	padding: 5px 0;
+}
+
+.footerheader {
+	padding-bottom: 5px;
+	display: block-inline;
+	border-bottom: 1px solid;
+	color: #000;
+}
+
+.tabsnoborder {
+	border: none;
+
+}
+
+
+.tabsnoborder a {
+	color: #000;
+}
+
+.tabsnoborder a:hover {
+	color: #fff;
+	bg
+}
