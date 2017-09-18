@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>ГБУЗ С "СГБ СМЭ"</title>
-
-
-
+          
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Кастомный CSS -->
@@ -66,18 +64,27 @@
           <div class="collapse navbar-collapse" id="navbar1">
               <ul class="nav navbar-nav">
                 <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                
+                <li><a href="#">Экспертизы</a></li>
+                
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Отделы<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Отделы <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Администрация</a></li>
-                    <li><a href="#">Отдел судебно-медицинской экспертизы трупов</a></li>
-                    <li><a href="#">Отдел судебно-медицинской экспертизы потерпевших, обвиняемых и других лиц</a></li>
-                    <li><a href="#">Отдел сложных судебно-медицинских экспертиз</a></li>
-                    <li><a href="#">Отдел судебно-медицинской экспертизы вещественных доказательств</a></li>
-                    <li class="divider"></li>            
-                    <li><a href="#">Подвал</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cудебно-медицинской <br>экспертизы трупов</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cудебно-медицинской <br>экспертизы потерпевших, <br>обвиняемых и других лиц</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cложных судебно-<br>медицинских экспертиз</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cудебно-медицинской <br>экспертизы вещественных <br>доказательств</a></li>
+                    
                   </ul>
                 </li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Контролирующие органы</a></li>
               </ul>
                       
               
@@ -85,7 +92,7 @@
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Поиск">
                 </div>
-                <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-info dark-info"><span class="glyphicon glyphicon-search"></span></button>
               </form>
           </div>
           
@@ -101,7 +108,7 @@
         
         <div class="row">
 
-          <aside class="col-md-3 hidden-xs hidden-sm well">
+          <aside class="col-md-3 hidden-xs hidden-sm darkwell well">
 
             <h4 class="text-center">Сайдбар</h4>
 
@@ -127,7 +134,7 @@
   
           </section>
 
-          <aside class="col-md-3 well">
+          <aside class="col-md-3 darkwell well">
             <div class="row">
               <h4 class="text-center aside-header">Контролирующие органы:</h4>
               
@@ -155,28 +162,31 @@
         
         <div class="row">
           
-          <div class="col-md-3">
+          <div class="col-sm-4 col-md-3">
               <h5 class="text-center footerheader">Карта сайта</h5>
               
-                <ul class="nav tabsnoborder nav-pills nav-stacked text-center col-md-6">
+                <ul class="footer-list list-unstyled col-md-6">
                   <li><a href="#">Главная</a></li>
-                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">О нас</a></li>
                 </ul>
 
-                <ul class="nav tabsnoborder nav-pills nav-stacked text-center col-md-6">
-                  <li><a href="#">Главная</a></li>
+                <ul class="footer-list list-unstyled col-md-6">
+                  <li><a href="#">Отделы</a></li>
                   <li><a href="#">Контакты</a></li>
                 </ul>
               
           </div>
-          <div class="col-md-4">
-            
+          <div class="hidden-xs col-sm-4 col-md-6">
+            <!-- Запасной Div пока не удаляю -->
           </div>
-          <div class="col-md-4">
+          <div class="col-sm-4 col-md-3">
             
-              <a class="btn navbar-right" href="#">Вверх</a>
+             <div class="col-md-12 footer-btn">
+                <a href="#" type="button" class="btn btn-info dark-info navbar-right"><span class="glyphicon glyphicon-chevron-up"></span> Вверх</a>
+             </div>
+             <div class="col-md-12">
               <h5 class="navbar-right">ГБУЗ С "СГБ СМЭ" 2017 &#169</h5>
-            
+             </div>                   
           </div>
 
         </div>
