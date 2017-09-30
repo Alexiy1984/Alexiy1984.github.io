@@ -54,7 +54,7 @@ section {
 }
 
 #navbar1 a:hover {
-	color: #000;
+	color: #12D4F3;
 }
 
 #navbar1 .dropdown-menu a {
@@ -99,4 +99,29 @@ footer {
 .dark-info:hover {
 	/* background-color: #666666;
 	border-color: #fff; */
+}
+
+/*ДЛЯ АККОРДЕОНА*/
+
+.panel-heading-colored {
+	background: linear-gradient(to bottom, #01405d, #026ea0 );
+}
+
+.panel-title-colored a {
+	font-family: 'Merriweather', serif;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.panel-title-colored a:hover {
+	color: #12D4F3;
+}
+
+.well-white {
+	background-color: #fff;
+}
+
+.well-white h3{
+	margin-bottom: 20px;
 }
