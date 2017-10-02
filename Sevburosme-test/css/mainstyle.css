@@ -3,7 +3,15 @@ html {
 }
 body {
  min-height: 100%;
- // background-color: #A0A0A0;
+ /* background-color: #A0A0A0; */
+}  
+
+b, h1, h2, h3, h4 {
+	font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;
 }  
 
 .toprow {
@@ -135,13 +143,13 @@ footer {
 	border-radius: 0 0 3px 3px;
 }
 
-.tab-content b, .tab-content h3,.tab-content h4, .tab-contenth5 {
+/* .tab-content b, .tab-content h3,.tab-content h4, .tab-contenth5 {
 	font-family: 'Merriweather', serif;
 }
 
 .tab-content h3, .tab-content h4, .tab-content h5 {
 	font-weight: 700;
-}
+} */
 
 .tab-li a{
 	color: #fff;
@@ -154,4 +162,23 @@ footer {
 	color: #12D4F3;
 }
 
+/* ДЛЯ КОНТАКТОВ */
 
+.noborder {
+	border: none;
+	background-image: none;
+	background-repeat: no-repeat;
+	box-shadow: none;
+}
+
+.noborder a{
+	text-decoration: none;
+}
+
+.noborder a:hover{
+	color: #12D4F3;
+}
+
+.indent {
+	margin-right: 3em;
+}
