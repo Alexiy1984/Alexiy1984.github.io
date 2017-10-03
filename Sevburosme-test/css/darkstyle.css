@@ -14,6 +14,19 @@ h1, h2, h3, h4, h5 {
 	font-weight: 700;
 }
 
+.well-blue {
+	background: linear-gradient(to top, #026ea0, #01405d);
+}
+
+.well-blue h1, .well-blue h2, .well-blue h3, .well-blue h4{
+	color: #fff;
+	text-shadow: 1px 1px 3px black, 0 0 1em #000;
+}
+
+.carousel-img {
+	width: 100%;
+}
+
 .main-p{
 	margin-bottom: 30px;
 }  

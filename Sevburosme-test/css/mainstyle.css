@@ -3,7 +3,7 @@ html {
 }
 body {
  min-height: 100%;
- /* background-color: #A0A0A0; */
+ /* background-color: #026ea0; */
 }  
 
 b, h1, h2, h3, h4, h5 {
@@ -12,6 +12,24 @@ b, h1, h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5 {
 	font-weight: 700;
+}
+
+.well-blue {
+	background: linear-gradient(to top, #026ea0, #01405d);
+}
+
+.well-blue h1, .well-blue h2, .well-blue h3, .well-blue h4{
+	color: #fff;
+	text-shadow: 1px 1px 3px black, 0 0 1em #000;
+}
+
+.well-blue p{
+	color: #fff;
+	font-weight: 700;
+}
+
+.carousel-img {
+	width: 100%;
 }
 
 .main-p{
