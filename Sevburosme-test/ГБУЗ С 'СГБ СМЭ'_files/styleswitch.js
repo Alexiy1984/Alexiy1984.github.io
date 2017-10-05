@@ -10,14 +10,6 @@
 		$('.styleswitch').click(function()
 		{
 			switchStylestyle(this.getAttribute("rel"));
-			if (this.getAttribute("rel")=="dark") {
-				this.setAttribute("rel", "green");
-			}
-			else if (this.getAttribute("rel")=="green") {
-				this.setAttribute("rel", "main");
-			}	
-			else this.setAttribute("rel", "dark");
-
 			return false;
 		});
 		var c = readCookie('style');

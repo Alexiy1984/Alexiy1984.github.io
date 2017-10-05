@@ -3,8 +3,8 @@ html {
 }
 body {
  min-height: 100%;
- /* background-color: #007F0E; */
-}  
+	background-color: #A0A0A0;
+} 
 
 b, h1, h2, h3, h4, h5 {
 	font-family: 'Merriweather', serif;
@@ -14,57 +14,8 @@ h1, h2, h3, h4, h5 {
 	font-weight: 700;
 }
 
-/* ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ НАЧ*/
-
-.material-switch > input[type="checkbox"] {
-    display: none;   
-}
-
-.material-switch > label {
-    cursor: pointer;
-    height: 0px;
-    position: relative; 
-    width: 40px;  
-}
-
-.material-switch > label::before {
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    content: '';
-    height: 16px;
-    margin-top: -8px;
-    position:absolute;
-    opacity: 0.3;
-    transition: all 0.4s ease-in-out;
-    width: 40px;
-}
-.material-switch > label::after {
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    content: '';
-    height: 24px;
-    left: -4px;
-    margin-top: -8px;
-    position: absolute;
-    top: -4px;
-    transition: all 0.3s ease-in-out;
-    width: 24px;
-}
-.material-switch > input[type="checkbox"]:checked + label::before {
-    background: inherit;
-    opacity: 0.5;
-}
-.material-switch > input[type="checkbox"]:checked + label::after {
-    background: inherit;
-    left: 20px;
-}
-
-/* ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ КОН*/
-
 .well-blue {
-	background: linear-gradient(to top, #007F0E, #004D0E);
+	background: linear-gradient(to top, #404040, #000 );
 }
 
 .well-blue h1, .well-blue h2, .well-blue h3, .well-blue h4{
@@ -83,18 +34,18 @@ h1, h2, h3, h4, h5 {
 
 .main-p{
 	margin-bottom: 30px;
-}
+}  
 
 .main-pp{
 	margin: 30px 0;
-}     
+} 
 
 .toprow {
 	margin-bottom: 0;
 }
 
 .jumbotron {
-	background: linear-gradient(to top, #004D0E, #007F0E );
+	background: linear-gradient(to top, #000, #404040 );
 	color: #fff;
 	margin-bottom: 0;
 	padding: 10px 0;
@@ -123,11 +74,11 @@ section {
 }
 
 .navbar-color {
-	background: linear-gradient(to bottom, #004D0E, #007F0E );
+	background: linear-gradient(to bottom, #000, #404040);
 }
 
 .navbar-color2 {
-	background: linear-gradient(to top, #404040, #808080 );
+	background: linear-gradient(to top, #000, #404040 );
 	margin-bottom: 0;
 }
 
@@ -137,7 +88,7 @@ section {
 }
 
 #navbar1 a:hover {
-	color: #A6F509;
+	color: #A0A0A0;
 }
 
 #navbar1 .dropdown-menu a {
@@ -153,7 +104,7 @@ footer {
 	padding-bottom: 10px;
 	display: block-inline;
 	border-bottom: 1px solid;
-	color: #000;
+	color: #fff;
 }
 
 .footer-list {
@@ -162,32 +113,34 @@ footer {
 
 .footer-list a,h5 {
 	text-transform: none;
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 }
 
 .footer-list a:hover {
-	color: #007F0E;
+	color: #666666;
 }
 
 .darkwell {
-	// background-color: #000;
+	background-color: #808080;
 }
 
 .dark-info {
-	background-color: #00B60E;
-	border-color: #16461C; 
+	background-color: #808080;
+	border-color: #fff;
 }
 
-.dark-info:hover {
-	background-color: #008E0E;
-	border-color: #fff; 
+.dark-info:hover,
+.dark-info:active
+{
+	background-color: #666666;
+	border-color: #fff;
 }
 
 /*ДЛЯ АККОРДЕОНА*/
 
 .panel-heading-colored {
-	background: linear-gradient(to bottom, #004D0E, #007F0E );
+	background: linear-gradient(to bottom, #000, #404040 );
 }
 
 .panel-title-colored a {
@@ -198,7 +151,7 @@ footer {
 }
 
 .panel-title-colored a:hover {
-	color: #A6F509;
+	color: #A0A0A0;
 }
 
 .well-white {
@@ -230,11 +183,11 @@ footer {
 	color: #fff;
 	font-family: 'Merriweather', serif;
 	font-weight: 700;
-	background: linear-gradient(to bottom, #004D0E, #007F0E );
+	background: linear-gradient(to bottom, #000, #404040 );
 }
 
 .tab-li a:hover{
-	color: #A6F509;
+	color: #A0A0A0;
 }
 
 /* ДЛЯ КОНТАКТОВ */
@@ -251,7 +204,7 @@ footer {
 }
 
 .noborder a:hover{
-	color: #A6F509;
+	color: #A0A0A0;
 }
 
 .indent {
