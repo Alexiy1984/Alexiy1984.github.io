@@ -14,6 +14,14 @@ h1, h2, h3, h4, h5 {
 	font-weight: 700;
 }
 
+#godown {
+	height: 50px;
+}
+
+.rnd-btn {
+	border-radius: 30px;
+}
+
 /* ДЛЯ ПЕРЕКЛЮЧАТЕЛЯ НАЧ*/
 
 .material-switch > input[type="checkbox"] {
