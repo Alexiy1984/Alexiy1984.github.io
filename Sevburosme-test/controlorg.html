@@ -10,17 +10,53 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Кастомный CSS -->
-    <link href="css/mainstyle.css" rel="stylesheet">
+    <link href="css/mainstyle.css" rel="stylesheet" title="main" media="screen" >
+    <!-- Дополнительные стили -->
+    <link href="css/darkstyle.css" rel="alternate stylesheet" title="dark" media="screen">
+    <link href="css/greenstyle.css" rel="alternate stylesheet" title="green" media="screen">
+    <!-- Скрипты для переключения стилей -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/styleswitch.js"></script>
+    
     <!-- Шрифт  -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
 
   </head>
   <body>
+
+
+    <nav id="topnav" class="navbar navbar-opacity  navbar-default navbar-fixed-top ">
+      <div class="container">
+        
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Поиск">
+            <button type="submit" class="btn btn-info dark-info"><span class="glyphicon glyphicon-search"></span></button>
+          </div>
+          
+        </form>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+          <a href="#" type="button" rel="dark" class="btn btn-info dark-info styleswitch navbar-left rnd-btn">
+            <span class="glyphicon glyphicon-tint"></span>
+          </a>
+           <a href="#" data-spy="affix" type="button" rel="dark" class="btn btn-info dark-info navbar-right rnd-btn">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </a>
+        </div>
+        </form>  
+       
+       </div> 
+     </nav> 
+
     <!-- Joombotron -->
     <!-- *************************************************************************************************************************************** -->
+        <div id="godown" class="godown-50">
           
+        </div>
         <div class="jumbotron">
+
           <div class="container">
             <div class="row">
               <div class="hidden-xs col-sm-2 col-md-2">
@@ -45,8 +81,8 @@
          
     <!-- *************************************************************************************************************************************** -->
     <!-- Joombotron -->
-
-
+    
+        
     <!-- Для навигации -->
     <!-- *************************************************************************************************************************************** -->
     <nav class="navbar navbar-color navbar-default">
@@ -88,95 +124,82 @@
               </ul>
                       
               
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Поиск">
-                </div>
-                <button type="submit" class="btn btn-info dark-info"><span class="glyphicon glyphicon-search"></span></button>
-              </form>
+              
           </div>
           
       </div>
     </nav>
+    
+     
+
     <!-- *************************************************************************************************************************************** --> 
     <!-- Конец навигации -->   
 
     <!-- Для тела страницы -->
     <!-- *************************************************************************************************************************************** -->
       
-      <div class="container">
-        
-        <div class="row well well-white">
-
-          <h4 class="text-center">ПОЛНОЕ НАИМЕНОВАНИЕ:</h4>
-          <hr> 
-          <h4 class="text-center">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ЗДРАВООХРАНЕНИЯ СЕВАСТОПОЛЯ "СЕВАСТОПОЛЬСКОЕ ГОРОДСКОЕ БЮРО СУДЕБНО-МЕДИЦИНСКОЙ ЭКСПЕРТИЗЫ"</h4>
-          <hr>    
-          <h4 class="text-center">СОКРАЩЕННОЕ НАИМЕНОВАНИЕ:</h4>
-          <hr> 
-          <h4 class="text-center">ГБУЗ С "СГБ СМЭ"</h4>
-          <hr>  
-          <h4 class="text-center">ОРГАН, ОСУЩЕТВЛЯЮЩИЙ ФУНКЦИИ И ПОЛНОМОЧИЯ УЧРЕДИТЕЛЯ:</h4>
-          <hr> 
-          <h4 class="text-center">ДЕПАРТАМЕНТ ЗДРАВООХРАНЕНИЯ ГОРОДА СЕВАСТОПОЛЯ</h4>
-          <hr>
-          <h4>РУКОВОДСТВО:</h4>
-          <hr> 
-          <div class="row">
-            <p class="col-md-6"><b> Черкащенко Николай Анатольевич - Начальник бюро<br>
-                Телефон: (8692) 44-26-75<br>
-                Время работы: 9:00-18:00</b></p>
-
-            <p class="col-md-6"><b> Кузьминский Алексей Алексеевич - Заместитель начальника бюро<br>
-                Телефон: (8692) 44-26-75<br>
-                Время работы: 9:00-18:00</b></p>
-
-            <p class="col-md-6"><b> Гавриляк Илья Михайлович - Заведующий отделом судебно-медицинской экспертизы потерпевших, обвиняемых и других лиц<br>
-                Телефон: (8692) 44-26-75<br>
-                Время работы: 9:00-18:00</b></p>
-
-            <p class="col-md-6"><b> Мамбедиев Ридван Решитович - Заведующий отделом судебно-медицинской экспертизы трупов<br>
-                Телефон: (8692) 24-23-67<br>
-                Время работы: 8:00-14:00</b></p>
-          </div>    
-          <hr>    
-          <h4>АДРЕСА:</h4>
-          
-          <div class="row">
-                
-              <div class="col-md-6">
-                <div class="thumbnail">
-                  <center>
-                  <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ade9b99173d2836a634433482c42653b0100cde87661168d11bd2918f5b2aef5d&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true" async="" type="text/javascript" charset="utf-8"></script></center>
-                  <div class="caption">
-                  <h5><a href="#">Отдел судебно-медицинской экспертизы трупов</a></h5>
-                    <h5>299014, г. Севастополь, Фиолентовское шоссе, ДОМ 15</h5>
-                  </div>
-                   
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="thumbnail">
-                  <center>
-                  <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A80431cbc37166976235a7f4e21100a217cdabecf6a0a5de122deec3539966c23&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true" async="" type="text/javascript" charset="utf-8"></script></center> 
-                  <div class="caption">
-                    <h5><a href="#">Отдел судебно-медицинской экспертизы потерпевших, обвиняемых и других лиц</a></h5>
-                    <h5><a href="#">Отдел сложных судебно-медицинских экспертиз</a></h5>
-                    <h5><a href="#">Отдел судебно-медицинской экспертизы вещественных доказательств</a></h5>
-                    <h5>299007, г. Севастополь, Улица Супруна, ДОМ 1</h5>
-                  </div>
+            
+            <div class="container">
+              <div class="well well-white">             
                   
-                </div>
+
+                    <h3 class="text-center">Вышестоящие и контролирующие органы</h3>
+                    <hr>
+                  
+                    
+                      <h4 class="text-center">Министерство здравоохранения Российской Федерации (Минздрав России)</h4>
+                      <hr>
+                      <p>
+                        <b>Телефон Справочной службы Министерства:</b> <br> 
+                        (495) 628-44-53, (495) 627-29-44
+                      </p>
+                      <p>  
+                        <b>Многоканальный телефон Министерства:</b> <br>
+                        (495) 627-24-00
+                      </p>
+                      <p>  
+                        <b>Телефон для обращения граждан:</b> <br> 
+                        (495) 627-29-93 <br>
+                      </p>  
+                        <b>Адрес:</b> <br>
+                        127994, ГСП-4, г. Москва, Рахмановский пер, д. 3 <br>
+                      </p>
+                      <p>
+                         <b>Сайт:</b> <br>
+                         <b><a href="http://www.rosminzdrav.ru">http://www.rosminzdrav.ru</a></b>                   
+                      </p>
+                   
+                      <hr>
+                      <h4 class="text-center">Федеральная служба по надзору в сфере здравоохранения (Росздравнадзор)Справочная Росздравнадзора </h4>
+                      <hr>
+                      
+                      <p>
+                        <b>Телефон:</b> <br>
+                        (495) 698-45-38; (499) 578-02-30 
+                      </p>
+                      <p>
+                        <b>E-mail:</b> <br>
+                        info@roszdravnadzor.ru 
+                      </p>
+                      <p>
+                        <b>Пресс-служба:</b> <br> 
+                        тел/факс (495)624-80-90 
+                      </p>
+                      <p>
+                        <b>Адрес:</b> <br>
+                        109074, Москва, Славянская площадь, д.4, стр.1 
+                      </p>
+                      <p>
+                        <b>Сайт:</b> <br>
+                        <b><a href="http://roszdravnadzor.ru">http://roszdravnadzor.ru</a></b>
+                      </p>
+                    
+
+                  
+
               </div>
-             
-          </div>
-
-          
-
-        </div>
-
-      </div>
+            </div>
+        
 
     <!-- *************************************************************************************************************************************** --> 
     <!-- Конец тела страницы -->   
@@ -234,6 +257,8 @@
 
     <!-- Для своих скриптов -->
     <script src="js/main.js"></script>
+    <!-- Для перемещения блоков по навигацией -->
+    <script type="text/javascript" src="js/godown.js"></script>
 
     <!-- *************************************************************************************************************************************** -->
     <!-- Конец скриптов -->
