@@ -139,6 +139,10 @@ section {
 	margin-bottom: 0;
 }
 
+.navbar-opacity {
+	background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(64,64,64,0.7));
+}
+
 #navbar1 a {
 	color: #fff;
 	font-weight: 600;
