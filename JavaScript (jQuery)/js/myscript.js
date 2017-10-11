@@ -1,16 +1,15 @@
 $(document).ready(function () {
-	$(':header').hide(3000).slideDown(3000);
-	$(':header').css({color: "red"});
-	var ptext1 = $('.one').html(), ptext2 = $('.two').html();
-	var ptext3 = +ptext1 + +ptext2, ptext4 = ptext1 + ptext2;
 
-	$('.three').html(ptext3);
-	$('.four').html(ptext4);
+	$('nav').hover(function() {
+		$('.content-block').slideDown(750);
+		$(this).css({"border-radius" : "5px 5px 0 0"});
+		$('.content-block').css({"border-radius" : "0 0 5px 5px"});
+	});
 
-	var name = prompt('Как вас зовут?', '');
-	var mass = [1 , 2 , 3, 4, 5, 6, 7];
-	$('body').append('<p>Добро пожаловать, ' + name + ' 0 элемент массива равен ' + mass[0]) + '</p>';
-
-	
+	$('.container').mouseleave(function() {
+		$('.content-block').slideUp(750);
+		$('nav').css({"border-radius" : "5px"});
+		$('.content-block').css({"border-radius" : "5px"});
+	});
 
 });
