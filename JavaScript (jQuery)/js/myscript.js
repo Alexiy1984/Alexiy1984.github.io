@@ -12,4 +12,7 @@ $(document).ready(function () {
 		$('.content-block').css({"border-radius" : "5px"});
 	});
 
+	$('.adding').click(function(){
+			
+	});
 });

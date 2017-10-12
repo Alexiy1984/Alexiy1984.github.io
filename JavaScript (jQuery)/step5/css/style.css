@@ -1,0 +1,60 @@
+.container {
+	margin: 0 auto;
+	width: 90%;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+h2 {
+	text-align: center;
+	color: #09F;
+}
+
+.h1wrapper {
+	background: #09F;
+	border: 2px solid #027;
+	border-radius: 5px;
+	padding: 3px 0;
+	margin-bottom: 30px;
+}
+
+.wellbutt {
+	margin: 0 1%;
+	padding: 10px 10px;
+	border-radius: 5px;
+	border: 1px solid #000;
+	font-weight: 700;
+	background: #0CF;
+	color: #fff;
+}
+
+.wellbutt:hover {
+	background: #09F;
+}
+
+.row {
+	display: block;
+	width: 100%;
+	border-top: 2px solid #000;
+	border-bottom: 2px solid #000;
+	padding: 10px 0;
+}
+
+.three-button {
+	width: 30%;
+}
+
+.twoo-button {
+	width: 45%;
+}
+
+.one-button {
+	width: 98%;
+}
+
+.hrr {
+	margin: 30px 0;
+}
