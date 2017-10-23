@@ -1,0 +1,179 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #CCC url() 0 0 no-repeat;
+}
+
+.header {
+	background: #0AF;
+	margin: 0;
+	padding: 5px;
+	border: 3px solid #fff;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.header h1 {
+	color: #fff;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.container {
+	width: 90%;
+	padding: 10px 5%;
+}
+
+.content {
+	background: #fff url() 0 0 no-repeat;
+	padding: 10px;
+	margin: 10px;
+	border: 3px solid #DDD;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.in-button {
+	margin: 10px;
+	padding: 10px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	border-color: #000;
+}
+
+.in-button:hover {
+	background-color: #999; 
+	border-color: #000;
+}
+
+.three, .threeup{
+	display: none;
+}
+
+.centerblock {
+	display: block;
+	margin: 10px auto;
+	
+}
+
+.eighty-persent {
+	width: 80%;
+}
+
+.fifty-persent {
+	width: 50%;
+}
+
+.forty-persent {
+	width: 40%;
+}
+
+.thirty-persent {
+	width: 30%;
+}
+
+.twenty-persent {
+	width: 20%;
+}
+
+.two-col{
+	margin-left: 7%;
+	display: inline-block;
+	width: 40%;
+	/* background: #000; */
+}
+
+.col-lg{
+	margin: 2%;
+	display: inline-block;
+	width: 70%;
+	/* background: #000; */
+}
+
+.col-sm{
+	margin: 2%;
+	display: inline-block;
+	width: 20%;
+	/* background: #000; */
+}
+
+textarea {
+	height: 5em;
+}
+
+label{
+	display: block;
+	margin: 10px auto;
+	font-weight: 700;
+	/* text-align: center; */
+	
+}
+
+.simple-button {
+	text-transform: uppercase;
+	margin: 5px 10px;
+	display: inline-block;
+	padding: 7px 5px;
+	
+}
+
+.colored-h2 {
+	padding: 10px 0;
+	color: #fff;
+	font-weight: 700;
+	background: linear-gradient( to top, #0C2,#062 );
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+.colored-p {
+	padding: 10px 20px 30px 20px;
+	color: #153;
+	font-weight: 700;
+	border-bottom: #153 solid 1px;
+}
+
+.centered {
+	display: block;
+	margin: 10px auto;
+}
+
+.inline-input {
+	display: inline-block;
+	width: 10%;
+}
+
+form {
+	border: 3px solid #DDD;	
+	padding: 20px;
+	margin: 10px;
+	display: inline-block;
+	box-shadow: 1px 1px 4px #000;
+}
+
+#IS_SHIFT, #clav, #IS_SHIFTM {
+	text-transform: uppercase;
+}
+
+.clavish {
+	width: 8.5%;
+	height: 8.5%;
+}
+
+.clavish-pressed {
+	background: #0AF;
+}
+
+.clavrow {
+	display: block;
+	margin-bottom: 5px;
+	padding: 0 auto;
+}
