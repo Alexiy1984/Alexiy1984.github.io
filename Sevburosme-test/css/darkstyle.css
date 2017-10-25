@@ -251,6 +251,11 @@ footer {
 	color: #A0A0A0;
 }
 
+.block .nav-tabs > .active > a,
+.block .nav-tabs > .active > a:hover,
+.block .nav-tabs > .active > a:focus{	
+	color: #A0A0A0;
+}
 /* ДЛЯ КОНТАКТОВ */
 
 .noborder {

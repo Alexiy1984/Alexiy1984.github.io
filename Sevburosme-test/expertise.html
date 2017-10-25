@@ -10,17 +10,53 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Кастомный CSS -->
-    <link href="css/mainstyle.css" rel="stylesheet">
+    <link href="css/mainstyle.css" rel="stylesheet" title="main" media="screen" >
+    <!-- Дополнительные стили -->
+    <link href="css/darkstyle.css" rel="alternate stylesheet" title="dark" media="screen">
+    <link href="css/greenstyle.css" rel="alternate stylesheet" title="green" media="screen">
+    <!-- Скрипты для переключения стилей -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/styleswitch.js"></script>
+    
     <!-- Шрифт  -->
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
 
   </head>
   <body>
+
+
+    <nav id="topnav" class="navbar navbar-opacity  navbar-default navbar-fixed-top ">
+      <div class="container">
+        
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Поиск">
+            <button type="submit" class="btn btn-info dark-info"><span class="glyphicon glyphicon-search"></span></button>
+          </div>
+          
+        </form>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+          <a href="#" type="button" rel="dark" class="btn btn-info dark-info styleswitch navbar-left rnd-btn">
+            <span class="glyphicon glyphicon-tint"></span>
+          </a>
+           <a href="#" data-spy="affix" type="button" rel="dark" class="btn btn-info dark-info navbar-right rnd-btn">
+            <span class="glyphicon glyphicon-arrow-up"></span>
+          </a>
+        </div>
+        </form>  
+       
+       </div> 
+     </nav> 
+
     <!-- Joombotron -->
     <!-- *************************************************************************************************************************************** -->
+        <div id="godown" class="godown-50">
           
+        </div>
         <div class="jumbotron">
+
           <div class="container">
             <div class="row">
               <div class="hidden-xs col-sm-2 col-md-2">
@@ -45,8 +81,8 @@
          
     <!-- *************************************************************************************************************************************** -->
     <!-- Joombotron -->
-
-
+    
+        
     <!-- Для навигации -->
     <!-- *************************************************************************************************************************************** -->
     <nav class="navbar navbar-color navbar-default">
@@ -88,19 +124,17 @@
               </ul>
                       
               
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Поиск">
-                </div>
-                <button type="submit" class="btn btn-info dark-info"><span class="glyphicon glyphicon-search"></span></button>
-              </form>
+              
           </div>
           
       </div>
     </nav>
+    
+     
+
     <!-- *************************************************************************************************************************************** --> 
     <!-- Конец навигации -->   
-
+    
     <!-- Для тела страницы -->
     <!-- *************************************************************************************************************************************** -->
       
