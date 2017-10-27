@@ -1,0 +1,92 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+
+.jumbotron {
+	background: @brand-backgroundcl @jumbo-image no-repeat;
+	background-size: cover;
+	color: @brand-color;
+	padding: 300px 0 0 0;
+	margin-bottom: 0;
+	> div {
+		background: @jumboinnerBG;
+		padding: 40px;
+		}
+	
+	
+	.btn-round {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		border-radius: 30px;
+		width: 80%;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+
+	.ipbtn {
+		background: @ip-bg;
+		color: @brand-color;
+		border: 2px solid @ip-bd;
+		
+		img {
+			opacity: 0.90;
+			margin: 0 auto;
+		}
+
+		&:hover {
+			background: darken(@ip-bg, 5%)
+		}
+	}
+	
+	.ncbtn {
+		background: @nc-bg;
+		color: @brand-color;
+		border: 2px solid @nc-bd;
+
+		img {
+			opacity: 0.90;
+			margin: 0 auto;
+		}
+
+		&:hover {
+			background: darken(@nc-bg, 5%)
+		}
+	}
+
+	.tsgbtn {
+		background: @tsg-bg;
+		color: @brand-color;
+		border: 2px solid @tsg-bd;
+
+		img {
+			opacity: 0.90;
+			margin: 0 auto;
+		}
+
+		&:hover {
+			background: darken(@tsg-bg, 5%)
+		}
+	}
+
+	.prbtn {
+		background: @pr-bg;
+		color: @brand-color;
+		border: 2px solid @pr-bd;
+
+		img {
+			opacity: 0.90;
+			margin: 0 auto;
+		}
+
+		&:hover {
+			background: darken(@pr-bg, 5%)
+		}
+	}
+
+}
+.footer {
+	background: @brand-backgroundcl;
+	color: @brand-color;
+	padding: 20px;
+	margin-top: 0;
+}
+
