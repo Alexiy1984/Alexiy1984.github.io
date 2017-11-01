@@ -60,126 +60,191 @@ body {
 			border-bottom: 3px darken(@jumbo-color, 15%) solid;
 		}
 	}
-
-	.btn-round {
-		margin-top: 20px;
-		/* margin-bottom: 20px; */
-		border-radius: 10px;
-		width: 80%;
-		box-shadow: 0 0 10px rgba(0,0,0,0.5);
-
-		&-top {
-			border-radius: 10px 10px 0 0;
-			margin-bottom: 0px;
-		}
-
-		&-bot {
-			border-radius: 0 0 10px 10px;
-			margin-top: 0px;
-			margin-bottom: 0px;
-			font-size: 1em;
-			font-weight: bold;
-			
-		}
-
-	}
 	
 	.main-col{
 		position: relative;
-		.hiddiv {
-		position: absolute;
-		display: none;
-		z-index: 999;
-		width: 90.5%;
-		top: 100%;
-		left: auto;
-		}
 
-	}
 
-	.ipbtn {
+			.btn-round {
+			display: block;
+			overflow: hidden;
+			word-wrap: break-word;
+			position: relative;
+			padding: 10px;
+			border-radius: 25px;
+			width: 80%;
+			box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			margin: 10px auto;
+
+				img{
+					float: left;
+					opacity: 0.80;
+					margin: 0 auto;
+					border: 2px solid @jumbo-color;
+					padding: 10px;
+					border-radius: 50%;
+					width: 25%;
+				}
+
+				.img-noresize {
+					min-height: 65px;
+					min-width: 65px;
+				}
+
+				/* @media screen and (min-width: 594px) {
+					img {
+						display: none;
+						border: none;
+					}
+				} */
+
+				div{
+					position: absolute;
+					left: 30%;
+    			top: 50%;
+    			transform: translateY(-50%);
+					
+					.second-p{
+						display: none;
+					}
+					
+					@media screen and (min-width: 992px) {
+						.main-p {
+    				font-size: 18px;
+    				font-weight: bold;
+    			}
+					}
+
+					@media screen and (min-width: 768px) and (max-width: 991px) {
+						.main-p {
+    				font-size: 24px;
+    				font-weight: bold;
+    			}
+					}
+
+					@media screen and (min-width: 595px) and (max-width: 767px) {
+						.main-p {
+    				font-size: 18px;
+    				font-weight: bold;
+    			}
+					}
+
+					@media screen and (min-width: 480px) and (max-width: 594px){
+						.main-p {
+    				font-size: 14px;
+    				font-weight: bold;
+    			}
+					}
+
+					@media screen and (max-width: 479px){
+						.main-p {
+    				
+    				display: none;
+    			}
+
+    			.second-p{
+    				display: inline;
+    				font-size: 12px;
+    				font-weight: bold;
+    			}
+					}
+    			
+				}
+			}
+
+			@media screen and (max-width: 479px){
+					div {
+						left: 100px;
+						transform: translateX(300px);
+					}
+			}
+			
+			.ipbtn {
 		background: @ip-bg;
 		color: @jumbo-color;
-		border: 1px solid @ip-bd;
+		border: 2px solid @ip-bd;
 
 		&-light {
 			background: @jumbo-color;
 			color: @brand-backgroundcl;
-			border: 1px solid @ip-bd;
+			border: 2px solid @ip-bd;
 		}
 		
 		img {
-			opacity: 0.90;
-			margin: 0 auto;
+			
 		}
 
 		&:hover {
 			background: darken(@ip-bg, 5%);
+		  color: darken(@ip-bd, 5%);		
 		}
 	}
 	
 	.ncbtn {
 		background: @nc-bg;
 		color: @jumbo-color;
-		border: 1px solid @nc-bd;
+		border: 2px solid @nc-bd;
 		
 		&-light {
 			background: @jumbo-color;
 			color: @brand-backgroundcl;
-			border: 1px solid @nc-bd;
+			border: 2px solid @nc-bd;
 		}
 
 		img {
-			opacity: 0.90;
-			margin: 0 auto;
+			
 		}
 
 		&:hover {
 			background: darken(@nc-bg, 5%);
+			color: darken(@nc-bd, 5%);	
 		}
 	}
 
 	.tsgbtn {
 		background: @tsg-bg;
 		color: @jumbo-color;
-		border: 1px solid @tsg-bd;
+		border: 2px solid @tsg-bd;
 		
 		&-light {
 			background: @jumbo-color;
 			color: @brand-backgroundcl;
-			border: 1px solid @tsg-bd;
+			border: 2px solid @tsg-bd;
 		}
 
 		img {
-			opacity: 0.90;
-			margin: 0 auto;
+			
 		}
 
 		&:hover {
 			background: darken(@tsg-bg, 5%);
+			color: darken(@tsg-bd, 5%);	
 		}
 	}
 
 	.prbtn {
 		background: @pr-bg;
 		color: @jumbo-color;
-		border: 1px solid @pr-bd;
+		border: 2px solid @pr-bd;
 		
 		&-light {
 			background: @jumbo-color;
 			color: @brand-backgroundcl;
-			border: 1px solid @pr-bd;
+			border: 2px solid @pr-bd;
 		}
 
 		img {
-			opacity: 0.90;
-			margin: 0 auto;
+			
 		}
 
 		&:hover {
 			background: darken(@pr-bg, 5%);
+			color: darken(@pr-bd, 5%);	
 		}
 	}
+	}
+
+	
 
 }
 .footer {
