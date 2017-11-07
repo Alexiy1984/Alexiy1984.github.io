@@ -14,35 +14,50 @@ $(document).ready(function() {
  	/*}
 );*/
 
-/*$('.btn-round > img').toggleClass('img-responsive img-noresize');*/
-$('.btn-round > img').css({'width':'100%'});
+var mainwidth = $('.main-col').width();
 var wrapradius = ($('.btn-round > img').outerWidth()/2+10);
+var btnroundheight = $('.btn-round').height();
+var btnroundwidth = $('.btn-round').width();
+var imgwidth = $('.btn-round > img').width();
+var imgOwidth = $('.btn-round > img').outerWidth(true);
+var imgOheight = $('.btn-round > img').outerHeight(true);
 
-$('.btn-round').css({'width':'25%'});
+$('.btn-round').width(mainwidth/4);
+$('.btn-round > img').width(btnroundwidth);
 $('.btn-round > div').css({'display':'none'});
 $('.btn-round').css({'border-radius': wrapradius });
 
 
 $(window).resize(function () {
-	var wrapradius = ($('.btn-round > img').outerWidth()/2+10);
+	wrapradius = ($('.btn-round > img').outerWidth()/2+10);
 	$('.btn-round').css({'border-radius': wrapradius });
+
+	wrapradius = ($('.btn-round > img').outerWidth()/2+10);
+	btnroundheight = $('.btn-round').height();
+	btnroundwidth = $('.btn-round').width();
+	mainwidth = $('.main-col').width();
+	imgwidth = $('.btn-round > img').width();
 	
 });
 
 $('.btn-round').hover(
 
 	function() {
-	
-		$('> div',this).css({'display':'block'});
-		$(this).animate({'width':'80%'},300);
-		$('> img',this).css({'width':'25%'});
-	},
 
+		imgwidth = $('.btn-round > img').width();
+		imgOheight = $('.btn-round > img').outerHeight(true);
+		imgOwidth = $('.btn-round > img').outerWidth(true);
+		$('> img',this).toggleClass('img-responsive');
+		$('> div',this).css({'display':'block'});
+		$(this).animate({'width':btnroundwidth},500);
+		$('> img',this).width(imgwidth);
+	},
 	function() {
-		$('> div',this).css({'display':'none'});
-		/*$('> img',this).css({'width':'100%'});*/
-		$(this).animate({'width':'25%'},300);
 		
+		imgwidth = $('.btn-round > img').outerWidth(true);
+		$('> div',this).css({'display':'none'});
+		$(this).animate({'width':imgOwidth,'height':imgOheight},500);
+		$('> img',this).width(imgwidth);
 	}
 
 );
