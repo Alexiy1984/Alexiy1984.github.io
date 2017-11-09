@@ -1,5 +1,5 @@
 @import "bootstrap/bootstrap.less";
-@import "Subvars.less"; 
+@import "Subvars2.less"; 
 
 html,
 body {
@@ -11,10 +11,18 @@ body {
 	border-radius: 0;
 	color: @header-color;
 	margin-bottom: 0px;
-
+  
 	.img-noresize {
 		min-width: 135px;
 	}
+
+  .btn-div{
+     
+  }
+  
+  .btn-nav {
+    
+  }
 }
 
 #wrap {
@@ -23,6 +31,14 @@ body {
   margin: 0 auto -50px;
   padding: 0 0 50px;
 	background-color: lighten(@header-bg, 35%);
+
+  @media screen and (max-width: 750px){
+            
+    .min-left {
+      text-align: left;
+    }
+   } 
+
   .well {
   	border-radius: 0;
 			
@@ -38,6 +54,13 @@ body {
 				margin: 0;
   		}
   	}
+  }
+
+  .news-well{
+    .img-news {
+      float:left;
+      margin: 0 10px 10px 0;
+    }
   }
 
 	.notype{
