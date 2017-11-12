@@ -33,31 +33,32 @@ $(window).resize(function () {
 	$('.btn-round').css({'border-radius': wrapradius });
 
 	wrapradius = ($('.btn-round > img').outerWidth()/2+10);
-	btnroundheight = $('.btn-round').height();
-	btnroundwidth = $('.btn-round').width();
-	mainwidth = $('.main-col').width();
-	imgwidth = $('.btn-round > img').width();
+
+	if ($('.btn-round > img').hasClass('img-responsive')) {
+	} else {$('.btn-round > img').addClass('img-responsive');}
+
+		imgwidth = $('.btn-round > img').width();
+		imgOheight = $('.btn-round > img').outerHeight(true);
+		imgOwidth = $('.btn-round > img').outerWidth(true);
+		btnroundheight = $('.btn-round').height();
+		btnroundwidth = $('.btn-round').width();
+		mainwidth = $('.main-col').width();
 	
 });
 
 $('.btn-round').hover(
 
 	function() {
-
-		imgwidth = $('.btn-round > img').width();
-		imgOheight = $('.btn-round > img').outerHeight(true);
-		imgOwidth = $('.btn-round > img').outerWidth(true);
-		$('> img',this).toggleClass('img-responsive');
+		$('> img',this).removeClass('img-responsive');
 		$('> div',this).css({'display':'block'});
-		$(this).animate({'width':btnroundwidth},500);
-		$('> img',this).width(imgwidth);
+		$(this).animate({'width':(mainwidth*80)/100},500);
+		$('> img',this).width(imgOwidth);
 	},
 	function() {
-		
-		imgwidth = $('.btn-round > img').outerWidth(true);
+
 		$('> div',this).css({'display':'none'});
-		$(this).animate({'width':imgOwidth,'height':imgOheight},500);
-		$('> img',this).width(imgwidth);
+		$(this).animate({'width':btnroundwidth,'height':btnroundheight},500);
+		$('> img',this).width(imgOwidth);
 	}
 
 );
