@@ -230,9 +230,19 @@ form {
 }
 
 .li-selected {
- 	background: rgba(17,138,17,.5);
+	text-decoration: underline;
+ 	color: #4A4;
+}
+
+.li-active {
+	background: rgba(10, 244, 105, 0.3);
 }
 
 form input[type="button"] {
 	width: 30%;
+}
+
+form li {
+	margin-left: 12%;
+	width: 28%;
 }

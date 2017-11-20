@@ -60,34 +60,45 @@ $(document).ready( function () {
 
   $('#addd').on('click', function() {
     var textli = $('#textsp').val();
-    if ($('ul li').hasClass('li-selected')) {
-      $('ul .li-selected').before('<li>'+ textli+'</li>');
+    if ($('#dela ul li').hasClass('li-selected')) {
+      $('#dela ul .li-selected').before('<li>'+ textli+'</li>');
     }
     else {
-      $('ul').append('<li>'+ textli+'</li>');
+      $('#dela ul').append('<li>'+ textli+'</li>');
     }
   });
 
-  $('ul').on('dblclick', 'li', function() {
+  $('#dela ul').on('dblclick', 'li', function() {
   $(this).toggleClass('line-through');
   $(this).removeClass('li-selected');
   }); // Делегирование - указывается родительский элемент существующий на странице для динамически добавляемого контента
 
-  $('ul').on('click', 'li', function() {
+  $('#dela ul').on('click', 'li', function() {
   if ($(this).hasClass('li-selected'))
     {
       $(this).removeClass('li-selected');
       $('#addd').val('Добавить новое');
     }
     else {
-      $('ul .li-selected').removeClass('li-selected');
+      $('#dela ul .li-selected').removeClass('li-selected');
       $(this).toggleClass('li-selected');
       $('#addd').val('Добавить перед выбранным');
     }
   }); 
 
+ $('#dela ul').on('mousemove', 'li', function() 
+    {
+      $(this).addClass('li-active');   
+     
+  }); 
+
+  $('#dela ul').on('mouseout', 'li', function() 
+    {
+      $(this).removeClass('li-active');    
+  });  
+
   $('#deld').on('click', function() {
-    $('ul .line-through').remove();
+    $('#dela .line-through').remove();
   });
 
 });

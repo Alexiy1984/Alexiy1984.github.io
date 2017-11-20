@@ -53,3 +53,20 @@ nav h2{
 	box-shadow: 1px 1px 5px rgba(0,0,0,0.8)
 }
 
+.content-block p{
+	margin: 0;
+	padding: 10px;
+}
+
+.content-block p:hover{
+	background: rgba(47, 47, 47, 0.4);
+}
+
+.content-block p:hover a{
+	color: #1CBCE2;
+}
+
+.content-block hr {
+	margin: 0;
+}
+
