@@ -1,8 +1,11 @@
 body {
  background: url(../images/jquery2.jpg);
+ padding: 0;
+ margin: 0;
 }
 
 .container {
+	position: relative;
 	margin: 20px auto;
 	padding: 20px;
 	width: 95%;
@@ -44,8 +47,9 @@ nav h2{
 }
 
 .content-block {
+	position: absolute;
 	display: none;
-	width: 100%;
+	width: 97%;
 	background: rgba(47, 47, 47, 0.3);
 	border-radius: 5px;
 	border: 2px solid #fff;
@@ -68,5 +72,9 @@ nav h2{
 
 .content-block hr {
 	margin: 0;
+}
+
+footer{
+	
 }
 
