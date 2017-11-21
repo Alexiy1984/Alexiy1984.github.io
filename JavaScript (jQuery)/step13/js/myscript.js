@@ -23,10 +23,10 @@ $(document).ready( function () {
 	/*alert($('.inner').outerWidth());*/
 	/*var posleft = $('.left:last').position(); */ /*узнаем позицию относительно родительского элемента при условии что его position == relative || absolute*/
 	/*alert('left:' + posleft.left + ' top:' + posleft.top); */
-
+  var step = 150;
   $('.left').on({
     'mouseover' : function () {
-    	var step = 150;
+    	
     	if( isNaN($('#step').val()))
     	{
 
@@ -57,10 +57,19 @@ $(document).ready( function () {
 
   $('.infront').on({
   	'mouseover' : function () {
-  	 $('.behind').animate({width : 600, height :150},500);
+      $(this).css({'padding-right': '400px'});
+      $('.behind').animate({height :140},100);
+  	  $('.behind').animate({width : 360, left : 160},1000);
+      $('.behind a').delay(1000);
+      $('.behind a').fadeIn(500);
+      $('.behind a').css({'z-index': 150});
   	},
   	'mouseout'  : function () {
-  		$('.behind').animate({width : '-=600'},100);
+      $('.behind a').fadeOut(100);
+      $('.behind').delay(100);
+  		$('.behind').animate({width : '-=360', left : '-=155'},500);
+      $(this).css({'padding-right': ''});
+
   	}	
   
   });
