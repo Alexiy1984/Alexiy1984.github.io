@@ -34,9 +34,17 @@ body {
 }
 
 .content {
+	position: relative;
 	background: #fff url() 0 0 no-repeat;
 	padding: 10px;
 	margin: 10px;
+	border: 3px solid #DDD;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.content .inner {
+	position: relative;
+	height: 600px;
 	border: 3px solid #DDD;
 	box-shadow: 1px 1px 4px #000;
 }
@@ -238,6 +246,14 @@ form {
 	background: rgba(10, 244, 105, 0.3);
 }
 
+form {
+	display: block;
+}
+
+form input[type="text"] {
+	width: 30%;
+}
+
 form input[type="button"] {
 	width: 30%;
 }
@@ -248,6 +264,27 @@ form li {
 }
 
 img {
-	position: relative;
+	position: absolute;
+	top: 5px;
+	left: 5px;
 	width: 150px;
+}
+
+.left {
+	z-index: 100;
+}
+
+
+.infront{
+	top: 200px;
+	left: 5px;
+	width: 150px;
+	z-index: 99;
+}
+
+.behind {
+	top: 200px;
+	left: 5px;
+	width: 150px;
+	z-index: 90;
 }
