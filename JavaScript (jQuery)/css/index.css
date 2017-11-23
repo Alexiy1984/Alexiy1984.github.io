@@ -68,6 +68,7 @@ nav h2{
 
 .content-block p:hover a{
 	color: #1CBCE2;
+	animation: fontgrow 300ms forwards;
 }
 
 .content-block hr {
@@ -78,3 +79,12 @@ footer{
 	
 }
 
+@keyframes fontgrow { // Анимация CSS
+	from {
+		font-size: 1em;
+	}
+	to {
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+} // конец анимации
