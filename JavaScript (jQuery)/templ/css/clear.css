@@ -96,4 +96,60 @@ body {
 .line-throughed {
 	text-decoration: line-through;
 }
+
+.slyled-a {
+	color: #000;
+}
+
+.slyled-a:hover {
+	color: #0AF;
+}
+
+.slyled-li {
+	color: #000;
+}
+
+.slyled-li a{
+	color: #000;
+}
+
+.slyled-li:hover {
+	color: #0AF;
+}
+
+.slyled-li:hover a{
+	color: #0AF;
+}
+
+.slyled-but {
+	padding: 5px 10px;
+	background: #0AF;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #39C;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.slyled-but:hover {
+	background: #09E;
+	color: #fff;
+	border: 1px solid #268;
+}
+
+.slyled-but:disabled {
+	background: #DDD;
+	color: #fff;
+	border: 1px solid #fff;
+	cursor: default;
+}
+
+.slyled-but:active, 
+.slyled-but:focus {
+  outline: none;
+}
+
+.btn-block {
+	width: 100%;
+}
 /* Оформление элеменов КОНЕЦ*/
