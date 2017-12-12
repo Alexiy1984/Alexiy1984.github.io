@@ -1,0 +1,15 @@
+.newform input[type="text"] {
+  width: 30%; 
+  background: #EFF;
+  color: #023;
+}
+
+.newform input[type="submit"] {
+   width: 30%; 
+}
+
+.newform .label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #023;
+}

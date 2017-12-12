@@ -153,3 +153,12 @@ body {
 	width: 100%;
 }
 /* Оформление элеменов КОНЕЦ*/
+
+/* Логика элеменов НАЧАЛО*/
+
+.error-marker {
+	color: #700 !important;
+	background: #FDD !important;
+}
+
+/* Логика элеменов КОНЕЦ*/

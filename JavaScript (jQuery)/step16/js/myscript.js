@@ -21,11 +21,20 @@ $('input[value="Создать новое окно"]').click(function () {
     	PosL = 0.1; 
 		};
 
-		var WinProps = 'height='+(HTMLHeight*75/100)+', width='+(HTMLWidth*80/100) 
+		var WinProps = 'menubar=yes, toolbar=no,' +'height='+(HTMLHeight*75/100)+', width='+(HTMLWidth*80/100) 
 	 	+',top='+(HTMLHeight*25/100)+ ',left='+(HTMLWidth*PosL);
-	 	var newWin= open('http://www.google.com','WinN', WinProps);
+	 	newWin = open('http://www.google.com','WinN', WinProps); // обьявление неопределенной
+
+	 	$('input[value="Закрыть созданное окно"]').removeClass('hideclass');
 	 	
 } );
 
+$('input[value="Закрыть созданное окно"]').click(function () {
+
+	newWin.close();
+	$(this).addClass('hideclass');
+
+
+} );
 
 });
