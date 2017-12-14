@@ -1,15 +1,23 @@
 .newform input[type="text"] {
-  width: 30%; 
+  width: 75%; 
   background: #EFF;
   color: #023;
 }
 
 .newform input[type="submit"] {
-   width: 30%; 
+   width: 75%; 
+}
+
+input:nth-of-type(5) {
+	margin-bottom: 20px;
 }
 
 .newform .label {
   margin-bottom: 5px;
   font-weight: 600;
   color: #023;
+}
+
+.content {
+	width: 40%;
 }
