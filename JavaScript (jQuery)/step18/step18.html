@@ -15,11 +15,10 @@
 	</div>
 	<div class="container">
 
-
-		
 		<div class="content centerblock">
 			
 			<form class="newform" action="">
+
 				<label for="quantity" class="text-center centerblock label">Количество</label>
 				<input id="quantity" name="quantity" type="text" class="centerblock text-center blue-bordered numonly" placeholder="Введите пожалуйста значение">
 				<label for="price" class="text-center centerblock label">Цена</label>
@@ -27,11 +26,23 @@
 				<label for="sum" class="text-center centerblock label">Сумма</label>
 				<input id="sum" name="sum" type="text" class="centerblock text-center blue-bordered numonly" placeholder="Автозаполнение">
 				<label for="FullName" class="text-center centerblock label">Ф.И.О.</label>
-				<input id="FullName" name="FullName" type="text" class="centerblock text-center blue-bordered" placeholder="Введите пожалуйста значение">
+				<input id="FullName" name="FullName" type="text" class="centerblock text-center blue-bordered" value="Введите пожалуйста значение">
 				<label for="Email" class="text-center centerblock label">E-mail</label>
-				<input id="Email" name="Email" type="text" class="centerblock text-center blue-bordered" placeholder="Введите пожалуйста значение">
-				<input id="signup" name="signup" type="submit" class="centerblock slyled-but">	
+				<input id="Email" name="Email" type="text" class="centerblock text-center blue-bordered" value="Введите пожалуйста значение">
+				<label for="County" class="text-center centerblock label">Выберите страну</label>	
+				<select name="Country" id="Country" class="centerblock">
+					<option selected>--Выберите страну--</option>
+					<option value="Россия">Россия</option>
+					<option value="Украина">Украина</option>
+					<option value="Белорусcия">Белоруссия</option>
+					<option value="Казахстан">Казахстан</option>
+					<option value="Армения">Армения</option>
+				</select>
 
+				<label id="taxes" class="text-center centerblock label">Дополнительный сбор 10%</label>
+
+				<input id="signup" name="signup" type="submit" class="centerblock slyled-but">
+				
 			</form>
 			
 		</div>
