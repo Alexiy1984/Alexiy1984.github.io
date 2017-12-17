@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Начало работы с JQueryUI</title>
+	<title>Начало работы с JQueryUI (Диалоговые окна)</title>
 	<link rel="stylesheet" href="../templ/css/clear.css">
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -11,9 +11,18 @@
 	<script src="js/myscript.js"></script>
 </head>
 <body>
+
+<script id="TooltipTemlate" type="text/temlate">
+	<h2 class="text-center">Социальная сеть Вконтакте</h2>
+	<p class="text-center">
+		Российская социальная сеть для молодежи
+	</p>
+	<img src="images/vkpres.png" alt="ВК">
+
+</script>	
 	
 	<div class="header">
-		<h1 class="text-center text-uppercase text-shadow">Начало работы с JQueryUI</h1>
+		<h1 class="text-center text-uppercase text-shadow">Начало работы с JQueryUI (Диалоговые окна)</h1>
 	</div>
 	<div class="container">
 
@@ -28,8 +37,52 @@
 
 			</div>
 
+			<h1 class="text-center">Тестовая страница для отработки виджетов JQueryUi и приемов работы с ними</h1>
+			<p class="text-center">Данная кнопка вызывает диалоговую форму</p>
+			<button class="st-size-btn centerblock text-uppercase slyled-but openDialog" title="При нажатии появляется окно JQueryUi - dialog">нажать для появления диалога</button>
+
 			
+
+			<div class="tabbedPanels">
+				<ul>
+					<li><a href="#first">первая вкладка</a></li>
+					<li><a href="#second">вторая вкладка</a></li>
+					<li><a href="#third">третья вкладка</a></li>
+				</ul>
+				<div id="first" >
+					<p>
+						<img src="images/tabimg1.jpg" alt="1" class="blue-bordered">
+						Nulla cillum in reprehenderit ad tempor ut cillum ex est nostrud officia enim ut esse. Occaecat laboris in ut nisi dolor id pariatur ad laboris officia commodo nulla in ullamco occaecat dolore.
+						Lorem ipsum ex amet pariatur nostrud deserunt occaecat qui nulla ut ut ad. Amet velit exercitation aute aliquip laboris deserunt magna fugiat ullamco ut excepteur irure minim dolore sint.
+						Cillum duis duis nulla sit ut pariatur ex in ut aliquip dolor cillum minim fugiat veniam proident. Deserunt elit dolor tempor irure eu aliquip ea mollit aliqua ad id aliquip in excepteur reprehenderit in irure. Lorem ipsum aliquip velit adipisicing irure tempor quis dolor dolor sit pariatur minim voluptate fugiat velit officia quis labore officia. Lorem ipsum adipisicing commodo aute aliqua sunt in laborum mollit duis eiusmod dolor culpa laboris dolor magna dolore fugiat in. Aliqua nisi non ut dolor occaecat aute irure esse. Minim ut deserunt irure ex occaecat dolor non qui pariatur do reprehenderit ad ad proident. Culpa aute sed qui aliquip ullamco laboris esse deserunt consequat officia. In velit mollit excepteur proident minim labore non nulla ad eu aliqua et incididunt eiusmod culpa. Ut qui pariatur incididunt esse nulla aute enim consequat sit tempor esse. Sint proident laborum voluptate exercitation culpa et elit incididunt ut sint qui mollit et est dolor est laborum nisi. Sit anim dolore culpa in cupidatat nulla labore occaecat laboris adipisicing. Magna duis ad non qui id commodo nulla culpa consectetur ex magna. Eu fugiat incididunt dolor nostrud ea ea proident culpa do nostrud culpa labore culpa velit. Laboris eu commodo eu occaecat quis dolore in esse quis velit ad amet aliqua ex. Ex cupidatat do reprehenderit ex anim proident deserunt adipisicing in sed est dolor. Dolor veniam excepteur nostrud exercitation irure cillum consectetur fugiat pariatur adipisicing. Minim esse fugiat dolor do quis adipisicing enim nostrud sit dolore et do sunt tempor et qui. Tempor quis irure consequat ea enim velit commodo officia officia ut.
+					</p>
+				</div>
+				<div id="second">
+					<p>
+						<img src="images/tabimg2.jpg" alt="2" class="blue-bordered">
+						Irure velit quis cupidatat do proident ut dolore nostrud sint culpa sit minim sint in. In velit tempor exercitation do dolor quis sint ut quis nisi ex sed sint in ad aute id adipisicing.
+						Voluptate ad magna ut excepteur ut quis officia commodo. Ea culpa commodo in dolor et pariatur officia dolore occaecat quis laborum qui elit sunt. Qui enim aliqua deserunt velit ad ad ut sint reprehenderit reprehenderit duis adipisicing voluptate commodo sed laborum. Lorem ipsum nisi irure pariatur adipisicing deserunt officia nostrud et dolore do non ut voluptate minim ea veniam. Ea minim in ullamco elit ut tempor in dolor velit. Ad ea ut eiusmod aliqua aliqua ut dolor sint id aliquip. Elit velit irure consectetur ut duis irure est ad quis. Lorem ipsum culpa excepteur sunt non commodo dolor consequat incididunt exercitation nostrud id sint dolor do anim labore et dolore. Incididunt reprehenderit amet amet dolore proident eiusmod proident et duis exercitation excepteur in sunt. Excepteur dolore nulla in non eiusmod deserunt sed anim minim dolore dolore incididunt minim pariatur sed est elit. Deserunt esse deserunt fugiat et fugiat enim minim ex aute. Lorem ipsum ullamco magna ut nulla quis quis officia ut nostrud culpa in minim sunt officia ad. Lorem ipsum culpa pariatur excepteur nisi nisi in incididunt sunt veniam labore magna duis aliquip. Sint ex nulla sed adipisicing id eiusmod culpa in id elit occaecat in. Voluptate dolore dolor deserunt aliqua qui consectetur elit ut consequat in esse. Mollit do consectetur voluptate dolor tempor dolore amet minim. Nisi in proident laborum eu ut irure laborum adipisicing irure excepteur dolor proident. Lorem ipsum quis ut dolore in aliqua eu occaecat ut proident reprehenderit anim ut cillum enim in ad sed proident sit. Laboris pariatur cupidatat laboris velit nostrud mollit minim nostrud culpa nisi tempor sint qui consequat nisi. Ullamco do pariatur laborum adipisicing laboris non elit anim ea. Labore cupidatat anim ea consequat quis sed anim ea deserunt proident culpa sunt sint dolore voluptate ad irure.
+					</p>
+				</div>
+				<div id="third" >
+					<p>
+						<img src="images/tabimg3.png" alt="3" class="blue-bordered">
+						Veniam adipisicing id et in in culpa aute officia dolore. Excepteur voluptate laboris dolor incididunt nulla veniam dolor dolore et quis ullamco culpa voluptate exercitation in commodo irure veniam. Commodo mollit dolor enim ut minim excepteur ut in sed laboris consectetur eu duis magna. Nostrud nisi eiusmod anim nostrud nisi nisi sint esse veniam cupidatat tempor occaecat culpa magna adipisicing. Do ut deserunt officia incididunt irure dolore ullamco consectetur cillum laboris ut aute. Labore esse est pariatur quis magna dolor dolore ut consequat in incididunt ad dolore cillum. Sunt proident ut pariatur quis tempor consequat enim pariatur cillum nisi eiusmod adipisicing eiusmod ut sit in in tempor. Qui dolore veniam cupidatat voluptate minim anim labore consectetur quis aliqua ut in quis duis. Occaecat magna tempor sint non esse est amet incididunt nostrud duis do sed sint. Lorem ipsum enim dolor nulla cillum esse eiusmod proident anim nisi tempor officia magna tempor aliquip ex aute. Deserunt tempor aute voluptate laboris ut elit eu proident anim. Non in non aliqua officia culpa consectetur voluptate ex aute dolor adipisicing velit. Non et dolore incididunt occaecat est dolor qui nostrud dolore voluptate cupidatat velit commodo ullamco do non quis. Qui laborum adipisicing ad amet proident mollit sed qui eiusmod sint in ullamco aliquip cillum dolore. Excepteur occaecat dolore et dolore consectetur sed sit irure dolore nisi et. Culpa in veniam culpa sint excepteur voluptate sint qui mollit proident. Aliquip sint dolor irure consequat fugiat excepteur mollit do do in nostrud sit irure. Deserunt proident in dolor dolor aute deserunt anim non dolor mollit enim tempor ad elit tempor. Qui laborum ea esse ea eu tempor adipisicing dolore enim aliqua sunt officia occaecat eu sunt eiusmod et eu. Consequat officia irure voluptate sit esse ut dolore velit eiusmod aliquip eiusmod. Mollit qui ullamco qui in tempor eiusmod magna consectetur adipisicing sit. Aliqua excepteur in sed commodo reprehenderit duis aliqua eu in. Enim veniam ut in cupidatat deserunt labore aute aliquip sit ut laborum est sunt tempor. Cillum duis deserunt commodo velit deserunt enim proident nostrud duis magna aliquip tempor nulla. Nostrud sint ullamco laboris dolore nisi culpa dolor consequat sit veniam consectetur laboris exercitation occaecat sunt nisi qui anim. Est aute occaecat do elit anim in reprehenderit non eiusmod duis ex. Est minim incididunt irure elit officia esse aute aliquip cillum occaecat proident. Eu id sunt sed laborum esse sint cillum reprehenderit minim. Fugiat adipisicing nisi irure ut amet eu laboris in ad qui ut labore nisi veniam irure est dolor velit. Lorem ipsum dolor exercitation do culpa velit nulla occaecat ex incididunt aute nostrud. Nulla dolor sunt eiusmod anim velit aliqua aute labore dolor laborum.
+					</p>
+				</div>
+			</div>
+
+			<div class="listcontainer gray-bordered">
+				<ul>
+					<li><a href="https://twitter.com" title="Твиттер"><img src="images/twitter.png" alt="tvit"></a></li>
+					<li><a id="vkin" href="https://vk.com" title="Вконтакте"><img src="images/vk.jpg" alt="vk"></a></li>
+					<li><a href="https://www.facebook.com" title="Фейсбук"><img src="images/facebook.png" alt="fb"></a></li>
+					<li><a id="inst" href="https://www.instagram.com" title="Инстаграм"><img src="images/Instagram.png" alt="ig"></a></li>
+				</ul>
+			</div>
+
 		</div>
+
 
 	</div>
 

@@ -1,0 +1,71 @@
+.ui-widget-header {
+	background: #0AF;
+}
+
+.ui-widget-content {
+	border: 1px solid #000;
+}
+
+.ui-button {
+	padding: 5px 10px;
+	background: #0AF;
+	color: #000;
+	font-weight: bold;
+	border: 1px solid #39C;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.ui-button:hover,
+.ui-button:active,
+.ui-button:focus {
+	background: #09E;
+	color: #fff;
+	border: 1px solid #268;
+}
+
+.ui-button:disabled {
+	background: #DDD;
+	color: #fff;
+	border: 1px solid #fff;
+	cursor: default;
+}
+
+.ui-button:active, 
+.ui-button:focus {
+  outline: none;
+}
+
+.st-size-btn {
+	width: 30%;
+}
+ul {
+	text-align: center;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li img {
+	width: 40px;
+}
+
+.listcontainer {
+	margin: 50px 10px 0;
+}
+
+.tooltip {
+	background: #0AF;
+	font-weight: 600;
+	color: #fff;
+	overflow: hidden;
+}
+
+#first img,
+#second img,
+#third img {
+	float: left;
+	margin-right: 20px;
+	border-radius: 5px;
+}
