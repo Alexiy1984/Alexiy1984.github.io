@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,400i,600,600i,700');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (max-width: 900px) {
+	body{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 750px) {
+	body{
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 450px) {
+	body{
+		font-size: 12px;
+	}
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.text-center {
+	text-align: center;
+}
+
+h1 {
+	letter-spacing: 0.5rem;
+	font-size: 2.5em;
+	font-weight: 700;
+	margin-bottom: 1em;
+}
+
+ body:before {
+	content: '';
+	display: block;
+	position: fixed;
+	background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('../images/bg.jpg');
+	background-position: center, center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	background-attachment: fixed;
+	z-index: 0;
+} 
+
+.wrapper {
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.content {
+	z-index: 2;
+	
+}
+
+.inner {
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	width: 40em;
+	max-width: 100%;
+	padding: 0 5rem 5rem;
+}
+
+.img-round {
+	width: 15em;
+	border-radius: 100%;
+}
+
+.img-gray{
+	filter: grayscale(100%);
+	transition: filter 1.5s;
+}
+
+.img-gray:hover{
+	filter: none;
+	box-shadow: 0 0 50px 2px rgba(255,255,255,0.25);
+}
+
+.img-logo {
+	width: 8rem;
+	margin-bottom: 2em;
+	transition: all 2.5s;
+}
+
+.img-logo:hover {
+	transform: rotate(360deg);
+}
+
+.row-1, 
+.row-5 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5em;
+}
+
+.rows {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 2.5em;
+}
+
+.rows h2 {
+	letter-spacing: 0.25rem;
+	padding-bottom: 0.75em;
+}
+
+.row-2 div:first-child,
+.row-4 div:first-child {
+	padding-right: 5em;
+}
+
+.row-3 div:first-child {
+	padding-left: 5em;
+}
+
+.row-3 {
+	flex-direction: row-reverse;
+}
+
+.button {
+	display: block;
+	background: #D46679;
+	color: #fff;
+	letter-spacing: 0.25rem;
+	text-decoration: none;
+	border-radius: 0.25em;
+	font-weight: 700;
+	width: 35%;
+	padding: 1em 2em;
+	margin: 2em;
+	transition: background 1s;
+}
+
+.button:active,
+.button:hover
+ {
+	background: #E197A5;
+}
