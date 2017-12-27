@@ -1,9 +1,19 @@
 $(document).ready(function () {
-	$('.rows').hover(function () {
+	var h2size;
+	var h2bigsize;
+	var p2size;
+	var p2bigsize;
+	function CalcOfVal () {
 		h2size = $('.col-2 h2',this).css('font-size');
 		h2bigsize = +h2size.replace('px','')+5;
 		p2size = $('.col-2 p',this).css('font-size');
 		p2bigsize = +p2size.replace('px','')+5;
+	};
+	CalcOfVal();
+	$(window).resize(function() {
+		CalcOfVal();	
+	});
+	$('.rows').hover(function () {
 		$('.col-1 img',this).stop().animate({
 			filter: 'none', 
 			'box-shadow': '0 0 50px 2px rgba(255,255,255,0.25)'
