@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&subset=cyrillic,cyrillic-ext,greek,latin-ext');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: #CCB;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+.wrapper .header {
+  padding: 1em;
+  margin-bottom: 1em;
+  background: #0A0;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+}
+.wrapper .content {
+  display: flex;
+  padding: 0 2em;
+}
+.wrapper .content .inner {
+  display: flex;
+  background: #111;
+  width: 150em;
+  padding: 2em 4em;
+  border-radius: 0.5em;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px 2px #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7em;
+  color: #0F0;
+}
+.wrapper .content .inner div {
+  align-self: stretch;
+  padding: 2em 0;
+  margin: 0 1em;
+  border: 3px solid #111;
+}
+.wrapper .content .inner div h1 {
+  text-align: center;
+  color: #fff;
+}
+.wrapper .content .inner p {
+  line-height: 2em;
+}
+.wrapper .content .inner hr {
+  border: 1px dashed #0F0;
+  margin: 1em 0;
+}
+.wrapper .content .inner .white {
+  color: #fff;
+}
+.wrapper .content .inner .red {
+  color: red;
+}
+.wrapper .content .inner .choosenH1 {
+  background: #fff;
+  border: 3px solid #0F0;
+}
+.wrapper .content .inner .choosenH1 h1 {
+  color: #111;
+}
+.wrapper .content .inner .left-col {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  min-width: 250px;
+}
+.wrapper .content .inner .right-col {
+  border-left: 1px dashed #0F0;
+  width: 30%;
+}
+.wrapper .content .inner .right-col ul {
+  position: fixed;
+  list-style: none;
+  width: calc(28%);
+}
+.wrapper .content .inner .right-col ul li {
+  margin: 2em;
+}
+.wrapper .content .inner .right-col ul li a {
+  padding: 1em;
+  width: 100%;
+  line-height: 2em;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0F0;
+  text-align: center;
+  border: 2px solid #111;
+}
+.wrapper .content .inner .right-col ul li a:active,
+.wrapper .content .inner .right-col ul li a:hover {
+  color: #111;
+  border: 2px solid #fff;
+  background: #0F0;
+}
+.wrapper .footer {
+  padding: 1em;
+  margin-top: 1em;
+  background: #0A0;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid rgba(255, 255, 255, 0.8);
+}
+.wrapper .footer p {
+  font-weight: 600;
+  font-size: 1em;
+}
+@media (max-width: 1000px) {
+  body {
+    font-size: 12px;
+  }
+}
+@media (max-width: 800px) {
+  body {
+    font-size: 10px;
+  }
+  .wrapper .content .inner .left-col {
+    width: 100%;
+  }
+  .wrapper .content .inner .right-col {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper .content {
+    padding: 0;
+  }
+}
+@media (max-width: 350px) {
+  .inner p,
+  .inner h1,
+  .inner h2 {
+    word-wrap: break-word;
+  }
+}
