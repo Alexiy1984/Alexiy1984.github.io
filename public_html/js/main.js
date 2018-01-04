@@ -11,4 +11,18 @@ $(document).ready(function () {
 	}
 	);
 
+	$('#myPHPButton').click(function () {
+		/*$.post( '../PhpPost.php', function (data) {
+			$('.result').html(data);
+  	alert('Загрузка завершена.');
+		}
+			
+		)*/
+
+		//Временная заглушка пока просто перезагрузка страницы
+		document.location.reload(true);
+
+
+	});
+
 });
