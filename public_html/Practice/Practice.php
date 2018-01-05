@@ -79,8 +79,113 @@
 							echo "</pre>";
 						?>
 					</div>
+					
 				</div>
-				<div id="row-3" class="row">33</div>
+				<div id="row-3" class="row">
+					<div class="col">
+						<h1>Функции даты и времени</h1>
+						<?php 
+							echo "<p>".time()." - количество секунд прошедших с начала отсчета 01.01.1970 г.</p>";
+							echo "<p>";
+							echo time()+7*24*60*60;
+							echo " - количество секуд прошедших с начала отсчета 01.01.1970 г.  + 7 дней</p>";
+							echo '<p class="important">Отметка для заданной даты: <span class="code">mktime (0,0,0,1,1, 2018)</span></p>';
+							echo "<p><span class='important'>Результат: </span>";
+							echo mktime(0,0,0,1,1,2018);
+							echo "</p>";
+							echo '<p class="important">Отображение даты: <span class="code"> date ($format, $timestamp)</span></p>';
+							echo "<p>";
+							echo date("l F jS, Y - g:ia", time());
+							echo "</p>";
+							echo "<p>";
+							echo date("d m y - g:ia", time());
+							echo "</p>";
+							echo "<p>";
+							echo date("d m y - H:i", time());
+							echo "</p>";
+							echo '<p class="important">Контанты для работы с датой:</p>';
+							echo "<p>";
+							echo date(DATE_RSS)." - (DATE_RSS)";
+							echo "</p>";
+							echo "<p>";
+							echo date(DATE_ATOM)." - (DATE_ATOM)";
+							echo "</p>";	
+							echo "<p>";
+							echo date(DATE_COOKIE)." - (DATE_COOKIE)";
+							echo "</p>";
+							echo "<p>";
+							echo date(DATE_W3C)." - (DATE_W3C)";
+							echo "</p>";
+							echo "</p>";
+							echo '<p class="important">Проверка даты: <span class="code">checkdate($month,$day,$year)</span></p>';
+							echo "<p>";
+							$month = 9;
+							$day = 31;
+							$year = 2018;
+							$month1 = 9;
+							$day1 = 28;
+							$year1 = 2018;
+							print checkdate($month,$day,$year) ? 'Допустимая дата': 'Недопустимая дата';
+							echo "</p>";
+							echo "<p>";
+							print checkdate($month1,$day1,$year1) ? 'Допустимая дата': 'Недопустимая дата';
+							echo "</p>";
+						?> 
+					</div>
+					<div class="col">
+						<h1>Работа с файлами</h1>
+						<?php 
+							echo '<p class="important">Проверка существования файла: <span class="code">file_exists($filepath)</span></p>';
+							$filepath = 'files/file.txt';
+							$filepath2 = 'files/file2.txt';
+							$filepath3 = 'files/file3.txt';
+							print file_exists($filepath) ? "<p>Файл $filepath существует</p>" : "<p>Файла $filepath не существует</p>";
+							print file_exists($filepath2) ? "<p>Файл $filepath2 существует</p>" : "<p>Файла $filepath2 не существует</p>";
+							echo '<p class="important">Создание файла: <span class="code">fopen($filepath3,"w")</span> <span class="code">fwrite($ffwr, $text)</span> 
+							<span class="code">fclose($ffwr)</span></p>';
+							$ffwr = fopen($filepath3,'w') or die('Создать файл не удалось');
+							$text = <<<_END
+							Строка 1 
+							Строка 2 
+							Строка 3
+Строка без отступов							 
+_END;
+$text2 = <<<_END2
+Строка 4 
+Строка 5 
+Строка 6						 
+_END2;
+
+							fwrite($ffwr, $text) or die('Сбой записи файла');
+							fwrite($ffwr, $text2) or die('Сбой записи файла');
+							fclose($ffwr);
+							print file_exists($filepath3) ? "<p>Файл $filepath3 существует</p>" : "<p>Файла $filepath3 не существует</p>";
+							echo '<p class="important">Чтение строки из файла: <span class="code"> fgets($ffwr)</span></p>';
+							$ffwr = fopen($filepath3,'r') or die('Файл не существует или у вас нет доступа');
+							$fline = fgets($ffwr);
+							fclose($ffwr);
+							echo "<p>$fline</p>";
+							echo '<p class="important">Чтение определенного количества символов из файла: <span class="code"> fread($ffwr,45) </span></p>';
+							$ffwr = fopen($filepath3,'r') or die('Файл не существует или у вас нет доступа');
+							$ftext = fread($ffwr,45);
+							fclose($ffwr);
+							echo "<p>$ftext</p>";
+							echo '<p class="important">Копирование файла: <span class="code"> copy($filepath3,$filecopypath) </span> </p>';
+							$filecopypath = 'files/copyfile.txt';
+							copy($filepath3,$filecopypath) or die('Копирование невозможно');
+							print file_exists($filecopypath) ? "<p>Файл $filepath3 успешно скопирован в $filecopypath </p>" : "<p>Запись файла $filepath3 завершилась неудачей</p>";
+							echo '<p class="important">Перемещение (переименование) файла: <span class="code"> rename($filecopypath, $filerenpath) </span> </p>';
+							$filerenpath = 'files/renamedfile.txt';
+							if (!rename($filecopypath, $filerenpath)) 
+								echo '<p>Переименование невозможно</p>';
+							else echo "<p>Файл $filecopypath успешно переименован в $filerenpath</p>";
+							echo '<p class="important">Удаление файла: <span class="code"> rename($filecopypath, $filerenpath) </span> </p>';
+							if (!unlink($filerenpath)) 
+								echo '<p>удаление невозможно</p>';
+							else echo "<p>Файл $filerenpath успешно удален</p>";
+						?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
