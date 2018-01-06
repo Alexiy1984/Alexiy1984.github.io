@@ -145,18 +145,21 @@
 							<span class="code">fclose($ffwr)</span></p>';
 							$ffwr = fopen($filepath3,'w') or die('Создать файл не удалось');
 							$text = <<<_END
-							Строка 1 
-							Строка 2 
-							Строка 3
-Строка без отступов							 
+	Строка 1 
+		Строка 2 
+	Строка 3
+Строка без отступов
 _END;
 $text2 = <<<_END2
-Строка 4 
-Строка 5 
-Строка 6						 
+String 1 
+String 2
+String 3
+
 _END2;
 
 							fwrite($ffwr, $text) or die('Сбой записи файла');
+							fclose($ffwr);
+							$ffwr = fopen($filepath3,'w') or die('Создать файл не удалось');
 							fwrite($ffwr, $text2) or die('Сбой записи файла');
 							fclose($ffwr);
 							print file_exists($filepath3) ? "<p>Файл $filepath3 существует</p>" : "<p>Файла $filepath3 не существует</p>";
@@ -183,6 +186,82 @@ _END2;
 							if (!unlink($filerenpath)) 
 								echo '<p>удаление невозможно</p>';
 							else echo "<p>Файл $filerenpath успешно удален</p>";
+							echo '<p class="important">Обновление файла: <span class="code"> fopen($filepath3,"r+"") fseek($ffwr,0, [SEEK_END, SEEK_SET, SEEK_CUR]) </span> </p>';
+							$ffwr = fopen($filepath3,'r+') or die('Создать файл не удалось');
+							$text3 = fgets($ffwr);
+							fseek($ffwr,0, SEEK_END);
+							fseek($ffwr,5, SEEK_SET);
+							fwrite($ffwr, $text3) or die('Сбой записи файла');
+							fseek($ffwr,5, SEEK_CUR);
+							fwrite($ffwr, $text3) or die('Сбой записи файла');
+							fclose($ffwr);
+							echo '<p class="important">Блокирование файла в коллектиыном доступе: <span class="code"> flock($ffwr, LOCK_EX) flock($ffwr, LOCK_UN)</span> </p>';
+							$ffwr = fopen($filepath3,'r+') or die('Создать файл не удалось');
+							$text3 = fgets($ffwr);
+							if (flock($ffwr, LOCK_EX)) {
+							fseek($ffwr,0, SEEK_END);
+							fwrite($ffwr, $text3) or die('Сбой записи файла');
+							flock($ffwr, LOCK_UN);	
+							}
+							fclose($ffwr);
+						?>
+					</div>
+					
+				</div>
+				<div class="row">
+					<div class="col">
+						<h1>Чтение всего файла целиком</h1>
+						<?php 
+							echo '<p class="important">Чтение текстового файла: <span class="code"> file_get_contents ($filepath3) </span> </p>';
+							echo "<pre>";
+								echo file_get_contents($filepath3);
+							echo "</pre>";
+							echo '<p class="important">Чтение html файла: <span class="code"> file_get_contents (__DIR__ ."/mini.html") </span> </p>';
+								echo file_get_contents(__DIR__."/mini.html");
+						?>
+					</div>
+					<div class="col">
+						<h1>Загрузка файла на сервер</h1>
+						<?php
+							echo 
+								"<form method='post' action='Practice.php' enctype='multipart/form-data'>
+									Выберите файл с расширением JPG, GIF, PNG или TIF: <input type='file' name='filename' size='10'>
+									<input type='submit' value='Загрузить'> 
+								</form>";
+							if ($_FILES) {
+								$name =  $_FILES['filename']['name'];
+								switch ($_FILES['filename']['type']) {
+									case 'image/jpeg': $ext='jpg';  break;
+									case 'image/gif': $ext='gif';  break;
+									case 'image/png': $ext='png';  break;
+									case 'image/tiff': $ext='tif';  break;
+									default: $ext=''; ;break;
+								}
+								if ($ext) {
+									$newname = "image.$ext";
+ 									move_uploaded_file($_FILES['filename']['tmp_name'],$newname);
+									echo "<p>Загружаемое изображение '$newname' </p><img class='min-img' src='$newname'><br>"; 
+									echo "<p>Тип файла " .$_FILES['filename']['type']."</p>";
+									echo "<p>Размер файла " .$_FILES['filename']['size']." байт</p>";
+									echo "<p>Ошибки загрузки файла " .$_FILES['filename']['error']."</p>";
+									echo "<p>Временное имя файла " .$_FILES['filename']['tmp_name']."</p>";
+								}	else echo "<p class='error'>$name - неприемлемый файл изображения</p>";
+							} else echo "<p class='error'>Загрузки изображения не произошло</p>";
+						?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<h1>Системные вызовы</h1>
+						<?php 
+							$cmd = "ls";
+							exec(escapeshellcmd($cmd),$output,$status);
+							if ($status)	echo "Команда не выполнена"; 
+							else {
+								echo "<pre>";
+								foreach ($output as $line) echo htmlspecialchars("$line\n");
+								echo "</pre>";
+							}	
 						?>
 					</div>
 				</div>

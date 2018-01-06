@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.con {
+  width: 50%;
+  background: #222;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+.con h1 {
+  border-radius: 5px 5px 0 0;
+  background: #777;
+  display: block;
+  padding: 1em;
+  border-bottom: 3px solid #fff;
+}
+.con p {
+  padding: 1em;
+}
