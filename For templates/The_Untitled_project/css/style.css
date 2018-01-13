@@ -27,6 +27,7 @@ body .wrapper {
   padding: 3rem;
 }
 body .wrapper .container {
+  max-width: 100%;
   box-shadow: 0rem 1.75rem 3.5rem 1.25rem rgba(0, 0, 0, 0.059);
 }
 body .wrapper .container .inner {
@@ -49,10 +50,19 @@ body .wrapper .container .inner .MainHeader {
   font-weight: 700;
 }
 body .wrapper .container .inner .TopHeader {
+  color: #B8B8B8;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.8rem;
-  font-weight: 300;
+  font-weight: 200;
+}
+body .wrapper .container .inner .min-text {
+  font-size: 0.85rem;
+  color: #B8B8B8;
+}
+body .wrapper .container .inner .mgtop {
+  margin-bottom: 0;
+  margin-top: 1.48rem;
 }
 body .wrapper .container .inner .img-cont {
   margin-top: 3rem;
@@ -64,6 +74,7 @@ body .wrapper .container .inner .img-cont {
 body .wrapper .container .inner .img-cont img {
   width: 100%;
   max-width: 100%;
+  margin-bottom: 0;
 }
 body .wrapper .container .inner .Text {
   line-height: 1.8;
@@ -83,10 +94,20 @@ body .wrapper .container .inner form .form-wrap * {
   padding: 1rem;
   font-size: 1em;
   width: 100%;
+  outline: none;
+  box-sizing: border-box;
 }
 body .wrapper .container .inner form .form-wrap input[type="text"] {
   border: solid 1px #DEDEDE;
   color: #B8B8B8;
+  margin-bottom: 1.25rem;
+}
+body .wrapper .container .inner form .form-wrap input[type="text"]::placeholder {
+  color: #B8B8B8;
+}
+body .wrapper .container .inner form .form-wrap input[type="text"]:active,
+body .wrapper .container .inner form .form-wrap input[type="text"]:focus {
+  box-shadow: 0 0 0 1pt #2F9CEB;
 }
 body .wrapper .container .inner form .form-wrap input[type="submit"] {
   border: none;
@@ -102,5 +123,34 @@ body .wrapper .container .inner form .form-wrap input[type="submit"] {
 @media (max-width: 980px) {
   html {
     font-size: 11pt;
+  }
+}
+@media (max-width: 736px) {
+  body .wrapper {
+    padding: 1.75rem;
+  }
+  body .wrapper .container .inner {
+    padding: 3rem 1.75rem;
+  }
+  body .wrapper .container .inner .MainHeader {
+    font-size: 3em;
+  }
+  body .wrapper .container .inner .img-cont {
+    margin-left: calc(-1.75rem);
+    width: calc(100% + 3.5rem);
+    max-width: calc(100% + 3.5rem);
+  }
+}
+@media (max-width: 480px) {
+  body .wrapper {
+    padding: 0.75rem;
+  }
+}
+@media (max-width: 360px) {
+  body .wrapper {
+    padding: 0.5rem;
+  }
+  body .wrapper .container .inner {
+    padding: 2.25rem 1.3rem;
   }
 }
