@@ -52,6 +52,80 @@
 					<input id="InsField" type="text" name="InsField">
 					<input type="submit" value="Добавить данные">		
 				</form>
+
+				<form action="MySQLTables.php" method="post" id="DecsribeRows">
+					<h1>Показать поля таблицы</h1>
+					<label for="TableNameDesc">Введите название таблицы</label>
+					<input id="TableNameDesc" type="text" name="TableNameDesc">
+					<input type="submit" value="Показать поля таблицы">
+					<?php 
+						if (isset($_POST['TableNameDesc'])) {
+							$tablename = $_POST['TableNameDesc'];
+							$query = "DESCRIBE $tablename";
+							$result = $conn->query($query);
+							if (!$result) die ("Сбой при доступе к данным". $conn->error);
+							$rows = $result->num_rows;
+							echo "<table><tr><th>Column</th><th>Type</th><th>NULL</th><th>KEY</th></tr>";
+							for ($j = 0; $j < $rows; ++$j) {
+								$result->data_seek($j);
+								$row= $result->fetch_array(MYSQLI_NUM);
+								echo "<tr>";
+									for ($k = 0; $k < 4; ++$k) echo "<td>$row[$k]</td>";
+								echo "</tr>";
+							} 
+							echo "</table>";
+						}		
+					?>		
+				</form>
+
+				<form action="MySQLTables.php" method="post" id="ShowData">
+					<h1>
+						Вывод данных таблицы<br>
+						Удаление данных таблицы
+					</h1>
+					<select name="SelectOpt" id="SelectOpt">
+						<option selected value="SHOW">Вывести</option>
+						<option value="DELETE">Удалить</option>
+					</select>
+					<label for="TableNameShow">Введите название таблицы</label>
+					<input id="TableNameShow" type="text" name="TableNameShow">
+					<label for="ShowField">Введите имя поля</label>
+					<input id="ShowField" type="text" name="ShowField">
+					<label for="Conditions">Введите дополнительные условия</label>
+					<input id="Conditions" type="text" name="Conditions">
+					<input type="submit" value="Потвердить ввод">
+					<?php 
+						if (isset($_POST['TableNameShow']) && isset($_POST['ShowField']) && isset($_POST['Conditions'])) {
+							$tablename = $_POST['TableNameShow'];
+							$fieldname = $_POST['ShowField'];
+							$conditions = $_POST['Conditions'];
+							$selectedtedopt = $_POST['SelectOpt'];
+							if ($selectedtedopt =='SHOW') {
+								if (empty($conditions)) {
+									$query = "SELECT $fieldname FROM $tablename";
+								}	else $query = "SELECT $fieldname FROM $tablename WHERE $conditions";
+								$result = $conn->query($query);
+								if (!$result) die ("Сбой при доступе к данным". $conn->error);
+								$rows = $result->num_rows;
+								echo "<table><tr><th>ID</th><th>Family</th><th>Name</th><th>Age</th></tr>";
+								for ($j = 0; $j < $rows; ++$j) {
+									$result->data_seek($j);
+									$row= $result->fetch_array(MYSQLI_NUM);
+									echo "<tr>";
+										for ($k = 0; $k < 4; ++$k) echo "<td>$row[$k]</td>";
+									echo "</tr>";
+								}
+								echo "</table>";
+							} else {
+								$query = "DELETE FROM $tablename WHERE $conditions";
+								$result = $conn->query($query);
+								if (!$result) die ("Сбой при доступе к данным". $conn->error);
+								else echo "<p>Строка где $conditions успешно удалена</p>";
+							}
+						}		
+					?>	
+				</form>
+
 				<?php	
 
 					if (isset($_POST['deleteTable']) && isset($_POST['TableNameD'])) {
@@ -87,35 +161,12 @@
 						$query = "INSERT INTO $tablename VALUES ($fieldins)";
 						$result = $conn->query($query);
 						if (!$result) die ("Сбой при доступе к данным". $conn->error);
+						else echo "<p>Строка $fieldins вставлена в таблицу $tablename с id = $conn->insert_id </p>";
 					}		
-					/*$query = "CREATE TABLE cats (
-					id SMALLINT NOT NULL AUTO_INCREMENT,
-					family VARCHAR(32) NOT NULL,
-					name VARCHAR(32) NOT NULL,
-					age  TINYINT NOT NULL,
-					PRIMARY KEY (id)
-					)";	
-
-					$result = $conn->query($query);
-					if (!$result) die ("Сбой при доступе к данным". $conn->error);*/
-
-					$query = "DESCRIBE cats";
-					$result = $conn->query($query);
-					if (!$result) die ("Сбой при доступе к данным". $conn->error);
-
-					$rows = $result->num_rows;
-
-					echo "<table><tr><th>Column</th><th>Type</th><th>NULL</th><th>KEY</th></tr>";
-
-					for ($j = 0; $j < $rows; ++$j) {
-						$result->data_seek($j);
-						$row= $result->fetch_array(MYSQLI_NUM);
-						echo "<tr>";
-							for ($k = 0; $k < 4; ++$k) echo "<td>$row[$k]</td>";
-						echo "</tr>";
-					} 
-
-					echo "</table>";	
+					
+					$result->close();
+					$conn->close();	
+					
 				?>
 			</div>
 		</div>

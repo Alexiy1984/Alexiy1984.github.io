@@ -1,0 +1,39 @@
+<form action="MySQLprevent.php" method="post">
+					<h1>Удаление волшебных кавычек</h1>
+					<label for="Cust_data">Искомое поле(поля)</label>
+					<input type="text" name="Custdata" id="Custdata">
+					<label for="Cust_dataS">Поля поиска</label>
+					<input type="text" name="CustdataS" id="CustdataS">
+					<label for="Cust_cond">Условие</label>
+					<input type="text" name="Custcond" id="Custcond">
+					<label for="Cust_res">Значение</label>
+					<input type="text" name="Custres" id="Custres">
+					<input type="submit" value="Подтвердить">
+					<?php
+						$SQL_Tname = 'customers';
+					 						$SQL_T_dataV 	= mysql_fix_string($conn, $_POST['Custdata']);
+					 						$SQL_T_dataS 	= mysql_fix_string($conn, $_POST['CustdataS']);
+						$SQL_T_cond 	= mysql_fix_string($conn, $_POST['Custcond']);
+						$SQL_T_res 		= mysql_fix_string($conn, $_POST['Custres']);
+						$query = "SELECT $SQL_T_dataV FROM  $SQL_Tname where $SQL_T_dataS $SQL_T_cond '$SQL_T_res'"; 
+						echo $query;
+						$result = $conn->query($query);
+						if (!$result) die ("Сбой при доступе к данным". $conn->error);
+						$rows = $result->num_rows;
+									echo "<table><tr><th>Name</th><th>ISBN</th></tr>";
+									for ($j = 0; $j < $rows; ++$j) {
+										$result->data_seek($j);
+										$row= $result->fetch_array(MYSQLI_NUM);
+										echo "<tr>";
+											for ($k = 0; $k < 2; ++$k) echo "<td>$row[$k]</td>";
+										echo "</tr>";
+									}
+									echo "</table>";
+					
+						function mysql_fix_string( $conn, $string) {
+							if (get_magic_quotes_gpc()) $string = stripslashes($string);
+							return $conn->real_escape_string($string); 
+						}
+						$result->close();	
+					?>
+				</form>
