@@ -27,6 +27,7 @@ body .wrapper .content {
   background: rgba(255, 255, 255, 0.6);
   border-radius: 0.5rem;
   max-width: 100%;
+  margin-bottom: 1rem;
 }
 body .wrapper .content .header {
   box-sizing: border-box;
@@ -97,6 +98,20 @@ body .wrapper .content .inner td {
   border: 1px inset #050;
   background: #9F8;
   color: #050;
+}
+.msg-info {
+  border: 1px inset #05F;
+  background: #AEF;
+  color: #05F;
+}
+.persent-fifty {
+  width: 50%;
+}
+.persent-sixty {
+  width: 60%;
+}
+.persent-eighty {
+  width: 80%;
 }
 @media (max-width: 980px) {
   body .wrapper .content .inner form {
