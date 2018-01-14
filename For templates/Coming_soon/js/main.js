@@ -29,7 +29,7 @@ $(document).ready(function(){
         remain_bv = remain_bv - 1;
         parseTime_bv(remain_bv);
         if(remain_bv <= 0){
-            alert('Hello');
+            
         }
     }, 1000);
 });

@@ -35,6 +35,7 @@ body .wrapper .content {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  max-width: 100%;
 }
 body .wrapper .content .inner {
   z-index: 3;
@@ -47,32 +48,41 @@ body .wrapper .content .inner > * {
 }
 body .wrapper .content .inner img {
   width: 5rem;
+  margin: 0;
+}
+body .wrapper .content .inner p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.12em;
+  line-height: 1.5;
 }
 body .wrapper .content .inner .mainheader {
   font-size: 3.5em;
   font-weight: 500;
+  letter-spacing: -0.2rem;
 }
 body .wrapper .content .inner .timer {
   display: flex;
   justify-content: stretch;
+  max-width: 100%;
 }
 body .wrapper .content .inner .timer li {
   list-style-type: none;
-  border-right: 1px solid #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 body .wrapper .content .inner .timer li .timer-guts {
   display: flex;
   flex-direction: column;
-  padding-right: 1.5rem;
-  padding-left: 1.2rem;
+  padding: 0.75rem 1.5rem 0.75rem 1.2rem;
 }
 body .wrapper .content .inner .timer li .timer-guts .numbers {
   font-size: 3.5em;
   letter-spacing: 0.4rem;
 }
 body .wrapper .content .inner .timer li .timer-guts .strings {
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 300;
+  letter-spacing: 0.45rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 body .wrapper .content .inner .timer li:first-of-type .timer-guts {
   padding-left: 0;
@@ -82,9 +92,54 @@ body .wrapper .content .inner .timer li:last-of-type {
 }
 body .wrapper .content .inner .icons li {
   display: inline-block;
+  margin: 0.75rem;
+}
+body .wrapper .content .inner .icons li:first-of-type {
+  margin-left: 0;
 }
 body .wrapper .content .inner .icons li svg {
   fill: #fff;
   width: 1.5em;
   height: 1.5em;
+}
+@media (max-width: 1680px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+  body .wrapper .content .inner {
+    padding: 3.5rem 2rem;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 11pt;
+  }
+  body .wrapper .content .inner > * {
+    margin: 1.005rem 0;
+  }
+  body .wrapper .content .inner .mainheader {
+    font-size: 3em;
+  }
+  body .wrapper .content .inner .timer li .timer-guts {
+    padding: 0.75rem 0.9rem 0.75rem 0.8rem;
+  }
+  body .wrapper .content .inner .timer li .timer-guts .numbers {
+    font-size: 3.2rem;
+    letter-spacing: 0.4rem;
+  }
 }
