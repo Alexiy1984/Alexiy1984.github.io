@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18pt;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+}
+body:before {
+  background: linear-gradient(to top, #6EB1B5, #544C85);
+  content: '';
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+body .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+body .wrapper .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+body .wrapper .content .inner {
+  z-index: 3;
+  padding: 3.75rem 3rem;
+  width: 35rem;
+  max-width: 100%;
+}
+body .wrapper .content .inner > * {
+  margin: 1.25rem 0;
+}
+body .wrapper .content .inner img {
+  width: 5rem;
+}
+body .wrapper .content .inner .mainheader {
+  font-size: 3.5em;
+  font-weight: 500;
+}
+body .wrapper .content .inner .timer {
+  display: flex;
+  justify-content: stretch;
+}
+body .wrapper .content .inner .timer li {
+  list-style-type: none;
+  border-right: 1px solid #fff;
+}
+body .wrapper .content .inner .timer li .timer-guts {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  padding-left: 1.2rem;
+}
+body .wrapper .content .inner .timer li .timer-guts .numbers {
+  font-size: 3.5em;
+  letter-spacing: 0.4rem;
+}
+body .wrapper .content .inner .timer li .timer-guts .strings {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+body .wrapper .content .inner .timer li:first-of-type .timer-guts {
+  padding-left: 0;
+}
+body .wrapper .content .inner .timer li:last-of-type {
+  border: none;
+}
+body .wrapper .content .inner .icons li {
+  display: inline-block;
+}
+body .wrapper .content .inner .icons li svg {
+  fill: #fff;
+  width: 1.5em;
+  height: 1.5em;
+}

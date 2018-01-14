@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 18pt;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+body {
+	width: 100vw;
+	min-height: 100vh;
+	color: #fff;
+	&:before {
+		background: linear-gradient(to  top, #6EB1B5, #544C85);
+		content: '';
+		display: block;
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		z-index: 0;
+	}
+	.wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 100vh;
+		z-index: 1;
+		.content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+			.inner {
+				z-index: 3;
+				padding: 3.75rem 3rem;
+				width: 35rem;
+				max-width: 100%;
+				& > *  {
+					margin: 1.25rem 0;
+				}
+				img {
+					width: 5rem;
+				}
+				.mainheader {
+					font-size: 3.5em;
+					font-weight: 500;	
+				}
+				.timer {
+					display: flex;
+					justify-content: stretch;
+					li {
+						list-style-type: none;
+						border-right: 1px solid #fff;	
+						.timer-guts{
+							display: flex;
+							flex-direction: column;
+							padding-right: 1.5rem;
+							padding-left: 1.2rem;
+							.numbers {
+								font-size: 3.5em;
+								letter-spacing: 0.4rem;
+							}
+							.strings {
+								font-size: 0.8em;
+								font-weight: 300;
+							}
+						}
+						&:first-of-type {
+							.timer-guts{
+								padding-left: 0;
+							}	
+						}
+						&:last-of-type {
+							border: none;
+						}
+					}
+				}
+				.icons {
+					li {
+						display: inline-block;
+						svg {
+							fill: #fff;
+							width: 1.5em;
+							height: 1.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
