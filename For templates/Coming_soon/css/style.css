@@ -9,6 +9,7 @@ html {
   font-family: 'Source Sans Pro', sans-serif;
 }
 body {
+  min-width: 160px;
   width: 100vw;
   min-height: 100vh;
   color: #fff;
@@ -141,5 +142,57 @@ body .wrapper .content .inner .icons li svg {
   body .wrapper .content .inner .timer li .timer-guts .numbers {
     font-size: 3.2rem;
     letter-spacing: 0.4rem;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 11pt;
+  }
+  body .wrapper .content .inner {
+    padding: 2.6rem 1.5rem;
+  }
+  body .wrapper .content .inner > * {
+    margin: 1.005rem 0;
+  }
+  body .wrapper .content .inner .mainheader {
+    font-size: 3em;
+  }
+  body .wrapper .content .inner .timer li .timer-guts {
+    padding: 0.75rem 0.9rem 0.75rem 0.8rem;
+  }
+  body .wrapper .content .inner .timer li .timer-guts .numbers {
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+  }
+  body .wrapper .content .inner .timer li .timer-guts .strings {
+    width: 1em;
+    overflow: hidden;
+  }
+}
+@media (max-width: 160px) {
+  html {
+    font-size: 11pt;
+  }
+  body .wrapper .content .inner {
+    padding: 2.6rem 1.5rem;
+  }
+  body .wrapper .content .inner > * {
+    margin: 1.005rem 0;
+  }
+  body .wrapper .content .inner .mainheader {
+    font-size: 3em;
+  }
+  body .wrapper .content .inner .timer li .timer-guts {
+    padding: 0.75rem 0.9rem 0.75rem 0.8rem;
+  }
+  body .wrapper .content .inner .timer li .timer-guts .numbers {
+    width: 2em;
+    height: 2em;
+    font-size: 100%;
+    letter-spacing: 0.15rem;
+  }
+  body .wrapper .content .inner .timer li .timer-guts .strings {
+    width: 1em;
+    overflow: hidden;
   }
 }
