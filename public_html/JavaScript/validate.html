@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Validate</title>
+	<link rel="stylesheet" href="css/min-style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		function validate(form) {
+			fail = validateForename(form.forename.value);
+			fail += validateSurname(form.surname.value);
+			fail += validateUsername(form.username.value);
+			fail += validatePassword(form.password.value);
+			fail += validateAge(form.age.value);
+			fail += validateEmail(form.email.value);
+			if (fail == "") return true
+			else {
+				alert(fail); return false
+			}
+		}
+
+		function validateForename(field) {
+			return (field=="") ? "Не введено имя.\n" : "";
+		}
+		function validateSurname(field) {
+			return (field=="") ? "Не введена фамилия.\n" : "";
+		}
+		function validateUsername(field) {
+			if (field=="") return "Не введено имя пользователя.\n"
+			else if (field.length < 5) return "В имени пользователя должно быть не менее 5 символов. \n"
+			else if (/[^a-zA-Z0-9_-]/.test(field)) return "В имени пользователя разрешены только символы A-Z, цифры и символы -_.\n"
+			return "";	
+		}
+		function validatePassword(field) {
+			if (field=="") return "Не введен пароль.\n"
+			else if (field.length < 6) return "В пароле должно быть не менее 6 символов. \n"
+			if (!/[a-z]/.test(field) || !/[A-Z]/.test(field) || !/[0-9]/.test(field))
+			return "Для пароля необходимо ввести прописные, заглавные буквы и цифры\n"
+			return ""	
+		}
+		function validateAge(field) {
+			if (field=="" || isNaN(field)) return "Не введен возраст.\n"
+			else if (field < 18 || field > 110) return "Возраст должен быть между 18 и 110.\n"
+			return "" 
+		}
+		function validateEmail(field) {
+			if (field=="") return "Не введен пароль.\n"
+			else if (!((field.indexOf(".")>0) && (field.indexOf("@")>0)) || /[^a-zA-Z0-9.@_-]/.test(field))
+			return "Электронный адрес имеет неверный формат.\n"
+			return ""	
+		}
+	</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="header">
+				<h1 class="text-uppecase text-midspacing">Страница валидации</h1>
+			</div>
+			<div class="inner">
+				<form action="adduser.php" method="post" onSubmit="return validate(this)">
+					<h2 class="text-uppecase">Регистрационная форма</h2>
+					<div class="row">
+						<div class="col-1">
+							<label for="forename">Имя</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="forename" name="forename">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<label for="surname">Фамилия</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="surname" name="surname">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<label for="username">Имя пользователя</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="username" name="username">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<label for="password">Пароль</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="password" name="password">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<label for="age">Возраст</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="age" name="age">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-1">
+							<label for="email">Почта</label>
+						</div>
+						<div class="col-2">
+							<input type="text" id="email" name="email">
+						</div>
+					</div>
+					<div class="row"><input type="submit" value="Подтвердить" class="text-uppecase"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

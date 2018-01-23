@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+	<link rel="stylesheet" href="css/min-style.css">
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="header">
+				<h1>Java Script</h1>
+			</div>
+			<div class="inner">
+				<a id="mylink1" href="http://mysite.com">Нажми меня</a>
+				<a id="mylink2" href="http://mysite.ru">Нажми меня</a>
+				<a id="mylink3" href="http://mysite.su">Нажми меня</a>
+				<a id="mylink4" href="http://mysite.us">Нажми меня</a>
+				<script>
+					url1 = document.links.mylink1.href;
+					url2 = document.getElementById('mylink2').href;
+					document.write('<p>URL-адрес: '+ url1 +'</p>');
+					document.write('<p>URL-адрес: '+ url2 +'</p>');
+					numlinks = document.links.length;
+					document.write('<p>Количество ссылок: '+ numlinks +'</p>');
+
+					for (j=0; j< document.links.length; ++j)
+					document.write('<p>' + document.links[j].href + '</p>');
+					document.write('<p>' + history.length + '</p>');
+
+					string = "Шустрая быстрая лисица препрыгивает ленивую собаку";
+					with (string) {
+						document.write('<p> В строке ' + length + ' символов</p>');
+						document.write('<p> В верхнем регистре: ' + toUpperCase() + '</p>');
+					}
+
+					onerror = errorHandler;
+					document.write("Добро пожаловать!");
+
+					function errorHandler(message, url, line) {
+						out = "К сожалению обнаружена ошибка. \n\n";
+						out += "Ошибка: " + message + "\n";
+						out += "URL: " + url + "\n";
+						out += "Строка" + line + "\n\n";
+						out += "Нажмите кнопку ОК для продолжения \n\n";
+						alert(out);
+						return true;
+					}
+
+					displayItems("Собака","Кошка","Пони","Хомяк","Черепаха");
+
+					function displayItems(v1, v2, v3, v4, v5) {
+						document.write('<p>' + v1 +'</p>');
+						document.write('<p>' + v2 +'</p>');
+						document.write('<p>' + v3 +'</p>');
+						document.write('<p>' + v4 +'</p>');
+						document.write('<p>' + v5 +'</p>');
+					}
+
+					displayItemsMA("Собака","Кошка","Пони","Хомяк","Черепаха", "Крокодил");
+
+					function displayItemsMA() {
+							for (j = 0; j < displayItemsMA.arguments.length; ++j)
+								document.write('<p>' + displayItemsMA.arguments[j] + '</p>');
+					}
+
+					document.write(fixNames("the","DALLAS","CowBoys"));
+					words =fixNames2("the","DALLAS","CowBoys");
+
+					for (j=0; j< words.length; ++j)
+						document.write("<p>" + words[j] + "</p>");
+
+
+					function fixNames() {
+						var s = "";
+
+						for(i=0; i < fixNames.arguments.length; ++i) 
+							s += fixNames.arguments[i].charAt(0).toUpperCase()  + fixNames.arguments[i].substr(1).toLowerCase() + " ";
+							return s.substr(0, s.length-1);	
+						
+
+					}	
+					function fixNames2() {
+						var s = new Array();
+
+						for(i=0; i < fixNames2.arguments.length; ++i) 
+							s[i] = fixNames2.arguments[i].charAt(0).toUpperCase() + fixNames2.arguments[i].substr(1).toLowerCase();
+							return s;	
+
+
+					}	
+
+				</script>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="header">
+				<h1>Классы</h1>
+			</div>
+			<div class="inner">
+				<script>
+					detales = new User("Wolfgang","w.a.mozart","composer"); 
+
+					detales.showUser();
+
+					function User(forename, username, password) {
+						this.forename = forename;
+						this.username = username;
+						this.password = password;
+
+						User.prototype.showUser = function() {
+							document.write("<p>Имя: " + this.forename + "</p>");
+							document.write("<p>Имя пользователя: " + this.username + "</p>");
+							document.write("<p>Пароль: " + this.password + "</p>");
+						}	
+					}
+
+					User.prototype.greetings = "Hello!";
+
+					document.write(detales.greetings + " " +detales.forename);			
+
+				</script>
+			</div>			
+		</div>
+
+		<div class="content">
+			<div class="header">
+				<h1>Массивы</h1>
+			</div>
+			<div class="inner">
+				<script>
+					
+					Numbarray1 = new Array;0
+					Numbarray2 = [];
+					Numbarray3 = Array("Элемент 1", "Элемент 2", "Элемент 3");
+
+					Numbarray1.push("Элемент 1", "Элемент 2", "Элемент 3", "Элемент 4", "Элемент 5");	
+					Numbarray2.push("Элемент 1", "Элемент 2", "Элемент 3", "Элемент 4", "Элемент 5", "Элемент 6", "Элемент 7");		
+
+					document.write("<p> Количество элементов в массиве Numbarray1: "+Numbarray1.length+"</p>");
+					Numbarray1.forEach(function(item, i, Numbarray1 ) {
+						document.write("<p>["+ i +"] "+ item +" </p>");
+					});
+
+					document.write("<p> Количество элементов в массиве Numbarray2: "+Numbarray2.length+"</p>");
+					for (i = 0; i < Numbarray2.length; ++i) {
+						document.write("<p>["+ i +"] "+ Numbarray2[i] +"</p>");
+					}	
+					document.write("<p> Количество элементов в массиве Numbarray3: "+Numbarray3.length+"</p>");
+					for (i = 0; i < Numbarray3.length; ++i) {
+						document.write("<p>["+ i +"] "+ Numbarray3[i] +"</p>");
+					}
+
+					balls = {
+									"гольф": "мячи для гольфа, 6",
+									"теннис": "мячи для тенниса, 3",
+									"футбол": "футбольный мяч, 1",
+									"пинг-понг": "мячи для пинг-понга, 12"
+									};
+				 for (ball in balls) document.write("<p>"+ball+" = "+balls[ball]+"</p>");	
+
+				 fruit = ["банан ","виноград "];	
+				 veg = ["морковь ","капуста "];
+				 document.write("<p>"+fruit.concat(veg)+"</p>");	
+				 document.write("<p>"+fruit.concat(veg).join(' : ')+"</p>");	
+
+					rempop = Numbarray2.pop();
+					remspl = Numbarray2.splice(3,1);
+					document.write("<p> Количество элементов в массиве Numbarray2: "+Numbarray2.length+"</p>");
+					document.write("<p> Удаленный элемент: "+rempop+"</p>");
+					document.write("<p> Удаленный элемент: "+remspl+"</p>");
+					for (i = 0; i < Numbarray2.length; ++i) {
+						document.write("<p>["+ i +"] "+ Numbarray2[i] +"</p>");
+					}
+				 
+				 Numbarray2.reverse();
+					document.write("<p>\"Перевернутый массив\"</p>");
+				 for (i = 0; i < Numbarray2.length; ++i) {
+						document.write("<p>["+ i +"] "+ Numbarray2[i] +"</p>");
+					}	
+
+				</script>
+			</div>			
+		</div>
+
+
+	</div> 
+</body>
+</html>
