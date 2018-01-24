@@ -115,6 +115,14 @@ body .wrapper .container .inner .row .col-2 select[type="submit"] {
   font-size: 0.6em;
   font-weight: 600;
   height: 3.5rem;
+  transition: background 0.5s;
+}
+body .wrapper .container .inner .row .col-2 input[type="submit"]:active,
+body .wrapper .container .inner .row .col-2 select[type="submit"]:active,
+body .wrapper .container .inner .row .col-2 input[type="submit"]:hover,
+body .wrapper .container .inner .row .col-2 select[type="submit"]:hover {
+  background: #00C2C2;
+  cursor: pointer;
 }
 body .wrapper .container .inner .row .col-2 .select-wr {
   margin-bottom: 1.45rem;
