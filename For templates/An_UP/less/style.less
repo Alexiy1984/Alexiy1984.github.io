@@ -8,11 +8,11 @@
 html {
 	font-size: 18pt;
 	color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 body {
 	width: 100vw;
-	min-width: 360px;
+	min-width: 320px;
 	min-height: 100vh;
 	overflow-x: hidden;
 	&:before {
@@ -34,7 +34,7 @@ body {
 		z-index: 1;
 		justify-content: center;
 		align-items: center;
-		width: 100vw;
+		width: 100%;
 		min-height: 100vh;
 		max-width: 100%;
 		.container {
@@ -49,31 +49,44 @@ body {
 					max-width: 100%;
 					display: flex;
 					z-index: 4;
+					.cols {
+						padding: 0 0 0 3rem;
+					}
 					.col-1 {
-						width: calc(~"50% + 1.5rem");
+						width: calc(~"55% + 1.5rem");
 						max-width: 100%;
+						margin-left: -3rem;
 						h1 {
+							font-family: 'Raleway', sans-serif;
+							line-height: 1.25;
 							text-transform: uppercase;
 							font-weight: 900;
 							letter-spacing: 0.5rem;
 							margin-bottom: 1rem;
+							letter-spacing: 0.625rem;
 						}
 						p {
+							font-family: 'Source Sans Pro', sans-serif;
 							margin-top: 1rem;
-							font-size: 0.8rem;
-							line-height: 2;
+							font-size: 1em;
+							line-height: 1.625;
+							font-weight: 300;
 						}
 					}
 					.col-2 {
 						max-width: 100%;
-						width: 20rem;
+						width: calc(~"45% + 1.5rem");
+						form {
+							width: 20rem;
+							max-width: 100%;
+						}
 						input, select {
 							font-family: 'Source Sans Pro', sans-serif;
-							font-weight: 200;
+							font-weight: 300;
 							font-size: 1em;
 							height: 3.125rem;
 							padding: 0 1rem;
-							margin-bottom: 1rem;
+							margin-bottom: 1.45rem;
 							display: block;
 							width: 100%;
 							border: none;
@@ -85,10 +98,17 @@ body {
 							&[type="submit"] {
 								background: #009E9E;
 								color: #fff;
+								margin-bottom: 0;
+								font-family: 'Raleway';
+								text-transform: uppercase;
+								letter-spacing: 0.25rem;
+								font-size: 0.6em;
+								font-weight: 600;
+								height: 3.5rem;
 							}
 						}
 						.select-wr{
-							margin-bottom: 1rem;
+							margin-bottom: 1.45rem;
 							height: 3.125rem;
 							background: #fff;
 							width:100%;
@@ -111,6 +131,9 @@ body {
 								background-position: calc(~"100% - 1.09375rem") center;
 								padding-right: 3rem;
 							}
+							option {
+								font-weight: 300;
+							}
 						} 
 					}
 				}
@@ -119,7 +142,8 @@ body {
 				justify-content: center;
 				p {
 					margin-top: 2.5rem;
-					font-size: 0.8rem;
+					font-size: 0.875em;
+					font-weight: 300;
 					color: rgba(255,255,255,0.5);
 				}
 			}
@@ -161,15 +185,26 @@ body {
     .wrapper {
     	.container {
     		.inner {
+    			padding: 3.5rem 1.5rem;
     			.row {
     				flex-direction: column;
     				justify-content: center;
     				align-items: center;
     				max-width: 100%;
+    				.cols {
+    					padding: 0;
+    					margin: 0;
+    				}
     				.col-1 {
     					width: 100%;
     					text-align: center;
     					margin-bottom: 2.5rem;
+    				}
+    				.col-2 {
+    					width: 100%;
+    					form {
+    						margin: auto;
+    					}
     				}
     			}	
     		}
@@ -187,7 +222,7 @@ body {
 }
 @media (max-width: 480px) {
   html {
-    font-size: 10pt;
+    
   }
   body {
     
@@ -195,9 +230,18 @@ body {
 }
 @media (max-width: 360px) {
   html {
-    font-size: 10pt;
+    
   }
   body {
-    
+    .wrapper {
+    	.container {
+    		.inner {
+    			padding: 2.5rem 1.125rem;
+    			h1 {
+    				font-size: 1.5em;
+    			}
+    		}
+    	}
+    }
   }
 }
