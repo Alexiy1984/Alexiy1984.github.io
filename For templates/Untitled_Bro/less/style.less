@@ -3,7 +3,6 @@
 	padding: 0;
 	margin: 0;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -31,25 +30,43 @@ html {
 		}
 		.wrapper {
 			min-height: 100vh;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			z-index: 1;
 			max-width: 100%;
 			.container {
 				z-index: 2;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
-				align-items: center;
-				justify-content: center;
+				-webkit-box-align: center;
+				    -ms-flex-align: center;
+				        align-items: center;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
 				max-width: 100%;
 				.inner {
 				width: 60rem;	
 				z-index: 3;
 				max-width: 100%;	
 					.row {
+						display: -webkit-box;
+						display: -ms-flexbox;
 						display: flex;
-						justify-content: center;
-						align-items: center;
+						-webkit-box-pack: center;
+						    -ms-flex-pack: center;
+						        justify-content: center;
+						-webkit-box-align: center;
+						    -ms-flex-align: center;
+						        align-items: center;
 						min-height: 40rem;
 						max-width: 100%;
 						&-bh *{
@@ -68,6 +85,42 @@ html {
 							text-align: center;
 							min-height: 33rem;
 							padding: 6rem 0;
+							&-fs {
+								display: -webkit-box;
+								display: -ms-flexbox;
+								display: flex;
+								min-height: 0;
+								padding: 4rem 3rem;
+								max-width: 60rem;
+								-webkit-box-align: center;
+								    -ms-flex-align: center;
+								        align-items: center;
+								img {
+									width: 15rem;
+								}
+								div {
+										width: calc(~"40% + 1.5rem");
+										padding-left: 3rem;
+										text-align: right;
+										&:first-child {
+											margin-left: -3rem;
+										}
+										&:last-child {
+										width: calc(~"60% + 1.5rem");
+										text-align: left;
+										& > * {
+											margin-bottom: 1rem;
+										}
+										}
+								}
+								h2 {
+									font-weight: 200;
+									letter-spacing: 0.35rem;
+								}
+								.min {
+									font-size: 1em;
+								}
+							}
 							h1{
 								font-size: 3.5em;
 								letter-spacing: 0.45rem;
@@ -78,7 +131,7 @@ html {
     						line-height: 1.5;
     						font-weight: 200;
 							}
-							ul {
+							.buttons {
 								list-style: none;
 								li {
 									display: inline-block;
@@ -94,17 +147,61 @@ html {
 										line-height: 3.5rem;
 										padding: 0 1.5rem;
 										letter-spacing: 0.25rem;
+										&:active, &:hover {
+											color: #78FFDF;
+											border-color: #78FFDF;
+										}
 									}
 									.white {
 										background: #fff;
 										color: #94757E;
+										&:active, &:hover {
+											color: #94757E;
+											background: #78FFDF;
+											border-color: #78FFDF;
+										}
 									}
 								}
 							}
+							.icon-list {
+								list-style: none;
+								li {
+									display: inline-block;
+									a {
+										svg {
+											fill: #fff;
+											width: 2.5em;
+											height: 2.5em;
+											border-radius: 50%;
+											border: 1px solid #fff;
+											padding: 0.5rem;
+											&:active, &:hover {
+												fill: #78FFDF;
+												border-color: #78FFDF;
+											}
+										}
+									}
+								}
+							}	
 						}
 					}
 					#rw1 { background: #2E323B; }
-					#rw2 { background: #333842; }
+					#rw2 { 
+						background: #333842;
+						.row-inn-fs {
+							flex-direction: row-reverse;
+							div {
+								&:first-child {
+									text-align: left;
+									margin-left: 0;
+								}
+								&:last-child {
+									text-align: right;
+									margin-left: -3rem;
+								}
+							}
+						} 
+					}
 					#rw3 { background: #383E4A; }
 				}
 			}
@@ -139,7 +236,35 @@ html {
   html {
   	font-size: 11pt;
   	body {
-    
+  		.wrapper {
+  			.container {
+  				.inner {
+						.row {
+							&-fs {
+
+							}
+							.row-inn {
+								&-fs {
+									flex-direction: column !important;
+									img {
+										width: 10rem;
+									}
+									div:first-child, div:last-child {
+										width: 100%;
+										max-width: 100%;
+										padding-left:0 !important;
+										text-align: center !important;
+										margin: auto !important;
+									}
+									div:first-child {
+										margin-bottom: 2rem !important;
+									}
+								}
+							}
+						}
+  				}
+  			}
+  		}	
   	}
   }
 }
