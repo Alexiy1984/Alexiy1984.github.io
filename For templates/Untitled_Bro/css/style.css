@@ -57,6 +57,7 @@ html body .wrapper .container {
   max-width: 100%;
 }
 html body .wrapper .container .inner {
+  padding: 0 3rem;
   width: 60rem;
   z-index: 3;
   max-width: 100%;
@@ -74,8 +75,36 @@ html body .wrapper .container .inner .row {
   min-height: 40rem;
   max-width: 100%;
 }
-html body .wrapper .container .inner .row-bh * {
-  margin: 1.5rem 0;
+html body .wrapper .container .inner .row:nth-child(5) {
+  min-height: 0;
+}
+html body .wrapper .container .inner .row-bh .row-inn > * {
+  margin: 1.375rem 0;
+}
+html body .wrapper .container .inner .row-bh .row-inn > *:first-child {
+  margin-top: 0;
+}
+html body .wrapper .container .inner .row-bh .row-inn > *:last-child {
+  margin-bottom: 0;
+}
+html body .wrapper .container .inner .row-ft {
+  min-height: 0;
+  padding-top: 0;
+}
+html body .wrapper .container .inner .row-ft .row-inn {
+  border-top: 1px solid #fff;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 4rem 0 !important;
+}
+html body .wrapper .container .inner .row-ft .row-inn > *:first-child {
+  margin-bottom: 1.125rem;
+}
+html body .wrapper .container .inner .row-ft .row-inn > *:last-child {
+  margin-top: 1.125rem;
+}
+html body .wrapper .container .inner .row-ft .row-inn p {
+  font-size: 0.875em !important;
 }
 html body .wrapper .container .inner .row-fs {
   width: 100vw;
@@ -88,7 +117,7 @@ html body .wrapper .container .inner .row-fs {
 }
 html body .wrapper .container .inner .row .row-inn {
   text-align: center;
-  min-height: 33rem;
+  max-width: 33rem;
   padding: 6rem 0;
 }
 html body .wrapper .container .inner .row .row-inn-fs {
@@ -131,6 +160,15 @@ html body .wrapper .container .inner .row .row-inn h1 {
   font-size: 3.5em;
   letter-spacing: 0.45rem;
   font-weight: 200;
+  line-height: 1.125;
+  width: calc(100% + 0.45rem);
+}
+html body .wrapper .container .inner .row .row-inn h2 {
+  font-size: 2em;
+  letter-spacing: 0.3rem;
+  font-weight: 200;
+  line-height: 1.25;
+  width: calc(100% + 0.45rem);
 }
 html body .wrapper .container .inner .row .row-inn p {
   font-size: 1.25em;
@@ -139,22 +177,25 @@ html body .wrapper .container .inner .row .row-inn p {
 }
 html body .wrapper .container .inner .row .row-inn .buttons {
   list-style: none;
+  display: block;
 }
 html body .wrapper .container .inner .row .row-inn .buttons li {
   display: inline-block;
+  margin: 0.5rem;
 }
 html body .wrapper .container .inner .row .row-inn .buttons li a {
   text-transform: uppercase;
   display: block;
   text-decoration: none;
-  width: 17rem;
+  width: 16.5rem;
   height: 3.5rem;
   border: 1px solid #fff;
   border-radius: 2rem;
   color: #fff;
   line-height: 3.5rem;
   padding: 0 1.5rem;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.275rem;
+  font-size: 0.875em;
 }
 html body .wrapper .container .inner .row .row-inn .buttons li a:active,
 html body .wrapper .container .inner .row .row-inn .buttons li a:hover {
@@ -176,14 +217,15 @@ html body .wrapper .container .inner .row .row-inn .icon-list {
 }
 html body .wrapper .container .inner .row .row-inn .icon-list li {
   display: inline-block;
+  margin: 0.435rem;
 }
 html body .wrapper .container .inner .row .row-inn .icon-list li a svg {
   fill: #fff;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.25em;
+  height: 2.25em;
   border-radius: 50%;
   border: 1px solid #fff;
-  padding: 0.5rem;
+  padding: 0.45rem;
 }
 html body .wrapper .container .inner .row .row-inn .icon-list li a svg:active,
 html body .wrapper .container .inner .row .row-inn .icon-list li a svg:hover {

@@ -54,9 +54,10 @@ html {
 				        justify-content: center;
 				max-width: 100%;
 				.inner {
-				width: 60rem;	
-				z-index: 3;
-				max-width: 100%;	
+					padding: 0 3rem;	
+					width: 60rem;	
+					z-index: 3;
+					max-width: 100%;
 					.row {
 						display: -webkit-box;
 						display: -ms-flexbox;
@@ -69,8 +70,39 @@ html {
 						        align-items: center;
 						min-height: 40rem;
 						max-width: 100%;
-						&-bh *{
-							margin: 1.5rem 0; 
+						&:nth-child(5) {
+							min-height: 0;
+						}
+						&-bh .row-inn > * {
+							margin: 1.375rem 0;
+							&:first-child {
+								margin-top: 0;
+							}
+							&:last-child {
+								margin-bottom: 0;
+							} 
+						}
+						&-ft {
+							min-height: 0;
+							padding-top: 0;
+							.row-inn {
+								border-top: 1px solid #fff;
+								width: 100% !important;
+								max-width: 100% !important;
+								padding: 4rem 0 !important;
+								& > * {
+									&:first-child {
+										margin-bottom: 1.125rem;
+									}
+									&:last-child {
+										margin-top: 1.125rem;
+									}
+								}
+								p {
+									font-size: 0.875em !important;
+								} 
+							}
+
 						}
 						&-fs {
 							width: 100vw;
@@ -83,7 +115,7 @@ html {
 						}
 						.row-inn {
 							text-align: center;
-							min-height: 33rem;
+							max-width: 33rem;
 							padding: 6rem 0;
 							&-fs {
 								display: -webkit-box;
@@ -125,6 +157,15 @@ html {
 								font-size: 3.5em;
 								letter-spacing: 0.45rem;
 								font-weight: 200;
+								line-height: 1.125;
+								width: calc(~"100% + 0.45rem");
+							}
+							h2 {
+								font-size: 2em;
+								letter-spacing: 0.3rem;
+								font-weight: 200;
+								line-height: 1.25;
+								width: calc(~"100% + 0.45rem");
 							}
 							p {
 								font-size: 1.25em;
@@ -133,20 +174,23 @@ html {
 							}
 							.buttons {
 								list-style: none;
+								display: block;
 								li {
 									display: inline-block;
+									margin: 0.5rem;
 									a {
 										text-transform: uppercase;
 										display: block;
 										text-decoration: none;
-										width: 17rem;
+										width: 16.5rem;
 										height: 3.5rem;	
 										border: 1px solid #fff;
 										border-radius: 2rem;
 										color: #fff;
 										line-height: 3.5rem;
 										padding: 0 1.5rem;
-										letter-spacing: 0.25rem;
+										letter-spacing: 0.275rem;
+										font-size: 0.875em;
 										&:active, &:hover {
 											color: #78FFDF;
 											border-color: #78FFDF;
@@ -167,14 +211,15 @@ html {
 								list-style: none;
 								li {
 									display: inline-block;
+									margin: 0.435rem;
 									a {
 										svg {
 											fill: #fff;
-											width: 2.5em;
-											height: 2.5em;
+											width: 2.25em;
+											height: 2.25em;
 											border-radius: 50%;
 											border: 1px solid #fff;
-											padding: 0.5rem;
+											padding: 0.45rem;
 											&:active, &:hover {
 												fill: #78FFDF;
 												border-color: #78FFDF;
