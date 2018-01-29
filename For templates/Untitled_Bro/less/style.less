@@ -27,6 +27,11 @@ html {
 			background-position: 0 0, top;
 			background-repeat: repeat, no-repeat;
 			z-index: 0; 
+			animation: showel 3s linear;
+		}
+		@keyframes showel {
+			from {opacity: 0;}
+			to {opacity: 1;}
 		}
 		.wrapper {
 			min-height: 100vh;
@@ -59,6 +64,7 @@ html {
 					z-index: 3;
 					max-width: 100%;
 					.row {
+						animation: showel 4s linear;
 						display: -webkit-box;
 						display: -ms-flexbox;
 						display: flex;
@@ -131,24 +137,30 @@ html {
 									width: 15rem;
 								}
 								div {
-										width: calc(~"40% + 1.5rem");
-										padding-left: 3rem;
-										text-align: right;
-										&:first-child {
-											margin-left: -3rem;
-										}
-										&:last-child {
+									width: calc(~"40% + 1.5rem");
+									padding-left: 3rem;
+									text-align: right;
+									&:first-child {
+										margin-left: -3rem;
+									}
+									&:last-child {
 										width: calc(~"60% + 1.5rem");
 										text-align: left;
 										& > * {
 											margin-bottom: 1rem;
 										}
-										}
+									}
+									h2 {
+										font-size: 1.5rem;
+										font-weight: 200;
+										letter-spacing: 0.275rem;
+										line-height: 1.375;
+									}
+									p {
+										line-height: 1.625;
+									}
 								}
-								h2 {
-									font-weight: 200;
-									letter-spacing: 0.35rem;
-								}
+								
 								.min {
 									font-size: 1em;
 								}
@@ -175,20 +187,23 @@ html {
 							.buttons {
 								list-style: none;
 								display: block;
+								max-width: 100%;
 								li {
+									max-width: 100%;
 									display: inline-block;
 									margin: 0.5rem;
 									a {
 										text-transform: uppercase;
 										display: block;
 										text-decoration: none;
-										width: 16.5rem;
+										width: 16.375rem;
 										height: 3.5rem;	
 										border: 1px solid #fff;
 										border-radius: 2rem;
 										color: #fff;
 										line-height: 3.5rem;
-										padding: 0 1.5rem;
+										padding: 0 1.75rem;
+										padding-left: calc(~"1.75rem + 0.275rem"); 
 										letter-spacing: 0.275rem;
 										font-size: 0.875em;
 										&:active, &:hover {
@@ -284,7 +299,18 @@ html {
   		.wrapper {
   			.container {
   				.inner {
+  					padding: 0 2rem; 
 						.row {
+							&-bh {
+								min-height: 30rem;
+								.row-inn {
+									max-width: 100%;
+									padding: 3.5rem 0;
+									h1 {
+										font-size:3em;
+									}
+								}
+							}
 							&-fs {
 
 							}
@@ -323,14 +349,38 @@ html {
 @media (max-width: 480px) {
   html {
   	body {
-    
+    	.wrapper {
+    		.container {
+    			.inner {
+    				.row {
+    					.row-inn {
+    						.buttons {
+    							li {
+    								max-width: calc(~"100% - 1rem");
+    								a {
+    									width: 25rem;
+    									max-width: 100%;
+    								}
+    							}
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
   	}
   }
 }
 @media (max-width: 360px) {
   html {
     body {
-    
+    	.wrapper {
+    		.container {
+    			.inner {
+    				padding: 0 1.5rem;
+    			}
+    		}
+    	}
   	}
   } 
 }
