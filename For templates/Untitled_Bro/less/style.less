@@ -27,7 +27,12 @@ html {
 			background-position: 0 0, top;
 			background-repeat: repeat, no-repeat;
 			z-index: 0; 
-			animation: showel 3s linear;
+			-webkit-animation: showel 3s linear; 
+			        animation: showel 3s linear;
+		}
+		@-webkit-keyframes showel {
+			from {opacity: 0;}
+			to {opacity: 1;}
 		}
 		@keyframes showel {
 			from {opacity: 0;}
@@ -64,7 +69,8 @@ html {
 					z-index: 3;
 					max-width: 100%;
 					.row {
-						animation: showel 4s linear;
+						-webkit-animation: showel 4s linear;
+						        animation: showel 4s linear;
 						display: -webkit-box;
 						display: -ms-flexbox;
 						display: flex;
@@ -249,7 +255,10 @@ html {
 					#rw2 { 
 						background: #333842;
 						.row-inn-fs {
-							flex-direction: row-reverse;
+							-webkit-box-orient: horizontal;
+							-webkit-box-direction: reverse;
+							    -ms-flex-direction: row-reverse;
+							        flex-direction: row-reverse;
 							div {
 								&:first-child {
 									text-align: left;
@@ -316,7 +325,10 @@ html {
 							}
 							.row-inn {
 								&-fs {
-									flex-direction: column !important;
+									-webkit-box-orient: vertical !important;
+									-webkit-box-direction: normal !important;
+									    -ms-flex-direction: column !important;
+									        flex-direction: column !important;
 									img {
 										width: 10rem;
 									}
