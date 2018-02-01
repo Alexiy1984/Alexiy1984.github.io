@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Title</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/hide_show.js"></script>
 </head>
 <body>
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
@@ -26,7 +27,8 @@
 	<div class="wrapper">
 		<div class="container">
 			<div class="inner">
-				<div class="main-div">
+			<!-- Основной блок -->
+				<div class="main-div" id="main-content">
 					<div class="img-cont">
 						<img src="images/image03.png" alt="headimg">
 					</div>
@@ -38,7 +40,7 @@
 						<div class="cols col-1">
 							<h3>MAGNA ETIAM</h3>
 							<p>Ipsum dolore consequat sed amet feugiat nisl sed amet tempus dolor adipiscing nulla tempus.</p>
-							<ul class="buttons">
+							<ul class="buttons" id="butt1">
 								<li>
 									<a href="#">
 										More
@@ -53,9 +55,9 @@
 					<hr class="spacer">
 					<div class="inn-cont">
 						<div class="cols col-1">
-							<h3>MAGNA ETIAM</h3>
+							<h3>SED FEUGIAT</h3>
 							<p>Ipsum dolore consequat sed amet feugiat nisl sed amet tempus dolor adipiscing nulla tempus.</p>
-							<ul class="buttons">
+							<ul class="buttons" id="butt2">
 								<li>
 									<a href="#">
 										More
@@ -70,9 +72,9 @@
 					<hr class="spacer">
 					<div class="inn-cont">
 						<div class="cols col-1">
-							<h3>MAGNA ETIAM</h3>
+							<h3>NISL BLANDIT</h3>
 							<p>Ipsum dolore consequat sed amet feugiat nisl sed amet tempus dolor adipiscing nulla tempus.</p>
-							<ul class="buttons">
+							<ul class="buttons" id="butt3">
 								<li>
 									<a href="#">
 										More
@@ -93,6 +95,97 @@
 					</ul>	
 					<p class="footer-p">&#169; Untitled. All rights reserved.</p>
 				</div>
+				<!-- Конец основношо блока -->
+				<!-- Дополнительный блок №1 -->
+				<div class="main-div" id="addit-content1">
+					<ul class="buttons">
+						<li>
+							<a href="#">
+								Back
+							</a>
+						</li>
+					</ul>
+					<h2>MAGNA ETIAM</h2>
+					<hr class="spacer spacer-min">
+					<img src="images/image06.jpg" alt="image6" class="fullimage">
+					<div class="fulltext">
+						<p>
+							Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, lorem sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget amet interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla. Mauris porta ex sed nisl eleifend magna nisl et magna feugiat neque eget interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla sed interdum.
+						</p>
+						<p>
+							Duis mollis orci non erat convallis fringilla. Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, pellentesque sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget interdum. Nunc at tortor eget purus faucibus sagittis suscipit porta.
+						</p>
+						<hr class="spacer">
+						<ul class="icons">
+							<li><a href="#"><svg><use xlink:href="#icon-905"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-906"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-910"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-901"></use></svg></a></li>
+						</ul>	
+						<p class="footer-p">&#169; Untitled. All rights reserved.</p>
+					</div>
+				</div>
+				<!-- Конец дополнительного блока №1 -->
+				<!-- Дополнительный блок №2 -->
+				<div class="main-div" id="addit-content2">
+					<ul class="buttons">
+						<li>
+							<a href="#">
+								Back
+							</a>
+						</li>
+					</ul>
+					<h2>SED FEUGIAT</h2>
+					<hr class="spacer spacer-min">
+					<img src="images/image07.jpg" alt="image7" class="fullimage">
+					<div class="fulltext">
+						<p>
+							Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, lorem sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget amet interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla. Mauris porta ex sed nisl eleifend magna nisl et magna feugiat neque eget interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla sed interdum.
+						</p>
+						<p>
+							Duis mollis orci non erat convallis fringilla. Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, pellentesque sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget interdum. Nunc at tortor eget purus faucibus sagittis suscipit porta.
+						</p>
+						<hr class="spacer">
+						<ul class="icons">
+							<li><a href="#"><svg><use xlink:href="#icon-905"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-906"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-910"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-901"></use></svg></a></li>
+						</ul>	
+						<p class="footer-p">&#169; Untitled. All rights reserved.</p>
+					</div>
+				</div>
+				<!-- Конец дополнительного блока №2 -->
+				<!-- Дополнительный блок №3 -->
+				<div class="main-div" id="addit-content3">
+					<ul class="buttons">
+						<li>
+							<a href="#">
+								Back
+							</a>
+						</li>
+					</ul>
+					<h2>NISL BLANDIT</h2>
+					<hr class="spacer spacer-min">
+					<img src="images/image04.jpg" alt="image4" class="fullimage">
+					<div class="fulltext">
+						<p>
+							Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, lorem sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget amet interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla. Mauris porta ex sed nisl eleifend magna nisl et magna feugiat neque eget interdum. Nunc at tortor eget purus faucibus tempor. Donec sagittis suscipit porta. Duis mollis orci non erat convallis fringilla sed interdum.
+						</p>
+						<p>
+							Duis mollis orci non erat convallis fringilla. Mauris porta ex id nisl eleifend blandit a eu ex. Praesent nunc massa, pellentesque sed finibus ac, vehicula eget diam. Sed faucibus feugiat neque eget interdum. Nunc at tortor eget purus faucibus sagittis suscipit porta.
+						</p>
+						<hr class="spacer">
+						<ul class="icons">
+							<li><a href="#"><svg><use xlink:href="#icon-905"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-906"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-910"></use></svg></a></li>
+							<li><a href="#"><svg><use xlink:href="#icon-901"></use></svg></a></li>
+						</ul>	
+						<p class="footer-p">&#169; Untitled. All rights reserved.</p>
+					</div>
+				</div>
+				<!-- Конец дополнительного блока №3 -->
 			</div>
 		</div>
 	</div>
