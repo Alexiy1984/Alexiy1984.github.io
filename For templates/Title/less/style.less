@@ -3,7 +3,8 @@
 * {
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 html {
@@ -21,18 +22,25 @@ html {
 			left: 0;
 			width: 100vw;
 			height: 100vh;
-			background: linear-gradient(45deg, rgba(191,117,135,0.639) 0%, rgba(214,255,255,0.631) 100%), url('../images/bg (1).jpg');
+			background: linear-gradient(45deg, rgba(191,117,135,0.639) 0%, rgba(214,255,255,0.631) 100%), url('../images/bg(1).jpg');
 			background-size: cover, cover;
 			background-position: 0 0, center;
 			background-repeat: repeat, no-repeat;
-		}
+			transition: background-image 3s; 
+		} 
 		.wrapper {
 			z-index: 1;
 			min-height:100vh;
 			max-width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			-webkit-box-pack: center;
+			    -ms-flex-pack: center;
+			        justify-content: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			padding: 3.5rem; 
 			.container {
 				max-width: 100%;
@@ -40,7 +48,8 @@ html {
 				text-align: center;
 				z-index: 2;
 				background: rgba(45,40,55,0.8);
-				box-shadow: 0rem 3rem 3rem 0rem rgba(45,40,55,0.451); 
+				-webkit-box-shadow: 0rem 3rem 3rem 0rem rgba(45,40,55,0.451);
+				        box-shadow: 0rem 3rem 3rem 0rem rgba(45,40,55,0.451); 
 				.inner {
 					padding: 3.75rem 3rem;
 					width: 38rem;
@@ -51,37 +60,47 @@ html {
 					#addit-content1,
 					#addit-content2,
 					#addit-content3 {
+						opacity: 0;
 						display: none;
 						text-align: left;
 						.buttons {
+							display: block;
+							li {
+								display: inline-block;
+								a {
 									display: block;
-									li {
-										display: inline-block;
-										a {
-											display: block;
-											width: 7rem;
-											height: 2.5rem;
-											line-height: 2.5rem;
-											border: 1px solid #fff;
-											color: #fff;
-											text-decoration: none;
-											padding: 0 1.25rem;
-											padding-left: calc(~"1.25rem + 0.3rem");
-											text-transform: uppercase;
-											font-family: 'Montserrat', sans-serif;
-											font-size: 0.625em;
-											border-radius: 2rem;
-											letter-spacing: 0.3rem;
-											text-align: center;
-											&:hover, &:active {
-												color: #FFCCB0;
-    										border-color: #FFCCB0;
-											}
-										}
+									width: auto;
+									height: 2rem;
+									line-height: 2rem;
+									border: 1px solid #fff;
+									color: #fff;
+									text-decoration: none;
+									padding: 0 1rem;
+									padding-left: calc(~"1rem + 0.3rem");
+									text-transform: uppercase;
+									font-family: 'Montserrat', sans-serif;
+									font-size: 0.5em;
+									border-radius: 2rem;
+									letter-spacing: 0.3rem;
+									text-align: center;
+									font-weight: 300;
+									&:hover, &:active {
+										color: #FFCCB0;
+    								border-color: #FFCCB0;
 									}
 								}
+							}
+						}
+						h2 {
+							font-size: 1.25em;
+							line-height: 1.375;
+							letter-spacing: 0.375rem;
+							width: calc(~"100% + 0.375rem");
+						}
+						.spacer-min {
+							margin: 1.5rem 0;
+						}
 					}
-
 					.main-div {
 						h1,h2,h3,h4,h5 {
 							font-family: 'Montserrat', sans-serif;
@@ -92,12 +111,19 @@ html {
 							width: 100%;
 							max-width: 100%;
 							border-radius: 0.375rem;
+							display: block;
 						}
 						.fulltext {
 							text-align: left;
+							p {
+								margin-bottom: 1rem;
+							}
 						}
 						& > div:nth-of-type(3) {
-							flex-direction: row-reverse;
+							-webkit-box-orient: horizontal;
+							-webkit-box-direction: reverse;
+							    -ms-flex-direction: row-reverse;
+							        flex-direction: row-reverse;
 							.col-1 {
 								margin-left: 0;
 							}
@@ -164,8 +190,12 @@ html {
 							}
 						}	
 						.inn-cont {
+							display: -webkit-box;
+							display: -ms-flexbox;
 							display: flex;
-							align-items: center;
+							-webkit-box-align: center;
+							    -ms-flex-align: center;
+							        align-items: center;
 							.cols {
 								width: calc(~"50% + 1.25rem");
 								text-align: left;
@@ -227,6 +257,7 @@ html {
 					.icons {
 						list-style: none;
 						margin-bottom: 1rem;
+						margin-top: 1.5rem;
 						& + p {
 							margin-top: 1rem;
 						}
@@ -248,7 +279,34 @@ html {
 								}
 							}
 						}
-					}	
+					}
+					.spacer {
+							height: 3.5rem;
+							line-height:3.5rem;
+							border: none;
+							padding:0;
+							&:before {
+								content:'';
+								display: inline-block;
+								vertical-align: middle;
+								background: rgba(255,255,255,0.2);
+								height: 1px;
+								width: 100%;
+							}
+							&-min {
+								height: 0.5rem;
+								line-height:0.5rem;
+								margin: 1rem 0;
+								& + p {
+									margin:1rem 0;
+								}
+								&:before {
+									width:10%;
+									background: #fff;
+									height: 2px;
+								}
+							}
+						}	
 					.footer-p {
 						color: rgba(255,255,255,0.35);
     				font-size: 0.75em;
@@ -259,8 +317,8 @@ html {
 	}
 }
 
-//--------------------------------------------META-----------------------------------------------
-//-----------------------------------------------------------------------------------------------
+/*--------------------------------------------META-----------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------*/
 
 @media (max-width: 1680px) {
   html {
@@ -297,7 +355,10 @@ html {
     				padding: 3.125rem 1.875rem;
     				.main-div {
     					.inn-cont {
-    						flex-direction: column-reverse !important;
+    						-webkit-box-orient: vertical !important;
+    						-webkit-box-direction: reverse !important;
+    						    -ms-flex-direction: column-reverse !important;
+    						        flex-direction: column-reverse !important;
     						.cols {
     							width: 100% !important;
     							max-width: 100% !important;
