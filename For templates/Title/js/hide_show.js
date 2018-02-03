@@ -1,48 +1,20 @@
 window.onload = function () {
 
-	let sheet = (function() {
-	let style = document.createElement("style");
-	style.appendChild(document.createTextNode(""));
-	document.head.appendChild(style);
-	return style.sheet;
-	})();
+	let body = document.getElementById('bodyblock');
+	let backgrimg =document.createElement('div');
+	backgrimg.style.cssText = "z-index: 0; position: fixed; top:0;left: 0; width: 100vw; height: 100vh;"+ 
+														"background: linear-gradient(45deg, rgb(191,117,135) 0%, rgb(214,255,255) 100%), url(); opacity: 1;" +
+														"background-size: cover, cover; background-position: 0 0, center; background-repeat: repeat, no-repeat; transition: background-image 3s;";
 
-	let firstRule = "body:before {" +
-																"z-index: 1;" + 
-																"content: '';" +
-																"position: fixed;" +
-																"top:0;" +
-																"left: 0;" +
-																"width: 100vw;" +
-																"height: 100vh;" +
-																"background: linear-gradient(45deg, rgba(191,117,135,0.639) 0%, rgba(214,255,255,0.631) 100%), url();" +
-																"background-size: cover, cover;" +
-																"background-position: 0 0, center;" +
-																"background-repeat: repeat, no-repeat;" +
-																"transition: background-image 3s;}"; 
-	let secondRule = "body:before {" +
-																"z-index: 1;" + 
-																"content: '';" +
-																"position: fixed;" +
-																"top:0;" +
-																"left: 0;" +
-																"width: 100vw;" +
-																"height: 100vh;" +
-																"background: linear-gradient(45deg, rgba(191,117,135,0.639) 0%, rgba(214,255,255,0.631) 100%), url('./images/bg(1).jpg');" +
-																"background-size: cover, cover;" +
-																"background-position: 0 0, center;" +
-																"background-repeat: repeat, no-repeat;" +
-																"transition: background-image 3s;}"; 
+	document.body.insertBefore(backgrimg, document.body.firstChild);
+	let content = document.getElementById('container');
+	content.style.opacity = 0;
+	content.style.position = 'relative';
+	content.style.top = '+1.5em';
 
-	sheet.insertRule(firstRule, 0);
-
-	setTimeout(addimg, 3000);
-
-	function addimg() {
-		sheet.insertRule(secondRule, 1);
-	}
-
-	console.log(document.styleSheets[1]);
+	opacity(backgrimg, 10, 'minus' );
+	opacity(content, 5, 'plus' );
+	toTop(content, 1);
 
 	let buttarr = document.getElementsByClassName('buttons');
 	
@@ -61,7 +33,8 @@ window.onload = function () {
 		   return false;		
 			}
 	});
-	 
+
+
 	/*butt.onclick = function() {
    	HideShow('main-content', 'addit-content1');
     return false;
@@ -76,21 +49,37 @@ window.onload = function () {
 				HideblockN.style.opacity = 0;
 			}
 			blockToShow.style.display = 'block';
-			opacity(blockToShow, 10);
+			opacity(blockToShow, 10, 'plus');
 		} else {
 			let blockToHide = document.getElementById(elemId);
 			blockToHide.style.display = 'none'; 
 			blockToHide.style.opacity = 0; 
 			blockToShow.style.display = 'block';	
-			opacity(blockToShow, 10);
+			opacity(blockToShow, 10, 'plus');
 		}
 	}
 
-	function opacity(element, speed){
-    let interv = setInterval(function(){    
-    	if (element.style.opacity > 1) clearInterval(interv);
-       element.style.opacity = +element.style.opacity + 0.01;
-    }, speed)
+	function opacity(element, speed, vart){
+		if (vart == 'plus') {
+    	let interv = setInterval(function(){    
+    		if (element.style.opacity > 1) clearInterval(interv);
+       	element.style.opacity = +element.style.opacity + 0.01;
+    	}, speed)	
+		} else if (vart == 'minus') {
+			let interv = setInterval(function(){    
+    		if (element.style.opacity <= 0) clearInterval(interv);
+       	element.style.opacity = +element.style.opacity - 0.01;
+    	}, speed)	
+		}
+	}
+
+	function toTop(element, speed) {
+		let TOP = element.style.top.substr(0,1);
+		let toTopInt = setInterval(function(){
+			if (TOP <= 0) clearInterval(toTopInt)
+			TOP -=	0.025;
+			element.style.top = TOP + 'em';
+		} , speed)
 	}
 
 }
