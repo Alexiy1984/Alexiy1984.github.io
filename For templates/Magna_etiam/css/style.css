@@ -76,21 +76,27 @@ html body .wrapper .container .inner .img-cont img {
   vertical-align: top;
   width: 6rem;
   max-width: 100%;
+  transition: opacity 1s ease-in-out 1s;
+  animation: showel 0.3s linear;
 }
 html body .wrapper .container .inner h1 {
   font-size: 2.5em;
   font-weight: 900;
   line-height: 1.25;
+  animation: showel 0.5s linear;
 }
 html body .wrapper .container .inner p {
   font-weight: 100;
   line-height: 1.75;
+  animation: showel 0.7s linear;
 }
 html body .wrapper .container .inner ul {
   list-style: none;
   font-size: 1.25em;
   width: calc(100% + 1rem);
   margin-left: -0.5rem;
+  letter-spacing: 0;
+  animation: showel 0.9s linear;
 }
 html body .wrapper .container .inner ul li {
   display: inline-block;
@@ -145,5 +151,14 @@ html body .wrapper .container .inner ul li a svg {
   }
   html body .wrapper .container .inner h1 {
     font-size: 2em;
+  }
+}
+@keyframes showel {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
