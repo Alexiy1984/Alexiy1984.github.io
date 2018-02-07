@@ -73,20 +73,24 @@ html {
     					vertical-align: top;
 							width: 6rem;
 							max-width: 100%;
+							-webkit-transition: opacity 1s ease-in-out 1s;
 							transition: opacity 1s ease-in-out 1s;
-				 			animation: showel 0.3s linear;
+				 			-webkit-animation: showel 0.3s linear;
+				 			        animation: showel 0.3s linear;
 						}	
 				 	}
 				 	h1 {
 						font-size: 2.5em;
 						font-weight: 900;
 						line-height: 1.25;
-						animation: showel 0.5s linear;
+						-webkit-animation: showel 0.5s linear;
+						        animation: showel 0.5s linear;
 				 	}
 				 	p {
 							font-weight: 100;
 							line-height: 1.75;
-							animation: showel 0.7s linear;
+							-webkit-animation: showel 0.7s linear;
+							        animation: showel 0.7s linear;
 				 	}
 				 	ul {
 				 		list-style: none;
@@ -94,7 +98,8 @@ html {
 				 		width: calc(~"100% + 1rem");
 				 		margin-left: -0.5rem;
 				 		letter-spacing: 0;
-				 		animation: showel 0.9s linear;
+				 		-webkit-animation: showel 0.9s linear;
+				 		        animation: showel 0.9s linear;
 				 		li {
 				 			display: inline-block;
 				 			margin: 0.5rem;
@@ -189,6 +194,10 @@ html {
      }
   	}
   }
+}
+@-webkit-keyframes showel {
+	0%,50% {opacity: 0;}
+	100% {opacity: 1;}
 }
 @keyframes showel {
 	0%,50% {opacity: 0;}
