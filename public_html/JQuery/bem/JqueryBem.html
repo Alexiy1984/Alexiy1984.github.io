@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQuery+Bem</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body class="body-bem">
+	<div class="wrapper wrapper_flex-start">
+		<div class="wrapper__container">
+			<div class="inner">
+				<div class="inner__header">
+					<h1 class="inner__mainheading inner__mainheading_size-small color-normal">
+						JQuery и методология Bem
+					</h1>
+				</div>
+				<div class="inner__mainblock">
+					<form class="cool-form bg-white">
+						<div class="cool-form__row">
+							<label for="fname">Имя</label>
+							<input type="text" id="fname">
+						</div>
+						<div class="cool-form__row">
+							<label for="lname">Фамилия</label>
+							<input type="text" id="lname">
+						</div>
+						<div class="cool-form__row">
+							<input type="submit" class="button color-white">
+						</div>
+					</form>
+					<div class="listdiv">
+						<ul  class="listdiv__ul">
+							<li>Первый пункт</li>
+							<li>Второй пункт</li>
+							<li>Третий пункт</li>
+							<li>Четвертый пункт</li>
+							<li>Пятый пункт</li>
+						</ul>
+					</div>
+					<div class="listdiv">
+						<ul  class="listdiv__ul list-style">
+							<li>Первый пункт</li>
+							<li>Второй пункт</li>
+							<li>Третий пункт</li>
+							<li>Четвертый пункт</li>
+							<li>Пятый пункт</li>
+						</ul>
+					</div>
+				</div>
+				<div class="inner__footer">
+					<p class="color-white">2018</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
