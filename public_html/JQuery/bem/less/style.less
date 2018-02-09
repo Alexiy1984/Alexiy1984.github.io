@@ -170,6 +170,18 @@ html {
 		margin: 0;
 	}
 }
+.board {
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 15rem;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+	&__cell {
+		width: 5rem;
+		height: 5rem;
+		cursor: pointer;
+	}
+}
 .bg {
 	&-inverted {
 		background: @color-inverted;
@@ -183,7 +195,7 @@ html {
 	&-white {
 		background: #fff;
 	}
-	&-back {
+	&-black {
 		background: #000;
 	}
 }
@@ -241,6 +253,13 @@ html {
 	}
 	.wrapper {
 		padding: 1rem 0.75rem;
+	}
+	.inner {
+		padding: 0 0.5rem;
+		&__header, &__footer {
+				width: calc(~"100% + 1rem");
+				margin-left: -0.5rem;
+		}
 	}
 }
 @media (max-width: 360px) {
