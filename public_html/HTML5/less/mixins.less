@@ -1,0 +1,32 @@
+.body-before (@urlimg: '') {
+	content: '';
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background: #fff url(@urlimg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+}
+.flex-main(@alignItems: center, @justifyContent: center){
+	min-width: 100%;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: @justifyContent;
+	-ms-flex-pack: @justifyContent;
+	justify-content: @justifyContent;
+	-webkit-box-align: @alignItems;
+	-ms-flex-align: @alignItems;
+	align-items: @alignItems;
+	z-index: 5;
+}
+.flex-cont() {
+		max-width: 100%;
+		z-index: 10;
+}
