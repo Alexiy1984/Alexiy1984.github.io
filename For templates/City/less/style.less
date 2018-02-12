@@ -2,7 +2,8 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 html {
 	font-size: 18pt;
@@ -23,20 +24,35 @@ html {
 			background-position: bottom;
 			background-size: cover;
 			z-index: 0;
+			animation: bgopasity 3.5s ease-in-out;
 		}
 		.wrapper {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-pack: start;
+			-ms-flex-pack: start;
 			justify-content: flex-start;
+			-webkit-box-align: stretch;
+			-ms-flex-align: stretch;
 			align-items: stretch;
 			z-index: 2;
 			min-height: 100vh;
 			.container {
+				animation: bgopasity 1.5s ease-in-out, toright 2s ease-in-out;
 				background-color: rgba(0,134,209,0.91);
 				z-index: 3;
+				display: -webkit-box;
+				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
 				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
 				align-items: center;
 				max-width: 100%;
+				position: relative;
 				.inner {
 					padding: 5.5rem 4.5rem;
 					width: 40rem;
@@ -66,9 +82,14 @@ html {
 					}
 					.clock {
 						ul {
+							display: -webkit-box;
+							display: -ms-flexbox;
 							display: flex;
 							width: 30rem;
+							-webkit-box-pack: justify;
+							-ms-flex-pack: justify;
 							justify-content: space-between;
+							letter-spacing: normal;
 							li {
 								margin: 0;
 								&:first-of-type {
@@ -82,9 +103,12 @@ html {
 							}
 							.countdown {
 							font-size: 3em;
-							padding: 1rem 1.5rem;
+							height: 6rem;
+							width: 6rem;
+							line-height: 6rem;
 							border: 1px solid rgba(255,255,255,0.3);
 							border-radius: 0.5rem;
+							text-align: center;
 							}
 							p {
 								font-weight:100;
@@ -95,14 +119,22 @@ html {
 					}
 					ul {
 						list-style: none;
+						letter-spacing: -0.36em;
+						max-width: 100%;
 						li {
 							margin: 0.0625rem;
 							display: inline-block;
 							a {
+								display: -webkit-box;
+								display: -ms-flexbox;
 								display: flex;
 								width: 2em;
 								height: 2em;
+								-webkit-box-pack: center;
+								-ms-flex-pack: center;
 								justify-content: center;
+								-webkit-box-align: center;
+								-ms-flex-align: center;
 								align-items: center;
 								border-radius: 50%;
 								border: 1px solid transparent;
@@ -127,6 +159,15 @@ html {
 		}
 	}
 }
+@keyframes bgopasity {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes toright{
+	from {transform: translateX(-3em);}
+	to {transform: translateX(0);}
+}
 @media (max-width: 1680px) {
 	html {
 		font-size: 13pt;
@@ -147,18 +188,26 @@ html {
 	html {
 		font-size: 11pt;
 		body {
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: column;
 			flex-direction: column;
 			&:before {
 				position: relative;
 				width: 100%;
 				height: 45vh;
+				-webkit-box-flex: 1;
+				-ms-flex-positive: 1;
 				flex-grow: 1;
 			}
 			.wrapper {
 				height: auto !important;
 				min-height: 0;
 				.container {
+					background-color: rgba(0,134,209,1);
 					width: 100%;
 					.inner {
 						text-align: center;
@@ -167,8 +216,9 @@ html {
 						.clock {
 							ul {
 								margin: auto;
+								-ms-flex-pack: distribute;
 								justify-content: space-around;
-							}	
+							}
 						}
 					}
 				}
@@ -195,7 +245,22 @@ html {
 	html {
 		font-size: 11pt;
 		body {
-
+			.wrapper {
+				.container {
+					.inner {
+						.clock {
+							.numbers {
+								.countdown {
+									line-height: 5rem;
+									font-size: 2.5em;
+									height: 5rem;
+									width: 5rem;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -203,7 +268,26 @@ html {
 	html {
 		font-size: 11pt;
 		body {
-
+			.wrapper {
+				.container {
+					.inner {
+						padding: 2.625rem 1.5rem;
+						h1 {
+							font-size: 2em;
+						}
+						.clock {
+							.numbers {
+								.countdown {
+									line-height: 4rem;
+									font-size: 2em;
+									height: 4rem;
+									width: 4rem;
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
