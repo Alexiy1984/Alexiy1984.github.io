@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/video.css">
+  <title>HTML5 видео и аудио</title>
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/OSCFunct.js"></script>
+  <script src="js/audioVideoPlay.js"></script>
+</head>
+<body class="body-flex">
+  <div class="wrapper">
+    <div class="wrapper__container">
+      <div class="header">
+        <h1>HTML5 видео и аудио</h1>
+      </div>
+      <div class="inner">
+        <h3>Аудио</h3>
+        <audio controls>
+          <source src="audio/audio.m4a" type="audio/acc">
+          <source src="audio/audio.mp3" type="audio/mp3">
+          <source src="audio/audio.ogg" type="audio/ogg">
+        </audio>
+        <h3>Воспроизведение аудио через JS</h3>
+        <audio id="myaudio">
+          <source src="audio/audio.m4a" type="audio/acc">
+          <source src="audio/audio.mp3" type="audio/mp3">
+          <source src="audio/audio.ogg" type="audio/ogg">
+        </audio>
+        <div>
+          <button class="button button_rounded button_text-bold button_text-uppercase" id="js_playaudio">Play audio</button>
+          <button class="button button_rounded button_text-bold button_text-uppercase" id="js_pauseaudio">Pause audio</button>
+        </div>
+        <div class="video-div">
+          <video id="myvideo" class="video-div__screen">
+            <source src="video/movie.mp4" type="video/mp4">
+            <source src="video/movie.webm" type="video/webm">
+            <source src="video/movie.ogv" type="video/ogg">
+          </video>
+          <div class="video-div__panel">
+            <button class="video-div__btn-round" id="js_playvideo">Play</a>
+            <button class="video-div__btn-round" id="js_pausevideo">Pause</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

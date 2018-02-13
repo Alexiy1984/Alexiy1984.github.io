@@ -45,6 +45,11 @@ html {
  	min-height: 65vh;
  	padding: 1rem 1.5rem;
  	text-align: center;
+	& > * {
+		margin: 1rem 0;
+		&:first-child { margin-top: 0;}
+		&:last-child {margin-bottom: 0;}
+	}
 }
 .canvas-wrap {
 	max-width: 100%;

@@ -1,0 +1,33 @@
+.button {
+  font-size: 1em;
+  line-height: 2.5rem;
+  text-align: center;
+  width: 10rem;
+  height: 2.5rem;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: #ff4433;
+  color: #eeeeee;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #ff2d19;
+  color: #c8c8c8;
+  border: 1px solid #c8c8c8;
+}
+.button_rounded {
+  border-radius: 0.53rem;
+}
+.button_block {
+  display: block;
+  width: 100%;
+}
+.button_text-uppercase {
+  text-transform: uppercase;
+}
+.button_text-lowercase {
+  text-transform: lowercase;
+}
+.button_text-bold {
+  font-weight: 700;
+}

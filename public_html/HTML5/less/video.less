@@ -1,0 +1,51 @@
+@import "variables.less";
+@import "mixins.less";
+.video-div {
+  border: 2px solid rgba(0,0,0,0.225);
+  box-shadow: 1px 1px 10px 5px rgba(0,0,0,0.25);
+  background-color: rgba(35,24,20,0.825);
+  width: 35rem;
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 0.32rem;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  & > * {
+    &:first-child {
+      margin-right: 1rem;
+    }
+  }
+  &__screen {
+    width: 75%;
+  }
+  &__panel {
+    width: 25%;
+    border: 1px solid rgba(0,0,0,0.225);
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.125) inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__btn-round {
+    cursor: pointer;
+    outline: none;
+    display: block;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: @header-bg-color;
+    color: @content-block-color;
+    margin: 1rem 0;
+    border: 1px solid transparent;
+    &:hover {
+      background-color: darken(@header-bg-color, 5%);
+      color: darken(@content-block-color, 15%);
+      border: 1px solid darken(@content-block-color, 15%);
+    }
+  }
+}
