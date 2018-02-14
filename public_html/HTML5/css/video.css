@@ -1,5 +1,6 @@
 .video-div {
   border: 2px solid rgba(0, 0, 0, 0.225);
+  -webkit-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.25);
   background-color: rgba(35, 24, 20, 0.825);
   width: 35rem;
@@ -7,7 +8,11 @@
   padding: 1rem;
   border-radius: 0.32rem;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
   align-items: stretch;
 }
 .video-div > *:first-child {
@@ -20,10 +25,20 @@
   width: 25%;
   border: 1px solid rgba(0, 0, 0, 0.225);
   border-radius: 0.25rem;
+  -webkit-box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.125) inset;
   box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.125) inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .video-div__btn-round {
@@ -37,8 +52,8 @@
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3rem;
-  background-color: #ff4433;
-  color: #eeeeee;
+  background-color: #F43;
+  color: #EEE;
   margin: 1rem 0;
   border: 1px solid transparent;
 }

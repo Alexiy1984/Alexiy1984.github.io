@@ -6,8 +6,8 @@
   height: 2.5rem;
   outline: none;
   border: 1px solid transparent;
-  background-color: #ff4433;
-  color: #eeeeee;
+  background-color: #F43;
+  color: #EEE;
   cursor: pointer;
 }
 .button:hover {
@@ -23,6 +23,7 @@
   width: 100%;
 }
 .button_trn {
+  -webkit-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 .button_text-uppercase {

@@ -15,6 +15,5 @@
  		for (let i = 0; i < elements.length; ++i)
  			if (elements[i].className == name) objects.push(elements[i])
 
- 		return objects	
-	} 
-
+ 		return objects
+	}
