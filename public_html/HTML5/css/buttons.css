@@ -6,8 +6,8 @@
   height: 2.5rem;
   outline: none;
   border: 1px solid transparent;
-  background-color: #F43;
-  color: #EEE;
+  background-color: #ff4433;
+  color: #eeeeee;
   cursor: pointer;
 }
 .button:hover {

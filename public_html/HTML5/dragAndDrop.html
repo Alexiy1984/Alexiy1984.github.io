@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/drNdrp.css">
+  <title>Drag and Drop</title>
+  <script src="js/OSCFunct.js"></script>
+  <!-- <script src="js/drAdr.js"></script> -->
+</head>
+<body class="body-flex">
+  <div class="wrapper">
+    <div class="wrapper__container">
+      <div class="header">
+        <h1>Перетаскивание</h1>
+      </div>
+      <div class="inner">
+        <div class='dest' ondrop='drop(event)' ondragover='allow(event)'>
+        </div>
+
+        <div class='dest' ondrop='drop(event)' ondragover='allow(event)'>
+          <img src="images/image1.png" alt="img1" id="source1" draggable='true' ondragstart='drag(event)'>
+          <img src="images/image2.png" alt="img2" id="source2" draggable='true' ondragstart='drag(event)'>
+          <img src="images/image3.png" alt="img3" id="source3" draggable='true' ondragstart='drag(event)'>
+        </div>
+        <script>
+          function allow(event) {
+            event.preventDefault()
+          }
+
+          function drag(event) {
+            event.dataTransfer.setData('image/png', event.target.id);
+          }
+
+          function drop(event) {
+            event.preventDefault();
+            let data = event.dataTransfer.getData('image/png');
+            event.target.appendChild(O(data));
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

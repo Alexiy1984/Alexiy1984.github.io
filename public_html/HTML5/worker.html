@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <title>Worker</title>
+  <script src="js/OSCFunct.js"></script>
+  <script src="js/worker.js"></script>
+</head>
+<body class="body-flex">
+  <div class="wrapper">
+    <div class="wrapper__container">
+      <div class="header">
+        <h1>Рабочие веб-процессы</h1>
+      </div>
+      <div class="inner">
+        <p id="result"></p>
+        <script>
+          if (!!window.Worker) {
+            let worker = new Worker('js/worker.js');
+            worker.onmessage = function (event) {
+              O('result').innerHTML = event.data;
+            }
+          } else alert('Рабочие процессы не поддерживаются');
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
