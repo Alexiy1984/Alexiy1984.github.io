@@ -1,0 +1,142 @@
+@import "variables.less";
+@import "vndrPfx.less";
+@import "mixins.less";
+
+* {
+	margin: 0;
+	padding: 0;
+	.box-sizing(border-box);
+}
+
+html {
+	font-size: 18pt;
+	font-family: @main-font-family;
+}
+
+.body-flex {
+	min-width: 320px;
+	min-height: 100vh;
+	overflow-x: hidden;
+	&:before {
+		.body-before('../images/bg.jpg');
+	}
+}
+
+.wrapper {
+	.flex-main(center);
+	&__container {
+		.flex-cont;
+		background-color: @container-color;
+		color: @mainfont_color;
+		text-align: center;
+		.box-shadow(0rem, 1.75rem, 3.125rem, 1.25rem, rgba(0,0,0,0.51));
+		.border-radius(0.25rem);
+	}
+}
+
+.inner {
+  width: 29rem;
+  max-width: 100%;
+	padding: 3.75rem 3rem;
+	.inner-elements(1.5rem);
+}
+
+.img-cont {
+  max-width: 100%;
+  display: block;
+	position: relative;
+  overflow: hidden;
+  &__img {
+    display: inline-block;
+  	width: @img-width;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
+
+.separator {
+	width: 100%;
+  position: relative;
+  padding: 0;
+  border: 0;
+  height: 2.5rem;
+  line-height: 2.5rem;
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		vertical-align: middle;
+		height: 1px;
+		background-color: #C8CCCF;
+	}
+}
+
+h1 {
+	color: @heading_color;
+	font-size: 2.5rem;
+}
+
+.form-inner {
+	width: 18rem;
+	margin: auto;
+	.inner-elements(1rem);
+	&__field {
+		& input {
+			height: 3rem;
+			line-height: 3rem;
+			width: 100%;
+			font-size: 1rem;
+			outline: none;
+			border-radius: 0.25rem;
+			&[type="text"] {
+				padding: 0 1.05rem;
+				border: 1px solid @mainfont_color;
+			}
+			&[type="button"] {
+				background-color: @blue-color;
+				color: #fff;
+				border: 1px solid @blue-color;
+				cursor: pointer;
+				&:hover {
+					background-color: #288CD4;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 480px) {
+  html {
+
+  }
+}
+@media (max-width: 360px) {
+  html {
+
+  }
+}
