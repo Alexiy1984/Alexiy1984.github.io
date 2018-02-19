@@ -3,106 +3,139 @@
 @import "mixins.less";
 
 * {
-	margin: 0;
-	padding: 0;
-	.box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+  .box-sizing(border-box);
 }
 
 html {
-	font-size: 18pt;
-	font-family: @main-font-family;
+  font-size: 18pt;
+  font-family: @main-font-family;
 }
 
 .body-flex {
-	min-width: 320px;
-	min-height: 100vh;
-	overflow-x: hidden;
-	&:before {
-		.body-before('../images/bg.jpg');
-	}
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  &:before {
+    .body-before('../images/bg.jpg');
+    animation: bgopasity 3.5s ease-in-out;
+  }
 }
 
 .wrapper {
-	.flex-main(center);
-	&__container {
-		.flex-cont;
-		background-color: @container-color;
-		color: @mainfont_color;
-		text-align: center;
-		.box-shadow(0rem, 1.75rem, 3.125rem, 1.25rem, rgba(0,0,0,0.51));
-		.border-radius(0.25rem);
-	}
+  .flex-main(center);
+  background-color: #000;
+  padding: 1.875rem;
+  &__container {
+    animation: bgopasity 1.5s ease-in-out, totop 1.5s ease-in-out;
+    .flex-cont;
+    background-color: @container-color;
+    color: @mainfont_color;
+    text-align: center;
+    .box-shadow(0rem, 1.75rem, 3.125rem, 1.25rem, rgba(0,0,0,0.51));
+    .border-radius(0.25rem);
+  }
 }
 
 .inner {
   width: 29rem;
   max-width: 100%;
-	padding: 3.75rem 3rem;
-	.inner-elements(1.5rem);
+  padding: 3.75rem 3rem;
+  .inner-elements(1.5rem);
 }
 
 .img-cont {
   max-width: 100%;
   display: block;
-	position: relative;
+  position: relative;
   overflow: hidden;
   &__img {
     display: inline-block;
-  	width: @img-width;
+    width: @img-width;
     max-width: 100%;
     vertical-align: top;
   }
 }
 
 .separator {
-	width: 100%;
+  width: 100%;
   position: relative;
   padding: 0;
   border: 0;
   height: 2.5rem;
   line-height: 2.5rem;
-	&:before {
-		content: '';
-		display: inline-block;
-		width: 100%;
-		vertical-align: middle;
-		height: 1px;
-		background-color: #C8CCCF;
-	}
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    height: 1px;
+    background-color: #C8CCCF;
+  }
 }
 
 h1 {
-	color: @heading_color;
-	font-size: 2.5rem;
+  color: @heading_color;
+  font-size: 2.5rem;
+  line-height: 1.125;
+  letter-spacing: -0.075rem;
+}
+
+p {
+  line-height: 1.5;
 }
 
 .form-inner {
-	width: 18rem;
-	margin: auto;
-	.inner-elements(1rem);
-	&__field {
-		& input {
-			height: 3rem;
-			line-height: 3rem;
-			width: 100%;
-			font-size: 1rem;
-			outline: none;
-			border-radius: 0.25rem;
-			&[type="text"] {
-				padding: 0 1.05rem;
-				border: 1px solid @mainfont_color;
-			}
-			&[type="button"] {
-				background-color: @blue-color;
-				color: #fff;
-				border: 1px solid @blue-color;
-				cursor: pointer;
-				&:hover {
-					background-color: #288CD4;
-				}
-			}
-		}
-	}
+  width: 18rem;
+  max-width: 100%;
+  margin: auto;
+  .inner-elements(1.125rem);
+  &__field {
+    & input {
+      height: 3rem;
+      line-height: 3rem;
+      width: 100%;
+      font-size: 1rem;
+      outline: none;
+      border-radius: 0.25rem;
+      font-family: @main-font-family;
+      &[type="text"] {
+        padding: 0 1.05rem;
+        border: 1px solid #C8CCCF;
+        color: #C8CCCF;
+        &:focus {
+          border-color: #3299E3;
+          .box-shadow(0, 0, 0, 1px, #3299E3);
+        }
+      }
+      &[type="button"] {
+        padding: 0 1.5rem;
+        background-color: @blue-color;
+        color: #fff;
+        border: 1px solid @blue-color;
+        cursor: pointer;
+        font-weight: 700;
+        &:hover {
+          background-color: #288CD4;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bgopasity {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes toright{
+  from {.transform(translateX(-3rem));}
+  to {.transform(translateX(0));}
+}
+@keyframes totop{
+  from {.transform(translateY(1.5rem));}
+  to {.transform(translateY(0));}
 }
 
 @media (max-width: 1680px) {
@@ -124,6 +157,10 @@ h1 {
   html {
     font-size: 11pt;
   }
+  .inner {
+    padding: 3.5rem 2rem;
+    .inner-elements(1.5rem);
+  }
 }
 @media (max-width: 680px) {
   html {
@@ -134,9 +171,19 @@ h1 {
   html {
 
   }
+  .inner {
+    .inner-elements(1.3125rem);
+  }
 }
 @media (max-width: 360px) {
   html {
 
+  }
+  .inner {
+    padding: 2.625rem 1.5rem;
+    .inner-elements(1.125rem);
+  }
+  h1 {
+    font-size: 2em;
   }
 }

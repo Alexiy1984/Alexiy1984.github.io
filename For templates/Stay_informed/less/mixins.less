@@ -1,44 +1,45 @@
 .body-before (@urlimg: '') {
-	content: '';
-	display: block;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	background: #fff url(@urlimg) no-repeat;
-	background-size: cover;
-	background-position: center;
-	width: 100vw;
-	height: 100vh;
-	z-index: 0;
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: #fff url(@urlimg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  opacity: 1;
 }
 .flex-main(@alignItems: center, @justifyContent: center){
-	min-width: 100%;
-	min-height: 100vh;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: @justifyContent;
-	-ms-flex-pack: @justifyContent;
-	justify-content: @justifyContent;
-	-webkit-box-align: @alignItems;
-	-ms-flex-align: @alignItems;
-	align-items: @alignItems;
-	z-index: 5;
+  min-width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: @justifyContent;
+  -ms-flex-pack: @justifyContent;
+  justify-content: @justifyContent;
+  -webkit-box-align: @alignItems;
+  -ms-flex-align: @alignItems;
+  align-items: @alignItems;
+  z-index: 5;
 }
 .flex-cont() {
-		max-width: 100%;
-		z-index: 10;
+    max-width: 100%;
+    z-index: 10;
 }
 
 .inner-elements(@margin-elm: 1.5rem) {
-	& > *{
-		margin: @margin-elm 0;
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
+  & > *{
+    margin: @margin-elm 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
