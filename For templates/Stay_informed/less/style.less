@@ -103,13 +103,13 @@ p {
       &[type="text"] {
         padding: 0 1.05rem;
         border: 1px solid #C8CCCF;
-        color: #C8CCCF;
+        color: #878787;
         &:focus {
           border-color: #3299E3;
           .box-shadow(0, 0, 0, 1px, #3299E3);
         }
       }
-      &[type="button"] {
+      &[type="submit"] {
         padding: 0 1.5rem;
         background-color: @blue-color;
         color: #fff;
@@ -160,6 +160,10 @@ p {
   .inner {
     padding: 3.5rem 2rem;
     .inner-elements(1.5rem);
+  }
+  .separator {
+    height: 2rem;
+    line-height: 2rem;
   }
 }
 @media (max-width: 680px) {
