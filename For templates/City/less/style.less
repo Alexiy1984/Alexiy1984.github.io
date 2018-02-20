@@ -159,6 +159,7 @@ html {
 		}
 	}
 }
+
 @keyframes bgopasity {
 	0% {opacity: 0;}
 	50% {opacity: 0;}
@@ -167,6 +168,10 @@ html {
 @keyframes toright{
 	from {transform: translateX(-3em);}
 	to {transform: translateX(0);}
+}
+@keyframes totop{
+	from {transform: translateY(1.5em);}
+	to {transform: translateY(0);}
 }
 @media (max-width: 1680px) {
 	html {
@@ -209,6 +214,7 @@ html {
 				.container {
 					background-color: rgba(0,134,209,1);
 					width: 100%;
+					animation: bgopasity 1.5s ease-in-out, totop 2s ease-in-out;
 					.inner {
 						text-align: center;
 						width: auto;
@@ -290,4 +296,11 @@ html {
 			}
 		}
 	}
+}
+
+.animation-none {
+	animation: none !important;
+}
+.animation-none-before:before {
+	animation: none !important;
 }

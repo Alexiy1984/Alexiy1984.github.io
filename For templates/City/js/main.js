@@ -37,5 +37,8 @@ window.onload = function () {
 
     	}
     }, 1000);
+
+  AddClass('bodyJS','animation-none-before');
+  AddClass('containerJS','animation-none');
 }
 
