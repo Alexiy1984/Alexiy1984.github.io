@@ -1,0 +1,26 @@
+@import 'inn-margin.less';
+@import 'variables.less';
+@import 'vndrPfx.less';
+.form {
+  margin: auto;
+  width: 50%;
+  padding: 1rem;
+  .margin-and-child(1rem);
+  .box-shadow();
+  background-color: @main-color;
+}
+
+.form__row{
+  max-width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  & > * {
+    margin-left: 1rem;
+    &:first-child {
+      flex-grow: 1;
+    }
+    &:last-child {
+      flex-grow: 2;
+    }
+  }
+}
