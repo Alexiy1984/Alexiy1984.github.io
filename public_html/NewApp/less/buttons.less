@@ -1,0 +1,59 @@
+@import 'variables.less';
+@import 'vndrPfx.less';
+@button_def_color: #58C;
+@button_suc_color: #6C5;
+@button_err_color: #F34;
+@button_inf_color: #FF9;
+.button {
+  padding: 0.5rem;
+  border: 1px solid #fff;
+  background-color: #ddd;
+  color: #333;
+  .border-radius(0.25rem);
+  .transition(all, 0.5s, ease-in-out);
+  &:hover {
+    background-color: #bbb;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  &_def {
+    background-color: @button_def_color;
+    color: #333;
+    border-color: darken(@button_def_color, 20%);
+    &:hover {
+      background-color: darken(@button_def_color, 10%);
+      color: #fff;
+      border: 1px solid darken(@button_def_color, 30%);
+    }
+  }
+  &_suc {
+    background-color: @button_suc_color;
+    color: #333;
+    border-color: darken(@button_suc_color, 20%);
+    &:hover {
+      background-color: darken(@button_suc_color, 10%);
+      color: #fff;
+      border: 1px solid darken(@button_suc_color, 30%);
+    }
+  }
+  &_err {
+    background-color: @button_err_color;
+    color: #333;
+    border-color: darken(@button_err_color, 20%);
+    &:hover {
+      background-color: darken(@button_err_color, 10%);
+      color: #fff;
+      border: 1px solid darken(@button_err_color, 30%);
+    }
+  }
+  &_inf {
+    background-color: @button_inf_color;
+    color: #333;
+    border-color: darken(@button_inf_color, 20%);
+    &:hover {
+      background-color: darken(@button_inf_color, 10%);
+      color: #000;
+      border: 1px solid darken(@button_inf_color, 30%);
+    }
+  }
+}

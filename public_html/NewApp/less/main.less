@@ -1,14 +1,53 @@
+@import 'buttons.less';
 @import 'form.less';
+@import 'menu.less';
+@import 'variables.less';
+@import 'mixins.less';
+@import 'vndrPfx.less';
+html {
+  font-size: 14pt;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 14pt;
   font-family: verdana, sans-serif;
 }
-#logo {
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.main {
+  padding: 0.5rem 1.5rem;
+}
+.logo {
+  padding: 1rem;
+  background-color: @app-main-color;
   font-family:Georgia;
   font-weight:bold;
   font-style:italic;
-  font-size :97px;
+  color: #fff;
+  font-size :5em;
+}
+.appname {
+  width: 100%;
+  background-color: @app-secl-color;
+  margin: 0;
+  text-align: center;
+  padding: 1rem 1.5rem;
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 12pt;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 10pt;
+  }
 }

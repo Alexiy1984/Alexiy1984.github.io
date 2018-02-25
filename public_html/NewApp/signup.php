@@ -1,13 +1,7 @@
 <?php
   require_once 'header.php';
   require_once 'addForm.php';
-  echo <<<_END
-  <script>
-
-  </script>
-  <div class='main'><h3>Пожалуйста, введите регистрационные данные</h3>
-_END;
-
+  echo "<div class='main'><h3>Пожалуйста, введите регистрационные данные</h3>";
   $error = $user = $pass = "";
   if (isset($_SESSION['user'])) destroySession();
 
@@ -32,7 +26,7 @@ _END;
     }
   }
 
-  echo <<<_END
+  /*echo <<<_END
     <form method='post' action='signup.php' class='form'>$error
     <span class='fieldname'>Имя пользователя</span>
     <input type='text' maxlength='16' name='user' value='$user'
@@ -47,8 +41,10 @@ _END;
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Зарегистрироваться'>
     </form></div><br>
-<?php
-  AddForm('post', 'none', 'form', 2);
+<?php*/
+  AddForm('post', 'signup.php', 'form', 'sign-form', 2);
 ?>
+<script> addForm('sign-form',"<?php $user ?>","<?php $pass ?>")</script>
   </body>
 </html>
+

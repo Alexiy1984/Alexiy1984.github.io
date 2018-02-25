@@ -1,0 +1,30 @@
+.menu {
+  display: block;
+  width: 100vw;
+  text-align: center;
+  background-color: #015;
+  padding: 0.5rem 0;
+}
+.menu__item {
+  display: inline-block;
+  margin: 0.5rem;
+  width: 15rem;
+}
+.menu__link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #083aff;
+  border-color: #083aff;
+  color: #000;
+}
+.menu__link:hover {
+  background-color: #5577ff;
+  border-color: #5577ff;
+  color: #fff;
+}
+@media (max-width: 680px) {
+  .menu__item {
+    width: calc(100% - 1rem);
+  }
+}
