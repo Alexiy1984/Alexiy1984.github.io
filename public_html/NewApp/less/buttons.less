@@ -11,10 +11,15 @@
   color: #333;
   .border-radius(0.25rem);
   .transition(all, 0.5s, ease-in-out);
+  cursor: pointer;
   &:hover {
     background-color: #bbb;
     color: #fff;
     border: 1px solid #555;
+  }
+  &_block {
+    display: block;
+    text-align: center;
   }
   &_def {
     background-color: @button_def_color;

@@ -41,7 +41,7 @@
     echo ("<ul class='menu'>".
           "<li class='menu__item'><a class='menu__link button' href='index.php'>Домой</a></li>".
           "<li class='menu__item'><a class='menu__link button' href='signup.php'>Регистрация</a></li>".
-          "<li class='menu__item'><a class='menu__link button' href='login.php'>Вход</a></li></ul><br>".
-          "<span class='info'>&#8658; Для просомтра нужно зайти на сайт.</span>");
+          "<li class='menu__item'><a class='menu__link button' href='login.php'>Вход</a></li></ul>".
+          "<div class='info'>&#8658; Для просмотра нужно зайти на сайт.</div>");
   }
 ?>

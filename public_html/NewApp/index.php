@@ -1,7 +1,7 @@
 <?php
   require_once 'header.php';
 
-  echo "<br><span class='main'>Добро пожаловать на $appname,";
+  echo "<div class='main'>Добро пожаловать на $appname,";
   if ($loggedin) echo " $user, вы зарегистрированы.";
   else           echo ' Пожалуйста, зарегистируйтесь или войдите на сайт.';
 ?>

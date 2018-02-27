@@ -11,7 +11,7 @@
   if ($connection->connect_error) die($connection->connect_error);
   function createTable($name, $query) {
     queryMysql("CREATE TABLE IF NOT EXISTS $name($query)");
-    echo "Table '$name' created or already exists.<br>";
+    echo "Таблица '$name' создана или уже существует.<br>";
   }
 
   function queryMysql($query) {

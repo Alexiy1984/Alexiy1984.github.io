@@ -10,11 +10,16 @@
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 .button:hover {
   background-color: #bbb;
   color: #fff;
   border: 1px solid #555;
+}
+.button_block {
+  display: block;
+  text-align: center;
 }
 .button_def {
   background-color: #58C;
@@ -95,6 +100,7 @@
   background-color: #077 !important;
   color: #fff !important;
   border: 1px solid #001111 !important;
+  text-decoration: none;
 }
 .form__button:hover {
   background-color: #00aaaa !important;
@@ -118,12 +124,14 @@
 }
 .menu {
   display: block;
+  max-width: 100%;
   width: 100vw;
   text-align: center;
   background-color: #015;
   padding: 0.5rem 0;
 }
 .menu__item {
+  max-width: 100%;
   display: inline-block;
   margin: 0.5rem;
   width: 15rem;
@@ -156,13 +164,33 @@ html {
   font-family: verdana, sans-serif;
 }
 body {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 .main {
+  background-color: #d4ddff;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  margin: 0.5rem;
+  padding: 0.5rem 1.5rem;
+}
+.main > * {
+  margin: 0.5rem;
+}
+.info {
+  background-color: #FFA;
+  margin: 0.5rem 0;
+  max-width: 100%;
+  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.6);
+  margin: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
 .logo {
+  max-width: 100%;
   padding: 1rem;
   background-color: #015;
   font-family: Georgia;
@@ -172,6 +200,7 @@ body {
   font-size: 5em;
 }
 .appname {
+  max-width: 100%;
   width: 100%;
   background-color: #5577ff;
   margin: 0;
