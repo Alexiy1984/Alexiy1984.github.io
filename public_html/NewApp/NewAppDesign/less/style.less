@@ -1,0 +1,183 @@
+@import 'VendPfx.less';
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic,latin-ext');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
+}
+body {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  .linear-gradient(#fff,#DBD,50%);
+}
+.wrapper {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.header {
+  max-width: 100%;
+  padding: 0.5rem 2.5rem;
+  background-color: #625;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main {
+  max-width: 100%;
+  flex-grow: 1;
+  margin: 1rem;
+  background-color: rgba(255,255,255,0.75);
+  .box-shadow(0,0,5px,2px,rgba(221,178,221,0.5));
+}
+.logo {
+  width: 20%;
+  & canvas {
+    height: 3.5rem;
+  }
+}
+.hor-menu {
+  list-style: none;
+  &__item {
+    display: inline-block;
+    margin: 0.25rem;
+  }
+  &__link {
+    display: block;
+    height: 2rem;
+    padding: 0 0.8rem;
+    font-size: 0.8em;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+    &:hover {
+      background-color: rgba(221,178,221,0.3);
+      color: #625;
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
+.profile {
+  padding: 0.5em;
+  width: 100%;
+  &__row {
+    display: flex;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    &_rigth {
+      justify-content: flex-end;
+    }
+  }
+  &__img {
+    border: 2px solid rgba(102,34,85,0.125);
+    width: 7rem;
+    padding: 0.25rem;
+  }
+  &__col {
+    padding: 0.5em;
+  }
+  &__first-col {
+    border-right: 7px solid rgba(102,34,85,0.125);
+  }
+  &__second-col {
+    background: rgba(255,255,255,0.5);
+  }
+  &__text {
+    font-size: 0.8em;
+  }
+}
+.figure-button {
+  margin: 0 1rem;
+  width: 15rem;
+  height: 2rem;
+  transform: skew(20deg);
+  background: #625;
+  transition: background-color 0.5s, color 0.5s;
+  &:hover {
+    background: lighten(#625, 25%);
+    border-left: 18px solid rgba(255,255,255,0.5);
+    border-right: 18px solid rgba(255,255,255,0.125);
+    & a {
+      color: rgba(255,255,255,0.75);
+    }
+  }
+  &_blue {
+    background-color: #178;
+    &:hover {
+    background: lighten(#178, 25%);
+    }
+  }
+  & > div {
+    transform: skew(-20deg);
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 2rem;
+  }
+}
+.form {
+  width: calc(~"65% - 3rem");
+  margin: auto;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  .border-radius(0.125rem);
+  background-color: #BB4;
+   & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  &__row {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    & > *:last-child {
+      margin-right: 0;
+    }
+    &__item {
+      flex-grow: 1;
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+    &__big {
+      width: 60%;
+    }
+    &__text {
+      padding: 0 1rem;
+    }
+  }
+}
+.button {
+  padding: 0.5rem;
+  background-color: #178;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  &:hover {
+    background: lighten(#178, 10%);
+    color: #000;
+  }
+}
