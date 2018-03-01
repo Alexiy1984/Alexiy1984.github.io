@@ -73,16 +73,16 @@
   echo <<<_END
     <form method='post' action='profile.php' enctype='multipart/form-data' class='form'>
     <div class='form__row'>
-      <h3>Введите или отредактируйте сведения.</h3>
+      <h3 class='form__row__item'>Введите или отредактируйте сведения.</h3>
     </div>
     <div class='form__row'>
-      <textarea name='text' cols='50' rows='3'>$text</textarea>
+      <textarea name='text' cols='50' rows='10' class='form__row__item form__row__item_textarea'>$text</textarea>
     </div>
     <div class='form__row'>
-    <span>Изображение</span><input type='file' name='image' size='14' class='button form__button'>
+    <label for='image' class='form__row__item'>Изображение</label><input type='file' name='image' id='image' size='14' class='button form__row__item'>
     </div>
     <div class='form__row'>
-    <input type='submit' value='Сохранить профиль' class='button form__button'>
+    <input type='submit' value='Сохранить профиль' class='button form__row__item'>
     </div>
     </form>
 _END;

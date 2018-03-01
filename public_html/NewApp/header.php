@@ -23,25 +23,27 @@
         "<script src='js/main.js'></script>".
         "<script src='js/checkUser.js'></script>".
         "<script src='js/addForm.js'></script>".
+        "<div class='wrapper'>".
+        "<div class='header'>".
         "<div class='logo'>$appname</div>".
         "<div class='appname'>$appname$userstr</div>";
 
   if ($loggedin)
   {
-    echo "<ul class='menu'>" .
-         "<li class='menu__item'><a class='menu__link button' href='members.php?view=$user'>Домой</a></li>" .
-         "<li class='menu__item'><a class='menu__link button' href='members.php'>Участники</a></li>".
-         "<li class='menu__item'><a class='menu__link button' href='friends.php'>Друзья</a></li>".
-         "<li class='menu__item'><a class='menu__link button' href='messages.php'>Сообщения</a></li>".
-         "<li class='menu__item'><a class='menu__link button' href='profile.php'>Редактировать профиль</a></li>".
-         "<li class='menu__item'><a class='menu__link button' href='logout.php'>Выйти</a></li></ul>";
+    echo "<ul class='hor-menu'>" .
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php?view=$user'>Домой</a></li>" .
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php'>Участники</a></li>".
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='friends.php'>Друзья</a></li>".
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='messages.php'>Сообщения</a></li>".
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='profile.php'>Редактировать профиль</a></li>".
+         "<li class='hor-menu__item'><a class='hor-menu__link' href='logout.php'>Выйти</a></li></ul></div>";
   }
   else
   {
-    echo ("<ul class='menu'>".
-          "<li class='menu__item'><a class='menu__link button' href='index.php'>Домой</a></li>".
-          "<li class='menu__item'><a class='menu__link button' href='signup.php'>Регистрация</a></li>".
-          "<li class='menu__item'><a class='menu__link button' href='login.php'>Вход</a></li></ul>".
-          "<div class='info'>&#8658; Для просмотра нужно зайти на сайт.</div>");
+    echo ("<ul class='hor-menu'>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='index.php'>Домой</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='signup.php'>Регистрация</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='login.php'>Вход</a></li></ul></div>".
+          "<div class='info'>Для просмотра нужно зайти на сайт.</div>");
   }
 ?>

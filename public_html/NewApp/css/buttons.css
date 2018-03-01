@@ -1,63 +1,50 @@
-.button {
-  padding: 0.5rem;
-  border: 1px solid #fff;
-  background-color: #ddd;
-  color: #333;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
+.figure-button {
+  margin: 0 1rem;
+  width: 18rem;
+  height: 2rem;
+  transform: skew(20deg);
+  background: #625;
+  transition: background-color 0.5s, color 0.5s;
 }
-.button:hover {
-  background-color: #bbb;
-  color: #fff;
-  border: 1px solid #555;
+.figure-button:hover {
+  background: #c146a3;
+  border-left: 18px solid rgba(255, 255, 255, 0.5);
+  border-right: 18px solid rgba(255, 255, 255, 0.125);
 }
-.button_block {
-  display: block;
+.figure-button:hover a {
+  color: rgba(255, 255, 255, 0.75);
+}
+.figure-button_blue {
+  background-color: #178;
+}
+.figure-button_blue:hover {
+  background: #33cce6;
+}
+.figure-button > div {
+  transform: skew(-20deg);
   text-align: center;
 }
-.button_def {
-  background-color: #58C;
-  color: #333;
-  border-color: #2b5690;
-}
-.button_def:hover {
-  background-color: #376eb7;
+.figure-button__link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
   color: #fff;
-  border: 1px solid #1f3f69;
+  line-height: 2rem;
 }
-.button_suc {
-  background-color: #6C5;
-  color: #333;
-  border-color: #3a902b;
-}
-.button_suc:hover {
-  background-color: #49b737;
+.button {
+  padding: 0.5rem;
+  background-color: #178;
   color: #fff;
-  border: 1px solid #2a691f;
+  border: none;
+  outline: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
 }
-.button_err {
-  background-color: #F34;
-  color: #333;
-  border-color: #cc0011;
-}
-.button_err:hover {
-  background-color: #ff0015;
-  color: #fff;
-  border: 1px solid #99000d;
-}
-.button_inf {
-  background-color: #FF9;
-  color: #333;
-  border-color: #ffff33;
-}
-.button_inf:hover {
-  background-color: #ffff66;
+.button:hover {
+  background: #179fb5;
   color: #000;
-  border: 1px solid #ffff00;
 }

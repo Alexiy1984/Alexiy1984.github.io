@@ -1,32 +1,23 @@
-.menu {
-  display: block;
-  max-width: 100%;
-  width: 100vw;
-  text-align: center;
-  background-color: #015;
-  padding: 0.5rem 0;
+.hor-menu {
+  list-style: none;
 }
-.menu__item {
-  max-width: 100%;
+.hor-menu__item {
   display: inline-block;
-  margin: 0.5rem;
-  width: 15rem;
+  margin: 0.25rem;
 }
-.menu__link {
+.hor-menu__link {
   display: block;
+  height: 2rem;
+  padding: 0 0.8rem;
+  font-size: 0.8em;
+  line-height: 2rem;
   text-transform: uppercase;
-  text-decoration: none;
-  background-color: #083aff;
-  border-color: #083aff;
-  color: #000;
-}
-.menu__link:hover {
-  background-color: #5577ff;
-  border-color: #5577ff;
   color: #fff;
+  text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
 }
-@media (max-width: 680px) {
-  .menu__item {
-    width: calc(100% - 1rem);
-  }
+.hor-menu__link:hover {
+  background-color: rgba(221, 178, 221, 0.3);
+  color: #625;
+  border-bottom: 2px solid #fff;
 }

@@ -1,5 +1,3 @@
-
-
 function checkUser(user) {
   if (user.value == '') {
     O('info').innerHTML = '';

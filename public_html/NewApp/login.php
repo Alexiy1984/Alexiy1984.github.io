@@ -9,7 +9,7 @@
     $pass = sanitizeString($_POST['pass']);
 
     if ($user == "" || $pass == "")
-        $error = "Заполнены не все поля<br>";
+        $error = "<div class='error'>!!! Заполнены не все поля !!!</div>";
     else
     {
       $result = queryMySQL("SELECT user,pass FROM members
@@ -17,7 +17,7 @@
 
       if ($result->num_rows == 0)
       {
-        $error = "<span class='error'>Неверное Имя пользователя или пароль</span><br><br>";
+        $error = "<div class='error'>!!! Неверное Имя пользователя или пароль !!!</div>";
       }
       else
       {
@@ -31,17 +31,17 @@
   echo <<<_END
     <form method='post' action='login.php' class='form'>$error
     <div class='form__row'>
-      <span class='fieldname'>Имя пользователя</span>
-      <input type='text' maxlength='16' name='user' value='$user'>
+      <label for='user' class='form__row__item form__row__item_small'>Имя пользователя</label>
+      <input type='text' maxlength='16' name='user' id='user' value='$user' class='form__row__item form__row__item_big form__row__text'>
     </div>
     <div class='form__row'>
-      <span class='fieldname'>Пароль</span>
-      <input type='password' maxlength='16' name='pass' value='$pass'>
+      <label for='user' class='form__row__item form__row__item_small'>Пароль</label>
+      <input type='password' maxlength='16' name='pass' id='pass' value='$pass' class='form__row__item form__row__item_big form__row__text'>
     </div>
     <div class='form__row'>
-      <input type='submit' value='Login' class='button form__button'>
-      </form>
+      <input type='submit' value='Войти' class='form__row__item button'>
     </div>
+    </form>
 _END;
 ?>
     <!-- <span class='fieldname'>&nbsp;</span> -->

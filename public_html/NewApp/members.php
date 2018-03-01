@@ -8,7 +8,7 @@
     else                {$name = "$view's"; $nameP = "сообщения $name";}
     echo "<h3>$name Профиль</h3>";
     showProfile($view);
-    echo "<a class='button form__button' href='messages.php?view=$view'>Показать $nameP </a><br><br>";
+    echo "<div class='figure-button'><div><a class='figure-button__link' href='messages.php?view=$view'>Показать $nameP</a></div></div>";
     die("</div></body></html>");
   }
   if (isset($_GET['add']))
@@ -25,14 +25,14 @@
   }
   $result = queryMysql("SELECT user FROM members ORDER BY user");
   $num    = $result->num_rows;
-  echo "<h3>Другие участники</h3><ul>";
+  echo "<h3>Другие участники</h3><ul class='members-list'>";
   for ($j = 0 ; $j < $num ; ++$j)
   {
     $row = $result->fetch_array(MYSQLI_ASSOC);
     if ($row['user'] == $user) continue;
 
-    echo "<li><a href='members.php?view=" .
-      $row['user'] . "'>" . $row['user'] . "</a>";
+    echo "<li class='members-list__item'><a href='members.php?view=" .
+      $row['user'] . "' class='members-list__link'>" . $row['user'] . "</a>";
     $follow = "предложить дружбу";
 
     $result1 = queryMysql("SELECT * FROM friends WHERE

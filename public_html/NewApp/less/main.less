@@ -1,70 +1,118 @@
-@import 'buttons.less';
-@import 'form.less';
-@import 'menu.less';
-@import 'variables.less';
-@import 'mixins.less';
 @import 'vndrPfx.less';
-html {
-  font-size: 14pt;
-}
+@import 'menu.less';
+@import 'form.less';
+@import 'buttons.less';
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=cyrillic,latin-ext');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: verdana, sans-serif;
+}
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16pt;
 }
 body {
-  max-width: 100vw;
   min-height: 100vh;
-}
-.main {
-  background-color: lighten(@app-secl-color, 25%);
+  width: 100vw;
   max-width: 100%;
-  .box-shadow(0,0,10px,1px,rgba(0,0,0,.6));
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  & > * {
-    margin: 0.5rem;
-  }
+  .linear-gradient(#fff,#DBD,50%);
+}
+.wrapper {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.header {
+  max-width: 100%;
+  padding: 0.5rem 2.5rem;
+  background-color: #625;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .info {
-  background-color: #FFA;
-  margin: 0.5rem 0;
+  background-color: #DBD;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+#info {
+  width: 100%;
+}
+.error {
+  background-color: #F99;
+  color: #800;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.succes {
+  background-color: #9F9;
+  color: #050;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+.main {
   max-width: 100%;
-  .box-shadow(0,0,10px,1px,rgba(0,0,0,.6));
-  margin: 0.5rem;
-  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: rgba(255,255,255,0.75);
+  .box-shadow(0,0,5px,2px,rgba(221,178,221,0.5));
+  & > h3 {
+    text-align: center;
+  }
 }
 .logo {
-  max-width: 100%;
-  padding: 1rem;
-  background-color: @app-main-color;
-  font-family:Georgia;
-  font-weight:bold;
-  font-style:italic;
-  color: #fff;
-  font-size :5em;
+  width: 20%;
+  & canvas {
+    height: 3.5rem;
+  }
 }
-.appname {
-  max-width: 100%;
+.profile {
+  padding: 0.5em;
   width: 100%;
-  background-color: @app-secl-color;
-  margin: 0;
+  &__row {
+    display: flex;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+    &_rigth {
+      justify-content: flex-end;
+    }
+  }
+  &__img {
+    border: 2px solid rgba(102,34,85,0.125);
+    width: 7rem;
+    padding: 0.25rem;
+  }
+  &__col {
+    padding: 0.5em;
+  }
+  &__first-col {
+    border-right: 7px solid rgba(102,34,85,0.125);
+  }
+  &__second-col {
+    background: rgba(255,255,255,0.5);
+  }
+  &__text {
+    font-size: 0.8em;
+  }
+}
+.members-list {
+  margin: 0.5rem 0;
+  list-style: none;
   text-align: center;
-  padding: 1rem 1.5rem;
-}
-@media (max-width: 980px) {
-  html {
-    font-size: 12pt;
+  &__item {
+    margin: auto;
+    width: 30rem;
+    max-width: 100%;
+    height: 2rem;
+    background-color: #DBD;
+    border-bottom: 3px solid #625;
   }
-}
-@media (max-width: 680px) {
-  html {
-    font-size: 11pt;
-  }
-}
-@media (max-width: 360px) {
-  html {
-    font-size: 10pt;
+  &__link {
+    line-height: 2rem;
+    display: inline-block;
   }
 }

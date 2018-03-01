@@ -24,17 +24,16 @@
       <form class="form" method='post' action='messages.php?view=$view'>
       <div class="form__row">Напишите здесь свое сообщение:</div>
       <div class="form__row">
-        <textarea name='text' cols='40' rows='10'></textarea>
+        <textarea name='text' cols='40' rows='10' class='form__row__item form__row__item_textarea'></textarea>
       </div>
       <div class="form__row">
-        <div>
-          Public<input type='radio' name='pm' value='0' checked='checked'>
-          Private<input type='radio' name='pm' value='1'>
+        <div class='form__row__item'>
+          <label for='pub'>Публично </label><input type='radio' name='pm' id='pub' value='0' checked='checked'>
+          <label for='prv'>Приватно </label><input type='radio' name='pm' id='prv' value='1'>
         </div>
-        <div>
-          <input class="button form__button" type='submit' value='Отправить сообщение'></form><br>
-        </div>
+          <input class="button form__row__item" type='submit' value='Отправить сообщение'>
       </div>
+     </form>
 _END;
     if (isset($_GET['erase'])) {
       $erase = sanitizeString($_GET['erase']);
@@ -57,7 +56,7 @@ _END;
     }
   }
   if (!$num) echo "<br><span class='info'>Пока нет сообщений</span><br><br>";
-  echo "<br><a class='button form__button button_block' href='messages.php?view=$view'>Обновить сообщения</a>";
+  echo "<div class='figure-button figure-button_blue'><div><a class='figure-button__link' href='messages.php?view=$view'>Обновить сообщения</a></div></div>";
 ?>
     </div><br>
   </body>

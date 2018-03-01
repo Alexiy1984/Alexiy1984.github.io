@@ -1,0 +1,63 @@
+@import 'inn-margin.less';
+@import 'variables.less';
+@import 'vndrPfx.less';
+@form-bg-color: #1CC;
+@form-tx-color: #fff;
+@form-bt-color: #077;
+.form {
+  margin: auto;
+  width: 50%;
+  padding: 1rem;
+  .margin-and-child(1rem);
+  .box-shadow();
+  background-color: @form-bg-color;
+  color: @form-tx-color;
+}
+
+.form__row{
+  max-width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  & > * {
+    &:first-child {
+      flex-grow: 1;
+      width: 45%;
+    }
+    &:last-child {
+      flex-grow: 2;
+      width: 55%;
+    }
+  }
+  & input {
+    outline: none;
+  }
+}
+
+.form__button {
+  background-color: @form-bt-color !important;
+  color: @form-tx-color !important;
+  border: 1px solid darken(@form-bt-color, 20%)!important;
+  text-decoration: none;
+  &:hover {
+      background-color: lighten(@form-bt-color, 10%)!important;
+      color: darken(@form-tx-color, 10%)!important;
+      border: 1px solid darken(@form-bt-color, 30%)!important;
+  }
+}
+
+@media (max-width: 980px) {
+  .form{
+    width: 85%;
+  }
+}
+@media (max-width: 480px) {
+  .form{
+    width: 90%;
+  }
+}
+@media (max-width: 360px) {
+  .form{
+    width: 100%;
+  }
+}
+
