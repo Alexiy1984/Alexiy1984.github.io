@@ -73,6 +73,12 @@
   background: #625;
   transition: background-color 0.5s, color 0.5s;
 }
+.figure-button_float_left {
+  float: left;
+}
+.figure-button_float_rigth {
+  float: right;
+}
 .figure-button:hover {
   background: #c146a3;
   border-left: 18px solid rgba(255, 255, 255, 0.5);
@@ -208,12 +214,18 @@ body {
 }
 .main {
   max-width: 100%;
+  flex-grow: 1;
   margin: 1rem;
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.75);
   -webkit-box-shadow: 0 0 5px 2px rgba(221, 178, 221, 0.5);
   -moz-box-shadow: 0 0 5px 2px rgba(221, 178, 221, 0.5);
   box-shadow: 0 0 5px 2px rgba(221, 178, 221, 0.5);
+}
+.main__footer {
+  border-top: 2px solid #625;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
 }
 .main > h3 {
   text-align: center;
@@ -232,6 +244,9 @@ body {
   display: flex;
   margin-bottom: 0.5rem;
   justify-content: center;
+}
+.profile__row_left {
+  justify-content: flex-start;
 }
 .profile__row_rigth {
   justify-content: flex-end;
@@ -269,4 +284,67 @@ body {
 .members-list__link {
   line-height: 2rem;
   display: inline-block;
+  text-decoration: none;
+}
+.friends-list {
+  list-style: none;
+}
+.friends-list__item:before {
+  margin-right: 0.5rem;
+  content: '\1F89A';
+}
+.friends-list__item:hover {
+  color: #178;
+}
+.friends-list__item:hover a {
+  color: #178;
+  font-size: 1.2rem;
+}
+.friends-list__link {
+  line-height: 1.2rem;
+  text-decoration: none;
+  color: #000;
+}
+.message-window {
+  padding: 0.5rem;
+}
+.message-window__header {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #DBD;
+}
+.message-window__text {
+  padding: 0 0.5rem;
+  text-align: justify;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.75em;
+}
+.message-window__delmess {
+  text-align: right;
+}
+.message-window__delmess a {
+  text-decoration: none;
+  color: #000;
+}
+.message-window__delmess:hover {
+  color: #178;
+}
+.message-window__delmess:hover a {
+  color: #178;
+}
+@media (max-width: 1680px) {
+  html {
+    font-size: 14pt;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 14pt;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 12pt;
+  }
 }

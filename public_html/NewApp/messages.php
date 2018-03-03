@@ -42,21 +42,23 @@ _END;
     $query  = "SELECT * FROM messages WHERE recip='$view' ORDER BY time DESC";
     $result = queryMysql($query);
     $num    = $result->num_rows;
+    echo "<div class='message-window'>";
     for ($j = 0 ; $j < $num ; ++$j) {
       $row = $result->fetch_array(MYSQLI_ASSOC);
       if ($row['pm'] == 0 || $row['auth'] == $user || $row['recip'] == $user) {
-        echo date('M jS \'y g:ia:', $row['time']);
+        echo "<p class='message-window__header'>".date('M jS \'y g:ia:', $row['time']);
         echo " <a href='messages.php?view=" . $row['auth'] . "'>" . $row['auth']. "</a> ";
-        if ($row['pm'] == 0) echo "написал(ла): &quot;" . $row['message'] . "&quot; ";
+        if ($row['pm'] == 0) echo "написал(ла):</p> <div class='main__footer'><p class='message-window__text'>" . $row['message'] . "</p></div>";
         else echo "whispered: <span class='whisper'>&quot;".$row['message']. "&quot;</span> ";
         if ($row['recip'] == $user)
-          echo "[<a href='messages.php?view=$view &erase=" . $row['id'] . "'>очистить</a>]";
-        echo "<br>";
+          echo "<div class='main__footer'><p class='message-window__delmess'>[<a href='messages.php?view=$view &erase=" . $row['id'] . "'>очистить</a>]</p></div>";
       }
     }
+    echo "</div>";
   }
-  if (!$num) echo "<br><span class='info'>Пока нет сообщений</span><br><br>";
-  echo "<div class='figure-button figure-button_blue'><div><a class='figure-button__link' href='messages.php?view=$view'>Обновить сообщения</a></div></div>";
+  if (!$num) echo "<div class='info'>Пока нет сообщений</span></div>";
+  echo "<div class='main__footer'><div class='figure-button figure-button_blue figure-button_float_rigth'><div>"
+  ."<a class='figure-button__link' href='messages.php?view=$view'>Обновить сообщения</a></div></div></div>";
 ?>
     </div><br>
   </body>

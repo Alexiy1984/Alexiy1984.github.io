@@ -56,10 +56,16 @@ body {
 }
 .main {
   max-width: 100%;
+  flex-grow: 1;
   margin: 1rem;
   padding: 0.5rem;
   background-color: rgba(255,255,255,0.75);
   .box-shadow(0,0,5px,2px,rgba(221,178,221,0.5));
+  &__footer {
+    border-top: 2px solid #625;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
   & > h3 {
     text-align: center;
   }
@@ -77,6 +83,9 @@ body {
     display: flex;
     margin-bottom: 0.5rem;
     justify-content: center;
+    &_left {
+      justify-content: flex-start;
+    }
     &_rigth {
       justify-content: flex-end;
     }
@@ -114,5 +123,76 @@ body {
   &__link {
     line-height: 2rem;
     display: inline-block;
+    text-decoration: none;
+  }
+}
+.friends-list {
+  list-style: none;
+  &__item {
+    &:before {
+    margin-right: 0.5rem;
+    content: '\1F89A';
+    }
+    &:hover {
+      color: #178;
+      & a {
+        color: #178;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__link {
+    line-height: 1.2rem;
+    text-decoration: none;
+    color : #000;
+  }
+}
+.message-window {
+  padding: 0.5rem;
+  &__header {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #DBD;
+  }
+  &__text {
+    padding: 0 0.5rem;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75em;
+  }
+  &__delmess {
+    text-align: right;
+    & a {
+      text-decoration: none;
+      color: #000;
+    }
+    &:hover {
+      color: #178;
+      & a {
+        color: #178;
+      }
+    }
+  }
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 14pt;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 14pt;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 12pt;
+  }
+}
+@media (max-width: 480px) {
+  html {
+
   }
 }

@@ -5,6 +5,14 @@
   transform: skew(20deg);
   background: #625;
   transition: background-color 0.5s, color 0.5s;
+  &_float {
+    &_left {
+      float: left;
+    }
+    &_rigth {
+      float: right;
+    }
+  }
   &:hover {
     background: lighten(#625, 25%);
     border-left: 18px solid rgba(255,255,255,0.5);

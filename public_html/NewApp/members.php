@@ -8,7 +8,8 @@
     else                {$name = "$view's"; $nameP = "сообщения $name";}
     echo "<h3>$name Профиль</h3>";
     showProfile($view);
-    echo "<div class='figure-button'><div><a class='figure-button__link' href='messages.php?view=$view'>Показать $nameP</a></div></div>";
+    echo "<div class='main__footer'><div class='figure-button figure-button_float_rigth'><div>".
+    "<a class='figure-button__link' href='messages.php?view=$view'>Показать $nameP</a></div></div></div>";
     die("</div></body></html>");
   }
   if (isset($_GET['add']))

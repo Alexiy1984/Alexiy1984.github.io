@@ -34,29 +34,29 @@
   $following = array_diff($following, $mutual);
   $friends   = FALSE;
   if (sizeof($mutual)) {
-    echo "<span class='subhead'>$name2 Друзья</span><ul>";
+    echo "<span class='subhead'>$name2 Друзья</span><ul class='friends-list'>";
     foreach($mutual as $friend)
-      echo "<li><a href='members.php?view=$friend'>$friend</a>";
+      echo "<li class='friends-list__item'><a class='friends-list__link' href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
   }
   if (sizeof($followers)) {
-    echo "<span class='subhead'>$name2 входящие заявки в друзья</span><ul>";
+    echo "<span class='subhead'>$name2 входящие заявки в друзья</span><ul class='friends-list'>";
     foreach($followers as $friend)
-      echo "<li><a href='members.php?view=$friend'>$friend</a>";
+      echo "<li class='friends-list__item'><a class='friends-list__link' href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
   }
   if (sizeof($following)) {
-    echo "<span class='subhead'>$name3 исходящие заявки в друзья</span><ul>";
+    echo "<span class='subhead'>$name3 исходящие заявки в друзья</span><ul class='friends-list'>";
     foreach($following as $friend)
-      echo "<li><a href='members.php?view=$friend'>$friend</a>";
+      echo "<li class='friends-list__item'><a class='friends-list__link' href='members.php?view=$friend'>$friend</a>";
     echo "</ul>";
     $friends = TRUE;
   }
   if (!$friends) echo "<br>У вас пока нет друзей.<br><br>";
-  echo "<a class='button form__button' href='messages.php?view=$view'>" .
-       "Показать $name2 сообщения</a><br><br>";
+  echo "<div class='main__footer'><div class='figure-button figure-button_float_rigth'><div><a class='figure-button__link' href='messages.php?view=$view'>"
+  ."Показать $name2 сообщения</a></div></div></div>";
 ?>
     </div><br>
   </body>
