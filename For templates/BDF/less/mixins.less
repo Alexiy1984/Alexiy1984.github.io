@@ -1,0 +1,15 @@
+//Добавляет всем прямым потомкам (блочного типа) элемента внешние отступы снизу и сверху кроме
+//певого (отступ только снизу) и последнего блока (отступ только сверху)
+.block-child-margin( @margin: 1rem, @child-margin: 0) {
+  & > * {
+    margin: @margin 0;
+    &:first-child {
+      margin-top: @child-margin;
+    }
+    &:last-child {
+      margin-bottom: @child-margin;
+    }
+  }
+}
+
+
