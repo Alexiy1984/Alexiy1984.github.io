@@ -1,0 +1,27 @@
+@import 'vndrPfx.less';
+.icons-list {
+  padding:        0;
+  letter-spacing: 0;
+  font-size:      2em;
+  list-style:     none;
+  margin-left:    -0.875rem;
+  width:          calc(~"100% + 1.75rem");
+  & > *:first-child { margin-left: 0 !important;};
+  &__item {
+    vertical-align: middle;
+    margin:         0.875rem;
+    display:        inline-block;
+  }
+  &__link {
+    .align-items();
+    .display-flex();
+    .justify-content();
+    width:  1em;
+    height: 1em;
+  }
+  &__svg {
+    width:  100%;
+    height: 100%;
+    fill:   rgba(102,102,102,0.278);
+  }
+}
