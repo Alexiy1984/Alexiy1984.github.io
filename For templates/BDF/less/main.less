@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext');
 @import 'vndrPfx.less';
 @import 'mixins.less';
 @import 'keyframes.less';
@@ -71,7 +72,9 @@ body {
     margin-left:    -50vw;
     position:       relative;
     border-radius:  0 !important;
-    & > div { padding: 6rem 3rem !important;};
+    & > div {
+      padding: 6rem 3rem !important;
+    }
   }
   &__inner {
     width:      100%;
@@ -102,6 +105,7 @@ body {
   color:                  #fff;
   background-attachment:  fixed;
   & .row__inner {
+    display: inline-block;
     .block-child-margin(1.5rem);
   }
   h1 {
@@ -110,14 +114,30 @@ body {
   }
 }
 
-#row-1 { h1 {font-size: 4.5em;};};
+#row-1 {
+  h1 {
+    font-weight:    700;
+    font-size:      4.5em;
+    line-height:    1.125;
+    letter-spacing: -0.15rem;
+  }
+}
 #row-6 { h1 {font-size: 2.75em;};};
 
 #row-2, #row-3 {
   margin-bottom:  0;
   margin-top:     3rem !important;
   h2 {
-    color: #EB4F1E;
+    font-weight:    700;
+    font-size:      1.75em;
+    color:          #EB4F1E;
+    letter-spacing: -0.075rem;
+  }
+  .img-cont{
+    .block-child-margin(1rem);
+    & > *:first-child {
+      margin-bottom: 2.5rem;
+    }
   }
 }
 #row-3 {
@@ -148,19 +168,113 @@ body {
 #row-1 {
   margin-top: -3rem !important;
   .linear-gradient(to top, rgba(0,0,0,0.7), 0%, rgba(0,0,0,0.7), 100%,'../images/container01.jpg');
-  background-position:  0 0, right;
-  background-size:      auto, cover;
-  background-repeat:    repeat, repeat;
+  background-attachment:  fixed;
+  background-position:    0 0, right;
+  background-size:        auto, cover;
+  background-repeat:      repeat, repeat;
+  .row__inner {
+    margin: 6rem 0 !important;
+  }
 }
 
 #row-6 {
   .linear-gradient(to top, rgba(0,0,0,0.7), 0%, rgba(0,0,0,0.7), 100%,'../images/container06.jpg');
-  background-position:  0 0, right;
-  background-size:      auto, cover;
-  background-repeat:    repeat, repeat;
+  background-attachment:  fixed;
+  background-position:    0 0, right;
+  background-size:        auto, cover;
+  background-repeat:      repeat, repeat;
 }
 
 .copyright {
   color: rgba(102,102,102,0.278);
 }
 
+.main-text {
+  font-weight:  300;
+  line-height:  1.625;
+  font-size:    1.25em;
+  font-family:  'Source Sans Pro', sans-serif;
+}
+
+.small-text {
+  letter-spacing: 0;
+  line-height:    1.5;
+  font-weight:    300;
+  width:          auto;
+  font-family:    'Source Sans Pro', sans-serif;
+}
+
+.text {
+  &_gray {
+    color: #666666;
+  }
+}
+
+@media (max-width: 1680px) {
+ html {
+  font-size: 13pt;
+ }
+}
+
+@media (max-width: 1280px) {
+ html {
+  font-size: 13pt;
+ }
+ #row-1, #row-6 {
+  background-attachment: scroll;
+ }
+}
+@media (max-width: 980px) {
+ html {
+  font-size: 11pt;
+ }
+}
+@media (max-width: 736px) {
+ html {
+  font-size: 11pt;
+ }
+ .inner {
+    padding: 3rem 2rem;
+ }
+ #row-1 { h1 {font-size: 3.5em;};}
+ .row{
+  &__inner {
+    .img-cont {
+      width:          100%;
+      margin-bottom:  2.5rem;
+    }
+  }
+ }
+ .form__row {
+    .flex-direction(column);
+    &__field {
+      &_big {
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+      }
+    }
+ }
+}
+@media (max-width: 480px) {
+  .form__button {
+    width:      100%;
+    max-width:  100%;
+  }
+}
+@media (max-width: 360px) {
+ .inner {
+    padding: 2.25rem 1.5rem;
+ }
+ .row-full-with {
+    left: -1.5rem;
+    margin: auto !important;
+    & > div {
+      padding: 2.625rem 1.5rem !important;
+    }
+  }
+  #row-1 {
+    .row__inner {
+      margin: 0 !important;
+    }
+  }
+}

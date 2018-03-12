@@ -22,6 +22,19 @@
       box-shadow: @x @y @blur @spread @color;
 }
 
+//Внутренняя и внешние тени
+.box-shadow-plus-inset(
+  @x : 2px,
+  @y : 2px,
+  @blur : 5px,
+  @spread : 0,
+  @color : rgba(0,0,0,.6)
+) {
+  -webkit-box-shadow: @x @y @blur @spread @color, inset @x @y @blur @spread @color;
+     -moz-box-shadow: @x @y @blur @spread @color, inset @x @y @blur @spread @color;
+      box-shadow: @x @y @blur @spread @color, inset @x @y @blur @spread @color;
+}
+
 .transition(
   @what : all,
   @length : 1s,
@@ -144,6 +157,27 @@
   display: -ms-flex;
   display: -moz-flex;
   display: -webkit-flex;
+}
+
+.flex-direction(@dir: row) {
+  -moz-flex-direction:    @dir;
+  -webkit-flex-direction: @dir;
+  -ms-flex-direction:     @dir;
+  flex-direction:         @dir;
+}
+
+.flex-grow(@grow: 1) {
+  -moz-flex-grow:     @grow;
+  -webkit-flex-grow:  @grow;
+  -ms-flex-grow:      @grow;
+  flex-grow:          @grow;
+}
+
+.flex-shrink(@shrink: 1) {
+  -moz-flex-shrink:     @shrink;
+  -webkit-flex-shrink:  @shrink;
+  -ms-flex-shrink:      @shrink;
+  flex-shrink:          @shrink;
 }
 
 .display-inline-flex () {

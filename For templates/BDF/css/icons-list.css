@@ -34,3 +34,6 @@
   height: 100%;
   fill: rgba(102, 102, 102, 0.278);
 }
+.icons-list__svg:hover {
+  fill: #666666;
+}
