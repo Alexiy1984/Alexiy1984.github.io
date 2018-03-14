@@ -1,5 +1,7 @@
 .hor-menu {
   list-style: none;
+  max-width: 100%;
+  flex-wrap: wrap;
 }
 .hor-menu__item {
   display: inline-block;
@@ -20,4 +22,15 @@
   background-color: rgba(221, 178, 221, 0.3);
   color: #625;
   border-bottom: 2px solid #fff;
+}
+@media (max-width: 980px) {
+  .hor-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 680px) {
+  .hor-menu__item {
+    width: 100%;
+  }
 }

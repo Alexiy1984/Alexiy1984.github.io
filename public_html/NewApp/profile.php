@@ -73,7 +73,7 @@
   echo <<<_END
     <form method='post' action='profile.php' enctype='multipart/form-data' class='form'>
     <div class='form__row'>
-      <h3 class='form__row__item'>Введите или отредактируйте сведения.</h3>
+      <p class='form__row__item'>Введите или отредактируйте сведения.</p>
     </div>
     <div class='form__row'>
       <textarea name='text' cols='50' rows='10' class='form__row__item form__row__item_textarea'>$text</textarea>

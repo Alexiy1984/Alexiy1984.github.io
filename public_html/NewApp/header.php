@@ -30,20 +30,21 @@
 
   if ($loggedin)
   {
-    echo "<ul class='hor-menu'>" .
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php?view=$user'>Домой</a></li>" .
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php'>Участники</a></li>".
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='friends.php'>Друзья</a></li>".
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='messages.php'>Сообщения</a></li>".
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='profile.php'>Редактировать профиль</a></li>".
-         "<li class='hor-menu__item'><a class='hor-menu__link' href='logout.php'>Выйти</a></li></ul></div>";
+    echo
+          "<ul class='hor-menu'>" .
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php?view=$user'>Домой</a></li>" .
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='members.php'>Участники</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='friends.php'>Друзья</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='messages.php'>Сообщения</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='profile.php'>Редактировать профиль</a></li>".
+          "<li class='hor-menu__item'><a class='hor-menu__link' href='logout.php'>Выйти</a></li></ul></div>";
   }
   else
   {
-    echo ("<ul class='hor-menu'>".
+    echo  "<ul class='hor-menu'>".
           "<li class='hor-menu__item'><a class='hor-menu__link' href='index.php'>Домой</a></li>".
           "<li class='hor-menu__item'><a class='hor-menu__link' href='signup.php'>Регистрация</a></li>".
           "<li class='hor-menu__item'><a class='hor-menu__link' href='login.php'>Вход</a></li></ul></div>".
-          "<div class='info'>Для просмотра нужно зайти на сайт.</div>");
+          "<div class='info'>Для просмотра нужно зайти на сайт.</div>";
   }
 ?>

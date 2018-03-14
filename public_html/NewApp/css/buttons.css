@@ -5,6 +5,7 @@
   transform: skew(20deg);
   background: #625;
   transition: background-color 0.5s, color 0.5s;
+  max-width: calc(100% - 2rem);
 }
 .figure-button_float_left {
   float: left;

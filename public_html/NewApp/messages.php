@@ -22,7 +22,7 @@
     showProfile($view);
     echo <<<_END
       <form class="form" method='post' action='messages.php?view=$view'>
-      <div class="form__row">Напишите здесь свое сообщение:</div>
+      <div class="form__row"><p>Напишите здесь свое сообщение:</p></div>
       <div class="form__row">
         <textarea name='text' cols='40' rows='10' class='form__row__item form__row__item_textarea'></textarea>
       </div>

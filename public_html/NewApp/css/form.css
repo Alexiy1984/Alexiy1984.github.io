@@ -42,3 +42,24 @@
 .form__row__text {
   padding: 0 1rem;
 }
+@media (max-width: 1280px) {
+  .form {
+    width: calc(85% - 3rem);
+  }
+}
+@media (max-width: 980px) {
+  .form {
+    width: calc(100% - 3rem);
+  }
+  .form__row {
+    flex-wrap: wrap;
+  }
+  .form__row__item {
+    width: 100% !important;
+  }
+}
+@media (max-width: 480px) {
+  .form {
+    width: 100%;
+  }
+}
