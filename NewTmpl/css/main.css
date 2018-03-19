@@ -7,30 +7,74 @@
   left: 50px;
   z-index: 500;
 }
-.menu {
+.nav-menu {
   list-style: none;
   position: absolute;
   top: 50px;
   right: 50px;
 }
-.menu__item {
+.nav-menu__item {
   float: left;
   margin-left: 1.5rem;
 }
-.menu__link {
+.nav-menu__link {
   text-decoration: none;
   color: #fff;
 }
-.menu__link__js-atimatet-text {
+.nav-menu__link__js-atimatet-text {
   font-size: 0.75em;
   text-transform: uppercase;
   display: inline-block;
+}
+.vertical-menu {
+  list-style: none;
+}
+.vertical-menu_big {
+  font-size: 2rem;
+}
+.vertical-menu__item {
+  margin: 1.5rem 0;
+}
+.vertical-menu__link {
+  color: #000;
+  text-decoration: none;
 }
 .video-div {
   background: url('../media/images/pic_fv_video1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: 10 !important;
+}
+.video-div__centered-block {
+  background-color: #000;
+  color: #fff;
+  max-width: 100%;
+  width: 28rem;
+  height: 28rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 20 !important;
+}
+.video-div__centered-block_rounded {
+  border-radius: 100%;
+}
+.video-div__centered-block__inner {
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 30 !important;
 }
 * {
   margin: 0;
@@ -50,8 +94,53 @@ html {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
 }
 .row {
+  position: relative;
   width: 100%;
   height: 100vh;
+  z-index: 150;
+  color: #000;
+  background-color: #fff;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.row__inner {
+  padding: 12rem 10rem;
+}
+@media (max-width: 1680px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 13pt;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 680px) {
+  html {
+    font-size: 11pt;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 10pt;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 10pt;
+  }
 }
