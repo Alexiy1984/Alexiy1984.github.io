@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><% include partials/page/head.ejs %></head>
+  <body class="<%= classname %>">
+    <% include partials/page/header.ejs %>
+    <div class="container">
+      <h1><%= pagetitle %> <%= title %></h1>
+      <p>Nisi culpa incididunt cillum aliqua ut exercitation nulla sunt esse irure eu proident duis. Id nulla dolor duis occaecat dolor nisi ut dolor. Eiusmod proident cupidatat tempor do aliquip mollit elit ut adipisicing sit sit commodo culpa eiusmod ut tempor enim deserunt.</p>
+
+      <% if (typeof(users) !== 'undefined') {%>
+        <ul>
+          <% for(var i=0; i<users.length; i++) {%>
+            <li><%=users[i] %></li>
+          <% } %>
+        </ul>
+      <% } %>
+
+    </div>
+    <% include partials/page/footer.ejs %>
+    <% include partials/page/jsdefaults.ejs %>
+  </body>
+</html>
+
+
