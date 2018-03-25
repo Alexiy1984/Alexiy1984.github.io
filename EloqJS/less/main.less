@@ -50,6 +50,12 @@ html {
   text-transform: uppercase;
 }
 
+.secohd-heading {
+  font-size: 2em;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+}
+
 .img {
   &_small {
     width: 8rem;
@@ -63,6 +69,9 @@ html {
   }
   &_shadow {
     .box-shadow();
+    &:hover {
+      .box-shadow-none();
+    }
   }
 }
 
