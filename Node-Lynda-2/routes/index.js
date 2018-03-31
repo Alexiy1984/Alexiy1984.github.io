@@ -14,7 +14,8 @@ router.get('/', function(req, res, next) {
   res.render('index', {
     title: 'Home',
     artwork: myArtwork,
-    artists: myArtists
+    artists: myArtists,
+    page: 'home'
   });
 });
 
@@ -30,11 +31,12 @@ router.get('/speakers', function(req, res, next) {
   res.render('speakers', {
     title: 'Speakers',
     artwork: myArtwork,
-    artists: myArtists
+    artists: myArtists,
+    page: 'artistList'
   });
 });
 
-/* GET speakers page. */
+/* GET speakers detail page. */
 router.get('/speakers/:speakerid', function(req, res, next) {
   var myArtwork = [];
   var myArtists = [];
@@ -48,7 +50,8 @@ router.get('/speakers/:speakerid', function(req, res, next) {
   res.render('speakers', {
     title: 'Speakers',
     artwork: myArtwork,
-    artists: myArtists
+    artists: myArtists,
+    page: 'artistDetail'
   });
 });
 
