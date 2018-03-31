@@ -6,14 +6,30 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <script src="js/ellife/main.js"></script>
+<script src="js/ellife/animateworld.js"></script>
 <body class="full-size-body">
   <div class="wrapper">
     <div class="container">
-      <div class="inner">
+      <div class="inner" id="inner">
          <h1 class="main-heading">Проект электронная жизнь</h1>
          <p>Массив строк, представляющий "Мир"</p>
          <p id="JS-for-parameters"></p>
          <pre id="JS-for-world" ></pre>
+           <script>
+            animateWorld(world);
+            /*animateWorld(new World(
+              ["############",
+              "#     #    #",
+              "#   ~    ~ #",
+              "#  ##      #",
+              "#  ##  o####",
+              "#          #",
+              "############"],
+              {"#": Wall,
+              "~": WallFollower,
+              "o": BouncingCritter}
+            ));*/
+           </script>
       </div>
     </div>
   </div>
