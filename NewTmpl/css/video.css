@@ -3,4 +3,38 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  z-index: 10 !important;
+}
+.video-div__centered-block {
+  background-color: #000;
+  color: #fff;
+  max-width: 100%;
+  width: 28rem;
+  height: 28rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 20 !important;
+}
+.video-div__centered-block_rounded {
+  border-radius: 100%;
+}
+.video-div__centered-block_hidden {
+  display: none;
+}
+.video-div__centered-block__inner {
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 30 !important;
 }

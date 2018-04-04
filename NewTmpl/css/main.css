@@ -64,6 +64,9 @@
 .video-div__centered-block_rounded {
   border-radius: 100%;
 }
+.video-div__centered-block_hidden {
+  display: none;
+}
 .video-div__centered-block__inner {
   text-align: center;
   width: 50%;
