@@ -1,14 +1,33 @@
 function IdGet(idname) {return typeof i == 'object' ? i : document.getElementById(idname);}
 function ClassGet(classname) {return document.getElementsByClassName(classname);}
 function AddClass(element, classname) {
-  element.className = element.className.replace(classname);
+  var reg = new RegExp("\\b"+ classname+"\\b","g");
+  /*console.log(reg);*/
+  element.className = element.className.replace(reg,"");
 }
 function RemoveClass(element, classname) {
-  let arr;
+  var arr;
   arr = element.className.split(" ");
+  /*console.log(arr);
+  console.log(classname);*/
   if (arr.indexOf(classname) == -1) {
-    element.className += " " + classname;
+    element.className += "" + classname;
   }
+}
+
+function ToggleClass(element, classname) {
+  if (element.classList) {
+    element.classList.toggle(classname);
+} else {
+    var classes = element.className.split(" ");
+    var i = classes.indexOf(classname);
+
+    if (i >= 0)
+        classes.splice(i, 1);
+    else
+        classes.push(classname);
+        element.className = classes.join(" ");
+}
 }
 
 window.onload = function () {
@@ -36,9 +55,10 @@ window.onscroll = function() {
     console.log(secondblock);
     AddClass(secondblock,'video-div__centered-block_hidden');
   }
-  else {
+  else if (window.pageYOffset <= document.documentElement.clientHeight){
     console.log('failure');
     let secondblock = IdGet('second-vid-block');
     RemoveClass(secondblock,'video-div__centered-block_hidden');
   }
 }
+

@@ -47,6 +47,9 @@
   position: relative;
   z-index: 10 !important;
 }
+.video-div_second {
+  background: url('../media/images/Rmagazine01_cover-1.jpg');
+}
 .video-div__centered-block {
   background-color: #000;
   color: #fff;
