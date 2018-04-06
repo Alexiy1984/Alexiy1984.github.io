@@ -1,0 +1,127 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18pt;
+}
+
+.wrapper {
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f894a;
+  &_justify-flex-start {
+    justify-content: flex-start;
+    padding: 0; 
+  }
+}
+
+.header {
+  width: 100%;
+  max-width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: lighten($brunch-color, 25);
+  color: #fff;
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+  }
+}
+
+.container {
+  @include block-child-margin();
+  width: calc(100% - 2rem);
+  max-width: 100%;
+  margin: 1rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  flex-grow: 2;
+  div {
+    @include block-child-margin-right();
+    text-align: center;
+  }
+}
+
+.brunch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  font-family: -apple-system, Sans-Serif;
+  text-align: center;
+  color: #3f894a;
+  background-color: #fff;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 100%;
+  &__img {
+    width: 15rem;
+    height: auto;
+  }
+  &__main-text {
+    font-size: 1em;
+  }
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 10rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  background-color: #3f894a;
+  color: #fff;
+  text-decoration: none;
+  -webkit-border-radius: 0.35rem;
+  -moz-border-radius: 0.35rem;
+  border-radius: 0.35rem;
+  font-size: 0.75em;
+  font-weight: 600;
+  &:hover {
+    background-color: lighten($brunch-color, 10);
+    color: darken($brunch-color , 30)
+  }
+}
+
+@media (max-width: 1680px) {
+  html {font-size: 14pt;}
+}
+@media (max-width: 1280px) {
+  html {font-size: 14pt;}
+}
+@media (max-width: 980px) {
+  html {font-size: 14pt;}
+}
+@media (max-width: 680px) {
+  html {font-size: 12pt;}
+}
+@media (max-width: 480px) {
+  html {font-size: 12pt;}
+  .brunch{
+    width: 20rem;
+    height: 20rem;
+    &__img { width: 10rem; }
+    &__main-text { font-size: 0.75em;}
+  }
+}
+@media (max-width: 360px) {
+  html {font-size: 11pt;}
+  .brunch{
+    width: 75vw;
+    height: 75vw;
+    &__img { width: 35vw; }
+    &__main-text { font-size: 0.5em;}
+  }
+}

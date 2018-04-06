@@ -1,0 +1,21 @@
+@mixin block-child-margin($margin: 1rem) {
+  & > * {
+    margin: $margin 0;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@mixin block-child-margin-right($margin: 1rem) {
+  & > * {
+    margin: 0; 
+    margin-right: $margin;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
