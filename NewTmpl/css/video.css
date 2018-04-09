@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Oswald ExtraLight'), local('Oswald-ExtraLight'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-1h4jvQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-sh0jvQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg75GHg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Oswald Medium'), local('Oswald-Medium'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-6hwjvQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Oswald SemiBold'), local('Oswald-SemiBold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-xhsjvQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohojvQ.ttf) format('truetype');
+}
 .video-div {
   background: url('../media/images/pic_fv_video1.jpg');
   background-position: center;
@@ -10,7 +46,12 @@
   background: url('../media/images/Rmagazine01_cover-1.jpg');
 }
 .video-div__centered-block {
-  background-color: #000;
+  /* background: @begin; */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3))), url('../media/images/pic_fv_video1.jpg');
+  background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_fv_video1.jpg');
+  background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_fv_video1.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_fv_video1.jpg');
+  background-position: 0 0, center;
   color: #fff;
   max-width: 100%;
   width: 28rem;
@@ -29,15 +70,143 @@
 .video-div__centered-block_hidden {
   display: none;
 }
+.video-div__centered-block_second {
+  /* background: @begin; */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3))), url('../media/images/Rmagazine01_cover-1.jpg');
+  background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
+  background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
+  background-position: 0 0, center;
+}
 .video-div__centered-block__inner {
+  font-family: 'Oswald', sans-serif;
   text-align: center;
-  width: 50%;
-  height: 50%;
+  width: 65%;
+  height: 65%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+  padding: 2.5rem 0;
   z-index: 30 !important;
+}
+.video-div__centered-block__inner h1 {
+  font-weight: 300;
+}
+.video-div__centered-block__inner h2,
+.video-div__centered-block__inner p {
+  font-weight: 200;
+}
+.video-div__js-text-container {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+.video-div__js-text-show {
+  letter-spacing: -0.15em;
+  display: inline-block;
+  animation: text-translate 1s linear;
+  transform: translateY(2.5rem);
+  animation-fill-mode: forwards;
+}
+.video-div__js-text-show:first-child {
+  animation-delay: 0s;
+}
+.video-div__js-text-show:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.video-div__js-text-show:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.video-div__js-text-show:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.video-div__js-text-show:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.video-div__js-text-show:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.video-div__js-text-show:nth-child(6) {
+  animation-delay: 0.3s;
+}
+.video-div__js-text-show:nth-child(7) {
+  animation-delay: 0.35s;
+}
+.video-div__js-text-show:nth-child(8) {
+  animation-delay: 0.4s;
+}
+.video-div__js-text-show:nth-child(9) {
+  animation-delay: 0.45s;
+}
+.video-div__js-text-show:nth-child(10) {
+  animation-delay: 0.5s;
+}
+.video-div__js-text-show:nth-child(11) {
+  animation-delay: 0.55s;
+}
+.video-div__js-text-show:nth-child(12) {
+  animation-delay: 0.6s;
+}
+.video-div__js-text-show:nth-child(13) {
+  animation-delay: 0.65s;
+}
+.video-div__js-text-show:nth-child(14) {
+  animation-delay: 0.7s;
+}
+.video-div__js-text-show:nth-child(15) {
+  animation-delay: 0.75s;
+}
+.video-div__js-text-show:nth-child(16) {
+  animation-delay: 0.8s;
+}
+.video-div__js-text-show:nth-child(17) {
+  animation-delay: 0.85s;
+}
+.video-div__js-text-show:nth-child(18) {
+  animation-delay: 0.9s;
+}
+.video-div__js-text-show:nth-child(19) {
+  animation-delay: 0.95s;
+}
+.video-div__js-text-show:nth-child(20) {
+  animation-delay: 1s;
+}
+.video-div__js-text-show:nth-child(21) {
+  animation-delay: 1.05s;
+}
+.video-div__js-text-show:nth-child(22) {
+  animation-delay: 1.1s;
+}
+.video-div__js-text-show:nth-child(23) {
+  animation-delay: 1.15s;
+}
+.video-div__js-text-show:nth-child(24) {
+  animation-delay: 1.2s;
+}
+.video-div__js-text-show:nth-child(25) {
+  animation-delay: 1.25s;
+}
+.video-div__js-text-show:nth-child(26) {
+  animation-delay: 1.3s;
+}
+.video-div__js-text-show:nth-child(27) {
+  animation-delay: 1.35s;
+}
+.video-div__js-text-show:nth-child(28) {
+  animation-delay: 1.4s;
+}
+.video-div__js-text-show:nth-child(29) {
+  animation-delay: 1.45s;
+}
+.video-div__js-text-show:nth-child(30) {
+  animation-delay: 1.5s;
+}
+@keyframes text-translate {
+  50% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
 }

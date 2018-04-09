@@ -1,3 +1,9 @@
+@import 'mixins.less';
+
+@font-face {
+  font-family: 'Futura-PT';
+  src: url('../media/fonts/Futura PT Medium.otf');
+}
 .nav-menu {
   list-style: none;
   position: absolute;
@@ -8,15 +14,28 @@
     margin-left: 1.5rem;
   }
   &__link {
+    font-size: 0.75em;
+    font-family: 'Futura-PT', sans-serif;
     text-decoration: none;
     color: #fff;
-    &__js-atimatet-text {
+    &:hover &__js-atimated-text {
+      -webkit-transform: rotateX(360deg);
+      transform: rotateX(360deg);
+    }
+    &__js-atimated-text {
       font-size: 0.75em;
       text-transform: uppercase;
       display: inline-block;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.4s;
+      &:first-child {
+        transition-delay: 0s;
+      }
+      .generate-child();
     }
   }
 }
+
 .vertical-menu {
   list-style: none;
   &_big {
@@ -26,7 +45,10 @@
     margin: 1.5rem 0;
   }
   &__link {
+    font-family: 'Futura-PT', sans-serif;
+    font-weight: 300;
     color: #000;
     text-decoration: none;
   }
 }
+

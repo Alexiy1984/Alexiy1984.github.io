@@ -1,20 +1,22 @@
 function IdGet(idname) {return typeof i == 'object' ? i : document.getElementById(idname);}
 function ClassGet(classname) {return document.getElementsByClassName(classname);}
-function AddClass(element, classname) {
+function RemoveClass(element, classname) {
   var reg = new RegExp("\\b"+ classname+"\\b","g");
   /*console.log(reg);*/
-  element.className = element.className.replace(reg,"");
+  element.className = element.className.replace(reg," ");
 }
-function RemoveClass(element, classname) {
+function AddClass(element, classname) {
   var arr;
   arr = element.className.split(" ");
   /*console.log(arr);
   console.log(classname);*/
   if (arr.indexOf(classname) == -1) {
-    element.className += "" + classname;
+    element.className += " " + classname;
   }
+  element.className = element.className.replace(/\s+/g," ");
 }
 
+//ФУНКЦИЯ НЕ ПРОВЕРЕНА
 function ToggleClass(element, classname) {
   if (element.classList) {
     element.classList.toggle(classname);
@@ -29,6 +31,7 @@ function ToggleClass(element, classname) {
         element.className = classes.join(" ");
 }
 }
+//ФУНКЦИЯ НЕ ПРОВЕРЕНА
 
 window.onload = function () {
 
@@ -53,12 +56,12 @@ window.onscroll = function() {
     console.log('succes');
     let secondblock = IdGet('second-vid-block');
     console.log(secondblock);
-    AddClass(secondblock,'video-div__centered-block_hidden');
+    RemoveClass(secondblock,'video-div__centered-block_hidden');
   }
   else if (window.pageYOffset <= document.documentElement.clientHeight){
     console.log('failure');
     let secondblock = IdGet('second-vid-block');
-    RemoveClass(secondblock,'video-div__centered-block_hidden');
+    AddClass(secondblock,'video-div__centered-block_hidden');
   }
 }
 
