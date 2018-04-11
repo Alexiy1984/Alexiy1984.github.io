@@ -11,3 +11,10 @@
   }
   .generate-child2(@i + 1);
 }
+
+.transition-prfx (@trans-prop: transform, @trans-time: 1s, @trans-tf: ease-in-out, @trans-del: 0s) {
+  -webkit-transition: @trans-prop @trans-time @trans-tf @trans-del;
+  -moz-transition: @trans-prop @trans-time @trans-tf @trans-del;
+  -o-transition: @trans-prop @trans-time @trans-tf @trans-del;
+  transition: @trans-prop @trans-time @trans-tf @trans-del;
+}

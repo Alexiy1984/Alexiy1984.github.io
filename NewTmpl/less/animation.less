@@ -1,0 +1,23 @@
+@import 'mixins.less';
+.animated-link {
+  font-size: 0.75em;
+  font-family: 'Josefin Sans', sans-serif;
+  text-decoration: none;
+  &:hover &__text {
+      -webkit-transform: rotateX(360deg);
+      transform: rotateX(360deg);
+    }
+    &__text {
+      font-size: 0.75em;
+      text-transform: uppercase;
+      display: inline-block;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: transform 0.4s;
+      &:first-child {
+        transition-delay: 0s;
+      }
+      .generate-child();
+    }
+}
+
+

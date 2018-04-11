@@ -55,13 +55,17 @@ window.onscroll = function() {
   if (window.pageYOffset > document.documentElement.clientHeight) {
     console.log('succes');
     let secondblock = IdGet('second-vid-block');
+    let hiddenmenu = IdGet('JS-hidden-menu');
     console.log(secondblock);
     RemoveClass(secondblock,'video-div__centered-block_hidden');
+    RemoveClass(hiddenmenu,'row__inner_hidden');
   }
   else if (window.pageYOffset <= document.documentElement.clientHeight){
     console.log('failure');
     let secondblock = IdGet('second-vid-block');
+    let hiddenmenu = IdGet('JS-hidden-menu');
     AddClass(secondblock,'video-div__centered-block_hidden');
+    AddClass(hiddenmenu,'row__inner_appeared');
   }
 }
 

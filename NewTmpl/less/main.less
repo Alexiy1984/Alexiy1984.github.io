@@ -1,7 +1,10 @@
 @import 'logo.less';
 @import 'menu.less';
 @import 'video.less';
+@import 'animation.less';
 @import 'vendprx.less';
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&subset=latin-ext');
 @font-face {
   font-family: 'Futura-PT';
   src: url('../media/fonts/Futura PT Medium.otf');
@@ -37,7 +40,40 @@ html {
   background-size: cover;
   &__inner {
     padding: 12rem 10rem;
+    &_hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+    &_appeared {
+      .transition-prfx(transform, 1s, ease-in-out);
+      .transition-prfx(opacity, 1s, ease-in-out);
+       transform: translateY(2.5rem);
+       opacity:1;
+    }
   }
+}
+
+.gray-p {
+  color: #bbb;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.no-highlighted-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.text-compact {
+  letter-spacing: -0.35em;
+}
+
+.underlined-div {
+  padding-right: 0.35rem;
+  display:inline-block;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #000;
 }
 
 @media (max-width: 1680px) {

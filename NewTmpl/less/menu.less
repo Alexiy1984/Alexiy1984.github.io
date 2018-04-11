@@ -1,9 +1,11 @@
 @import 'mixins.less';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&subset=latin-ext');
 
 @font-face {
   font-family: 'Futura-PT';
   src: url('../media/fonts/Futura PT Medium.otf');
 }
+
 .nav-menu {
   list-style: none;
   position: absolute;
@@ -15,14 +17,14 @@
   }
   &__link {
     font-size: 0.75em;
-    font-family: 'Futura-PT', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-decoration: none;
     color: #fff;
-    &:hover &__js-atimated-text {
+    &:hover &__atimated-text {
       -webkit-transform: rotateX(360deg);
       transform: rotateX(360deg);
     }
-    &__js-atimated-text {
+    &__atimated-text {
       font-size: 0.75em;
       text-transform: uppercase;
       display: inline-block;
@@ -45,7 +47,7 @@
     margin: 1.5rem 0;
   }
   &__link {
-    font-family: 'Futura-PT', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     color: #000;
     text-decoration: none;

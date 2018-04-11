@@ -17,8 +17,8 @@
     background-position: 0 0, center;
     color: #fff;
     max-width: 100%;
-    width: 28rem;
-    height: 28rem;
+    width: 25rem;
+    height: 25rem;
     position: fixed;
     top: 0;
     right: 0;
@@ -39,29 +39,46 @@
     &__inner {
       font-family: 'Oswald', sans-serif;
       text-align: center;
-      width: 65%;
-      height: 65%;
+      width: 75%;
+      height: 75%;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       margin: auto;
-      padding: 2.5rem 0;
+      padding: 4.5rem 0;
       z-index: 30 !important;
-      h1 {
-        font-weight: 300;
-      }
-      h2, p{
-        font-weight: 200;
-      }
     }
   }
-  &__js-text-container {
+  &__animated-p-container {
+    font-size: 1.5em;
+    font-weight: 300;
     clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    letter-spacing: -0.05em;
   }
-  &__js-text-show {
-    letter-spacing: -0.15em;
+  &__animated-p {
+    animation: text-translate 1s linear;
+    transform: translateY(2.5rem);
+    animation-fill-mode: forwards;
+    &_1{
+      animation-delay: 1.2s;
+    }
+    &_2 {
+      animation-delay: 1.4s;
+    }
+    &_3 {
+      animation-delay: 1.6s;
+    }
+  }
+  &__text-container {
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+    margin-left: -0.3em;
+    margin-bottom: 0.5rem;
+  }
+  &__text-show {
+    font-weight: 400;
+    letter-spacing: -0.3em;
     display: inline-block;
     animation: text-translate 1s linear;
     transform: translateY(2.5rem);

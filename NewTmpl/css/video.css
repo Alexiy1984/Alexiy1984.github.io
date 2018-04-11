@@ -54,8 +54,8 @@
   background-position: 0 0, center;
   color: #fff;
   max-width: 100%;
-  width: 28rem;
-  height: 28rem;
+  width: 25rem;
+  height: 25rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -81,125 +81,141 @@
 .video-div__centered-block__inner {
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  width: 65%;
-  height: 65%;
+  width: 75%;
+  height: 75%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: 2.5rem 0;
+  padding: 4.5rem 0;
   z-index: 30 !important;
 }
-.video-div__centered-block__inner h1 {
+.video-div__animated-p-container {
+  font-size: 1.5em;
   font-weight: 300;
-}
-.video-div__centered-block__inner h2,
-.video-div__centered-block__inner p {
-  font-weight: 200;
-}
-.video-div__js-text-container {
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  letter-spacing: -0.05em;
 }
-.video-div__js-text-show {
-  letter-spacing: -0.15em;
+.video-div__animated-p {
+  animation: text-translate 1s linear;
+  transform: translateY(2.5rem);
+  animation-fill-mode: forwards;
+}
+.video-div__animated-p_1 {
+  animation-delay: 1.2s;
+}
+.video-div__animated-p_2 {
+  animation-delay: 1.4s;
+}
+.video-div__animated-p_3 {
+  animation-delay: 1.6s;
+}
+.video-div__text-container {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  margin-left: -0.3em;
+  margin-bottom: 0.5rem;
+}
+.video-div__text-show {
+  font-weight: 400;
+  letter-spacing: -0.3em;
   display: inline-block;
   animation: text-translate 1s linear;
   transform: translateY(2.5rem);
   animation-fill-mode: forwards;
 }
-.video-div__js-text-show:first-child {
+.video-div__text-show:first-child {
   animation-delay: 0s;
 }
-.video-div__js-text-show:nth-child(1) {
+.video-div__text-show:nth-child(1) {
   animation-delay: 0.05s;
 }
-.video-div__js-text-show:nth-child(2) {
+.video-div__text-show:nth-child(2) {
   animation-delay: 0.1s;
 }
-.video-div__js-text-show:nth-child(3) {
+.video-div__text-show:nth-child(3) {
   animation-delay: 0.15s;
 }
-.video-div__js-text-show:nth-child(4) {
+.video-div__text-show:nth-child(4) {
   animation-delay: 0.2s;
 }
-.video-div__js-text-show:nth-child(5) {
+.video-div__text-show:nth-child(5) {
   animation-delay: 0.25s;
 }
-.video-div__js-text-show:nth-child(6) {
+.video-div__text-show:nth-child(6) {
   animation-delay: 0.3s;
 }
-.video-div__js-text-show:nth-child(7) {
+.video-div__text-show:nth-child(7) {
   animation-delay: 0.35s;
 }
-.video-div__js-text-show:nth-child(8) {
+.video-div__text-show:nth-child(8) {
   animation-delay: 0.4s;
 }
-.video-div__js-text-show:nth-child(9) {
+.video-div__text-show:nth-child(9) {
   animation-delay: 0.45s;
 }
-.video-div__js-text-show:nth-child(10) {
+.video-div__text-show:nth-child(10) {
   animation-delay: 0.5s;
 }
-.video-div__js-text-show:nth-child(11) {
+.video-div__text-show:nth-child(11) {
   animation-delay: 0.55s;
 }
-.video-div__js-text-show:nth-child(12) {
+.video-div__text-show:nth-child(12) {
   animation-delay: 0.6s;
 }
-.video-div__js-text-show:nth-child(13) {
+.video-div__text-show:nth-child(13) {
   animation-delay: 0.65s;
 }
-.video-div__js-text-show:nth-child(14) {
+.video-div__text-show:nth-child(14) {
   animation-delay: 0.7s;
 }
-.video-div__js-text-show:nth-child(15) {
+.video-div__text-show:nth-child(15) {
   animation-delay: 0.75s;
 }
-.video-div__js-text-show:nth-child(16) {
+.video-div__text-show:nth-child(16) {
   animation-delay: 0.8s;
 }
-.video-div__js-text-show:nth-child(17) {
+.video-div__text-show:nth-child(17) {
   animation-delay: 0.85s;
 }
-.video-div__js-text-show:nth-child(18) {
+.video-div__text-show:nth-child(18) {
   animation-delay: 0.9s;
 }
-.video-div__js-text-show:nth-child(19) {
+.video-div__text-show:nth-child(19) {
   animation-delay: 0.95s;
 }
-.video-div__js-text-show:nth-child(20) {
+.video-div__text-show:nth-child(20) {
   animation-delay: 1s;
 }
-.video-div__js-text-show:nth-child(21) {
+.video-div__text-show:nth-child(21) {
   animation-delay: 1.05s;
 }
-.video-div__js-text-show:nth-child(22) {
+.video-div__text-show:nth-child(22) {
   animation-delay: 1.1s;
 }
-.video-div__js-text-show:nth-child(23) {
+.video-div__text-show:nth-child(23) {
   animation-delay: 1.15s;
 }
-.video-div__js-text-show:nth-child(24) {
+.video-div__text-show:nth-child(24) {
   animation-delay: 1.2s;
 }
-.video-div__js-text-show:nth-child(25) {
+.video-div__text-show:nth-child(25) {
   animation-delay: 1.25s;
 }
-.video-div__js-text-show:nth-child(26) {
+.video-div__text-show:nth-child(26) {
   animation-delay: 1.3s;
 }
-.video-div__js-text-show:nth-child(27) {
+.video-div__text-show:nth-child(27) {
   animation-delay: 1.35s;
 }
-.video-div__js-text-show:nth-child(28) {
+.video-div__text-show:nth-child(28) {
   animation-delay: 1.4s;
 }
-.video-div__js-text-show:nth-child(29) {
+.video-div__text-show:nth-child(29) {
   animation-delay: 1.45s;
 }
-.video-div__js-text-show:nth-child(30) {
+.video-div__text-show:nth-child(30) {
   animation-delay: 1.5s;
 }
 @keyframes text-translate {
