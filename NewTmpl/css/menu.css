@@ -83,6 +83,7 @@
   transform: rotateX(360deg);
 }
 .nav-menu__link__atimated-text {
+  letter-spacing: -0.35em;
   font-size: 0.75em;
   text-transform: uppercase;
   display: inline-block;

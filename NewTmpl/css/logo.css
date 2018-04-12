@@ -12,3 +12,7 @@
   left: 50px;
   z-index: 500;
 }
+.logo img {
+  height: 0.75rem;
+  width: auto;
+}

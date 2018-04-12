@@ -45,6 +45,9 @@
 .video-div_second {
   background: url('../media/images/Rmagazine01_cover-1.jpg');
 }
+.video-div_solutions {
+  background: url('../media/images/pic_solutions_fv.jpg');
+}
 .video-div__centered-block {
   /* background: @begin; */
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3))), url('../media/images/pic_fv_video1.jpg');
@@ -76,6 +79,14 @@
   background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
   background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/Rmagazine01_cover-1.jpg');
+  background-position: 0 0, center;
+}
+.video-div__centered-block_solutions {
+  /* background: @begin; */
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0.3))), url('../media/images/pic_solutions_fv.jpg');
+  background-image: -moz-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_solutions_fv.jpg');
+  background-image: -o-linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_solutions_fv.jpg');
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_solutions_fv.jpg');
   background-position: 0 0, center;
 }
 .video-div__centered-block__inner {

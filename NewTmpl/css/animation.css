@@ -47,3 +47,11 @@
 .animated-link__text:nth-child(10) {
   transition-delay: 0.5s;
 }
+@keyframes translate-Y {
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

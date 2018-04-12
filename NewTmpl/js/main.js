@@ -55,17 +55,32 @@ window.onscroll = function() {
   if (window.pageYOffset > document.documentElement.clientHeight) {
     console.log('succes');
     let secondblock = IdGet('second-vid-block');
-    let hiddenmenu = IdGet('JS-hidden-menu');
+    let rotatedtext = IdGet('JS-rotated-text');
+
     console.log(secondblock);
+
+    rotatedtext.innerHTML = 'next project';
+
     RemoveClass(secondblock,'video-div__centered-block_hidden');
-    RemoveClass(hiddenmenu,'row__inner_hidden');
   }
   else if (window.pageYOffset <= document.documentElement.clientHeight){
     console.log('failure');
     let secondblock = IdGet('second-vid-block');
     let hiddenmenu = IdGet('JS-hidden-menu');
+    let rotatedtext = IdGet('JS-rotated-text');
+
+    rotatedtext.innerHTML = 'scroll';
+
     AddClass(secondblock,'video-div__centered-block_hidden');
-    AddClass(hiddenmenu,'row__inner_appeared');
   }
+
+  if (window.pageYOffset > ((document.documentElement.clientHeight)*0.35))  {
+    let hiddenmenu = IdGet('JS-hidden-menu');
+
+    AddClass(hiddenmenu,'appeared');
+    // RemoveClass(hiddenmenu,'row__inner_hidden');
+  }
+
 }
+
 

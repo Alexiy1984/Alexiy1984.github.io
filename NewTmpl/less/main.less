@@ -31,6 +31,9 @@ html {
 }
 .row {
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   height: 100vh;
   z-index: 150;
@@ -39,25 +42,67 @@ html {
   background-repeat: repeat;
   background-size: cover;
   &__inner {
-    padding: 12rem 10rem;
+    padding-left: 12rem;
     &_hidden {
-      visibility: hidden;
       opacity: 0;
-    }
-    &_appeared {
-      .transition-prfx(transform, 1s, ease-in-out);
-      .transition-prfx(opacity, 1s, ease-in-out);
-       transform: translateY(2.5rem);
-       opacity:1;
+      .vertical-menu__item {
+        transform: translateY(5rem);
+      }
+      .gray-p {
+        color: #bbb;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        transform: translateY(5rem);
+      }
+      .underlined-div {
+        padding-right: 0.35rem;
+        display:inline-block;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid #000;
+        transform: translateY(5rem);
+      }
+      &.appeared {
+        .transition-prfx(opacity, 3s, ease-in-out);
+        opacity:1;
+        .vertical-menu__item {
+          transform: translateY(0);
+          .transition-prfx(transform, 1s, ease-in-out);
+          .generate-child3();
+        }
+        .gray-p {
+          .transition-prfx(transform, 1s, ease-in-out);
+          transform: translateY(0);
+          transition-delay: 0;
+        }
+        .underlined-div {
+          .transition-prfx(transform, 1s, ease-in-out);
+          transform: translateY(0);
+          transition-delay: 1.5s;
+        }
+      }
     }
   }
 }
 
-.gray-p {
-  color: #bbb;
+.bottom-rotated-text {
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.55em;
+  position: absolute;
+  top: calc(~"100vh - 100px");
+  left: 55px;
+  color: #fff;
   text-transform: uppercase;
-  font-size: 0.75em;
+  transform: rotate(-90deg);
+  transform-origin: center left;
+}
+
+.bottom-arrow {
+  position: absolute;
+  top: calc(~"100vh - 70px");
+  left: 50px;
+  width: auto;
+  height: 1rem;
 }
 
 .no-highlighted-link {
@@ -67,13 +112,6 @@ html {
 
 .text-compact {
   letter-spacing: -0.35em;
-}
-
-.underlined-div {
-  padding-right: 0.35rem;
-  display:inline-block;
-  padding-bottom: 0.25rem;
-  border-bottom: 1px solid #000;
 }
 
 @media (max-width: 1680px) {

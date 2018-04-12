@@ -20,4 +20,16 @@
     }
 }
 
+.cssanimation (@anim-name: translateY, @anim-dur: 1s, @anim-tm-fun: ease) {
+  animation: @anim-name @anim-dur @anim-tm-fun;
+}
+
+@keyframes translate-Y{
+  0% {
+    transform: translateY(2.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
