@@ -85,6 +85,84 @@ html {
   }
 }
 
+#svg-1 {
+
+}
+#svg-2 {
+  opacity: 0;
+  animation: dashoffset2 1s linear;
+}
+.anim-group {
+  position: absolute;
+  top: calc(~"100vh - 13rem");
+  left: calc(~"100vw - 18rem");
+  &_hidden {
+    visibility: hidden;
+  }
+  &__text-container {
+    position: absolute;
+    left: -0.5rem;
+    text-decoration: none;
+    font-size: 0.5em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    &__char {
+      position: relative;
+      color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: left 1s ease-out;
+      .generate-child();
+    }
+    &#cont-1 {
+      top: 1.2rem;
+      transition: left 0.5s ease-out;
+      transition-delay: 0;
+    }
+    &#cont-2 {
+      top: 2rem;
+      transition: left 0.5s ease-out;
+      transition-delay: 0.1s;
+    }
+  }
+  &__right-arrow {
+    position: absolute;
+    top: 3rem;
+    left: -0.5rem;
+    width: 3rem;
+    height: auto;
+    transition: left 0.5s ease-out;
+    transition-delay: 0.2s;
+  }
+  &:hover {
+    .anim-group{
+      &__text-container {
+        left: 0.3rem;
+        &__char {
+          left: 0.35rem;
+        }
+      }
+      &__right-arrow {
+        left: 0.4rem;
+      }
+    }
+  }
+}
+.svg-circle {
+  position: relative;
+  stroke-dasharray: 0.1;
+  stroke-dashoffset: 308;
+  transform: rotate(150deg);
+
+  &:hover #svg-2 {
+    stroke-dasharray: 308;
+    animation: dashoffset 1s linear;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+}
+
 .bottom-rotated-text {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 0.55em;

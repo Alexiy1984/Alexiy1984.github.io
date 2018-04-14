@@ -1,37 +1,20 @@
 function IdGet(idname) {return typeof i == 'object' ? i : document.getElementById(idname);}
+
 function ClassGet(classname) {return document.getElementsByClassName(classname);}
+
 function RemoveClass(element, classname) {
   var reg = new RegExp("\\b"+ classname+"\\b","g");
-  /*console.log(reg);*/
   element.className = element.className.replace(reg," ");
 }
+
 function AddClass(element, classname) {
   var arr;
   arr = element.className.split(" ");
-  /*console.log(arr);
-  console.log(classname);*/
   if (arr.indexOf(classname) == -1) {
     element.className += " " + classname;
   }
   element.className = element.className.replace(/\s+/g," ");
 }
-
-//ФУНКЦИЯ НЕ ПРОВЕРЕНА
-function ToggleClass(element, classname) {
-  if (element.classList) {
-    element.classList.toggle(classname);
-} else {
-    var classes = element.className.split(" ");
-    var i = classes.indexOf(classname);
-
-    if (i >= 0)
-        classes.splice(i, 1);
-    else
-        classes.push(classname);
-        element.className = classes.join(" ");
-}
-}
-//ФУНКЦИЯ НЕ ПРОВЕРЕНА
 
 window.onload = function () {
 
@@ -43,6 +26,23 @@ window.onload = function () {
   );
   console.log( 'Высота с учетом прокрутки: ' + scrollHeight );
   // вычисление высоты окна с учетом особенностей браузеров КОНЕЦ
+
+  /*let svg =(IdGet('svg-1'));
+
+
+  svg.addEventListener("mouseover", Overanim(svg));
+  svg.addEventListener("mouseout",  Outanim(svg));
+
+
+  function  Overanim (elem) {
+    elem.setAttribute("class","svg-circle svg-circle-hovered");
+    console.log(svg);
+  }
+
+  function  Outanim (elem) {
+    elem.setAttribute("class","svg-circle");
+  } ЧАСТЬ НЕРАБОЧЕГО КОДА ДЛЯ SVG*/
+
 }
 
 window.onresize = function() {
@@ -56,22 +56,27 @@ window.onscroll = function() {
     console.log('succes');
     let secondblock = IdGet('second-vid-block');
     let rotatedtext = IdGet('JS-rotated-text');
+    let hiddenanimgroup = IdGet('JS-hidden-anim-group');
 
     console.log(secondblock);
 
     rotatedtext.innerHTML = 'next project';
 
     RemoveClass(secondblock,'video-div__centered-block_hidden');
+    RemoveClass(hiddenanimgroup,'anim-group_hidden');
+
   }
   else if (window.pageYOffset <= document.documentElement.clientHeight){
     console.log('failure');
     let secondblock = IdGet('second-vid-block');
     let hiddenmenu = IdGet('JS-hidden-menu');
     let rotatedtext = IdGet('JS-rotated-text');
+    let hiddenanimgroup = IdGet('JS-hidden-anim-group');
 
     rotatedtext.innerHTML = 'scroll';
 
     AddClass(secondblock,'video-div__centered-block_hidden');
+    AddClass(hiddenanimgroup,'anim-group_hidden');
   }
 
   if (window.pageYOffset > ((document.documentElement.clientHeight)*0.35))  {
@@ -82,5 +87,6 @@ window.onscroll = function() {
   }
 
 }
+
 
 

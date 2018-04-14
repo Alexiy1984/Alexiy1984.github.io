@@ -392,6 +392,28 @@
     transform: translateY(0);
   }
 }
+@keyframes dashoffset {
+  from {
+    opacity: 1;
+    stroke-dashoffset: 308;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dashoffset2 {
+  from {
+    opacity: 1;
+    stroke-dasharray: 308;
+    stroke-dashoffset: 0;
+  }
+  to {
+    opacity: 1;
+    stroke-dasharray: 308;
+    stroke-dashoffset: 308;
+  }
+}
 @font-face {
   font-family: 'Josefin Sans';
   font-style: italic;
@@ -556,6 +578,104 @@ html {
   transition: transform 1s ease-in-out;
   transform: translateY(0);
   transition-delay: 1.5s;
+}
+#svg-2 {
+  opacity: 0;
+  animation: dashoffset2 1s linear;
+}
+.anim-group {
+  position: absolute;
+  top: calc(100vh - 13rem);
+  left: calc(100vw - 18rem);
+}
+.anim-group_hidden {
+  visibility: hidden;
+}
+.anim-group__text-container {
+  position: absolute;
+  left: -0.5rem;
+  text-decoration: none;
+  font-size: 0.5em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+.anim-group__text-container__char {
+  position: relative;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: left 1s ease-out;
+}
+.anim-group__text-container__char:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.anim-group__text-container__char:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.anim-group__text-container__char:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.anim-group__text-container__char:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.anim-group__text-container__char:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.anim-group__text-container__char:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.anim-group__text-container__char:nth-child(7) {
+  transition-delay: 0.35s;
+}
+.anim-group__text-container__char:nth-child(8) {
+  transition-delay: 0.4s;
+}
+.anim-group__text-container__char:nth-child(9) {
+  transition-delay: 0.45s;
+}
+.anim-group__text-container__char:nth-child(10) {
+  transition-delay: 0.5s;
+}
+.anim-group__text-container#cont-1 {
+  top: 1.2rem;
+  transition: left 0.5s ease-out;
+  transition-delay: 0;
+}
+.anim-group__text-container#cont-2 {
+  top: 2rem;
+  transition: left 0.5s ease-out;
+  transition-delay: 0.1s;
+}
+.anim-group__right-arrow {
+  position: absolute;
+  top: 3rem;
+  left: -0.5rem;
+  width: 3rem;
+  height: auto;
+  transition: left 0.5s ease-out;
+  transition-delay: 0.2s;
+}
+.anim-group:hover .anim-group__text-container {
+  left: 0.3rem;
+}
+.anim-group:hover .anim-group__text-container__char {
+  left: 0.35rem;
+}
+.anim-group:hover .anim-group__right-arrow {
+  left: 0.4rem;
+}
+.svg-circle {
+  position: relative;
+  stroke-dasharray: 0.1;
+  stroke-dashoffset: 308;
+  transform: rotate(150deg);
+}
+.svg-circle:hover #svg-2 {
+  stroke-dasharray: 308;
+  animation: dashoffset 1s linear;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 .bottom-rotated-text {
   font-family: 'Josefin Sans', sans-serif;
