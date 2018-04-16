@@ -1,0 +1,11 @@
+@mixin block-child-margin($margin: 1rem, $firstmargin: 0, $lastmargin:0) {
+  & > * {
+    margin: $margin 0;
+    &:first-child {
+      margin-top: $firstmargin;
+    }
+    &:last-child {
+      margin-bottom: $lastmargin;
+    }
+  }
+}

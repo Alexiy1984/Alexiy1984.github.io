@@ -1,0 +1,50 @@
+//@import "bourbon";
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext'); 
+@import 'media-queries.scss';
+@import 'mixins.scss';
+
+$bgimgpath:'/media/images/BG.jpg';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16pt;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))/*, url($bgimgpath)*/;
+  background-position: 0 0/*, center*/;
+  background-size: cover/*,  cover*/;
+  background-repeat: no-repeat/*, no-repeat*/;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@import 'header.scss';
+@import 'nav-menu.scss';
+@import 'wrapper.scss';
+@import 'footer.scss';
+
+html {
+  @include respond-to($size1) { font-size: 14pt;}
+  @include respond-to($size2) { font-size: 14pt;}
+  @include respond-to($size3) { font-size: 12pt;}
+  @include respond-to($size4) { font-size: 12pt;}
+  @include respond-to($size5) { font-size: 12pt;}
+  @include respond-to($size6) { font-size: 11pt;}
+  @include respond-to($size7) { font-size: 11pt;}
+  @include respond-to($size8) { font-size: 11pt;}
+  @include respond-to($size9) { font-size: 10pt;}
+}

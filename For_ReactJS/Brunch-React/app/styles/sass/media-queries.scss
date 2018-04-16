@@ -1,0 +1,39 @@
+$size1: 1680px;
+$size2: 1280px;
+$size3: 960px;
+$size4: 854px;
+$size5: 768px;
+$size6: 680px;
+$size7: 480px;
+$size8: 360px;
+$size9: 320px;
+
+@mixin respond-to($media) {
+  @if $media == $size1 {
+    @media only screen and (max-width: $size1) { @content; }
+  }
+  @else if $media == $size2 {
+    @media only screen and (max-width: $size2) { @content; }
+  }
+  @else if $media == $size3 {
+    @media only screen and (max-width: $size3) { @content; }
+  }
+  @else if $media == $size4 {
+    @media only screen and (max-width: $size4) { @content; }
+  }
+  @else if $media == $size5 {
+    @media only screen and (max-width: $size5) { @content; }
+  }
+  @else if $media == $size6 {
+    @media only screen and (max-width: $size6) { @content; }
+  }
+  @else if $media == $size7 {
+    @media only screen and (max-width: $size7) { @content; }
+  }
+  @else if $media == $size8 {
+    @media only screen and (max-width: $size8) { @content; }
+  }
+  @else if $media == $size9 {
+    @media only screen and (max-width: $size9) { @content; }
+  }
+}  

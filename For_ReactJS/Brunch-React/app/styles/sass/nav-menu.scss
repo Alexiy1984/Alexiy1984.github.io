@@ -1,0 +1,28 @@
+.nav-menu {
+  display: flex;
+  padding: 0 2rem;
+  list-style: none;
+  justify-content: flex-end;
+  &__item {
+    padding-right: 1.5rem;
+  }
+  &__link {
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    &:hover {
+      color: rgb(75, 75, 150);
+    }
+  }
+  &__animated-text {
+    display: inline-block;
+    transition: color 0.5s ease-out;
+    @for $i from 1 through 15 {
+      &:nth-child(#{$i}) { transition-delay: 0.025s * $i; }
+    }
+  }
+}
+
+.timer {
+  margin-right: auto;
+}
