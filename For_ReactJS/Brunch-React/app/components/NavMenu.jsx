@@ -22,7 +22,7 @@ export default class NavMenu extends React.Component {
             <li key={p.id} className={p.iclass}>
               <a href={p.link} className={p.aclass}>
                 {p.name.map((m,index)  => 
-                    <p key={index} className={mainclass+animtxtclass}>{m}</p>
+                  <p key={index} className={mainclass+animtxtclass}>{m}</p>
                 )}
               </a>
             </li>
