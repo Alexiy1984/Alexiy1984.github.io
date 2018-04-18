@@ -15,6 +15,7 @@ export default class AppPage extends React.Component {
     super(props);
     this.state = {page: 'Index.html'};
     this.NavMenuOnClick = this.NavMenuOnClick.bind(this);
+    this.changePage = this.changePage.bind(this);
   }
 
   NavMenuOnClick(page_id) {
@@ -27,11 +28,18 @@ export default class AppPage extends React.Component {
     } else this.setState({page: 'Contact.html' });
   }
 
+  changePage(page_name) {
+    console.log('we have to change page');
+    console.log(page_name);
+    this.setState({page: page_name});
+  }
+
   render() {
     const page = this.state.page;
     return (
       <div className="page">
-        <Header />
+        <Header onPageChose={this.changePage} />
+        {/* new Header({props: {onPageChose: this.changePage}}) */}
         {pagesurl.map(page =>
           <button onClick={(e) => { this.NavMenuOnClick(page.id) }} key={page.id}>{page.url}</button>
         )};
