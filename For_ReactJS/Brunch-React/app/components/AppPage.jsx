@@ -14,17 +14,17 @@ export default class AppPage extends React.Component {
   constructor(props){
     super(props);
     this.state = {page: 'Index.html'};
-    this.NavMenuOnClick = this.NavMenuOnClick.bind(this,props);
+    this.NavMenuOnClick = this.NavMenuOnClick.bind(this);
   }
 
-  NavMenuOnClick(props) {
-    if (props == 1) {
-      this.setState(state => ({page: 'Index.html' }));  
-    } else if (props == 2) {
-      this.setState(state => ({page: 'About.html' }));  
-    } else if (props == 3) {
-      this.setState(state => ({page: 'Works.html' })); 
-    } else this.setState(state => ({page: 'Contact.html' })); 
+  NavMenuOnClick(page_id) {
+    if (page_id == 1) {
+      this.setState({page: 'Index.html'});
+    } else if (page_id == 2) {
+      this.setState({page: 'About.html'});
+    } else if (page_id == 3) {
+      this.setState({page: 'Works.html'});
+    } else this.setState({page: 'Contact.html' });
   }
 
   render() {
@@ -32,8 +32,8 @@ export default class AppPage extends React.Component {
     return (
       <div className="page">
         <Header />
-        {pagesurl.map(props => 
-          <button onClick={this.NavMenuOnClick(props.id)} key={props.id}>{props.url}</button>
+        {pagesurl.map(page =>
+          <button onClick={(e) => { this.NavMenuOnClick(page.id) }} key={page.id}>{page.url}</button>
         )};
         <div>
           {this.state.page == 'Index.html' ? ' Выбрана главная страница': null}

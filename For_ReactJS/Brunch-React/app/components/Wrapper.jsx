@@ -4,9 +4,7 @@ let date = new Date();
 const infodivclass = 'info-div';
 const infodivimgclass = infodivclass + '__img';
 const infodivinnerclass = infodivclass + '__inner';
-const allimgspath = '/media/images/';
-const avatarspath = allimgspath + 'photo-avatars/';
-const imgpath = avatarspath + 'pers-paceholder.png';
+const imgpath = 'images/octomickey.png';
 
 const users = [
   'Иван',
@@ -38,14 +36,14 @@ export default class Wrapper extends React.Component {
           <div className="wrapper__content">
             <div className="wrapper__inner">
               <Greeting name={users[6]} />
-              {infoabout.map(props => 
+              {infoabout.map(props =>
                 <div className={infodivclass} key={props.id}>
                   <div className={infodivinnerclass}>
                     <img className={infodivimgclass} src={imgpath} alt="noimage"/>
                   </div>
                   <div className={infodivinnerclass}>
-                    <p>Имя: {props.name}</p> 
-                    <p>Год рождения {props.bio}</p> 
+                    <p>Имя: {props.name}</p>
+                    <p>Год рождения {props.bio}</p>
                     <p>Возраст: {date.getFullYear() - props.bio}</p>
                   </div>
                 </div>

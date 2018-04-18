@@ -13,21 +13,32 @@ const mainclass = 'nav-menu';
 const animtxtclass = '__animated-text';
 
 export default class NavMenu extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {current_id: 'non-chosen'}
+    this.onMouseEnter = (function (page) {
+      this.setState({current_id: page.id})
+    }).bind(this)
+  }
+  // onMouseEnter(page) {
+  //   this.setState({current_id: page.id})
+  // }
   render() {
     return (
       <div className="navigation-menu" id="nav">
         <ul className="nav-menu">
-        <Timer />
-          {pages.map(p => 
+          <Timer />
+          {pages.map(p =>
             <li key={p.id} className={p.iclass}>
-              <a href={p.link} className={p.aclass}>
-                {p.name.map((m,index)  => 
+              <a href={p.link} className={p.aclass} onMouseEnter={(e) => {this.onMouseEnter(p)}} >
+                {p.name.map((m,index)  =>
                   <p key={index} className={mainclass+animtxtclass}>{m}</p>
                 )}
               </a>
             </li>
           )}
-        </ul>      
+          <li>{this.state.current_id}</li>
+        </ul>
       </div>
     );
   }
