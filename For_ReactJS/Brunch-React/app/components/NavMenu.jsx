@@ -1,5 +1,5 @@
 import React from 'react';
-import Timer from 'components/Timer';
+// import Timer from 'components/Timer';
 //import AnimText from 'components/AnimatedText';
 
 const pages = [
@@ -20,14 +20,13 @@ export default class NavMenu extends React.Component {
       this.setState({current_id: page.id})
     }).bind(this)
   }
-  // onMouseEnter(page) {
-  //   this.setState({current_id: page.id})
-  // }
+  onMouseEnter(page) {
+    this.setState({current_id: page.id})
+  }
   render() {
     return (
       <div className="navigation-menu" id="nav">
         <ul className="nav-menu">
-          <Timer />
           {pages.map(p =>
             <li key={p.id} className={p.iclass}>
               <a href={"#" + p.link} onClick={(e) => {this.props.onPageChose(p.link)}} className={p.aclass} onMouseEnter={(e) => {this.onMouseEnter(p)}} >
@@ -37,7 +36,7 @@ export default class NavMenu extends React.Component {
               </a>
             </li>
           )}
-          <li>{this.state.current_id}</li>
+          {/* <li>{this.state.current_id}</li> */}
         </ul>
       </div>
     );

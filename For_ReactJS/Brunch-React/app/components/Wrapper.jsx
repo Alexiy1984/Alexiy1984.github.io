@@ -1,16 +1,13 @@
 import React from 'react';
+import MainContent from 'components/content/MainContent';
+import AboutUs from 'components/content/AboutUs';
+import OurWorks from 'components/content/OurWorks';
+import Contacts from 'components/content/Contacts';
 
-let date = new Date();
-const infodivclass = 'info-div';
-const infodivimgclass = infodivclass + '__img';
-const infodivinnerclass = infodivclass + '__inner';
-const imgpath = 'images/octomickey.png';
-
-const users = [
-  'Иван',
-  'Валерия',
-  'Георгий',
-  'Анна'
+const slyleNames = [
+  'wrapper__inner',
+  'wrapper__inner wrapper__inner_transparent',
+  'wrapper__inner wrapper__inner_no-padding'
 ];
 
 function Greeting(props) {
@@ -20,36 +17,29 @@ function Greeting(props) {
   return <span>Добро пожаловать, незнакомец.</span>;
 }
 
-
-const infoabout = [
-  { id: 1, name: 'Larce'  , bio: '1965'},
-  { id: 2, name: 'Max'    , bio: '1975'},
-  { id: 3, name: 'Denis'  , bio: '1982'},
-  { id: 4, name: 'Robin'  , bio: '1966'}
-];
-
+function ContentChoice(element) {
+  if (element == 'Index.html') {
+    return (<MainContent wrpinncls={slyleNames[2]} />) 
+  } else if (element == 'About.html') {
+    return (<AboutUs wrpinncls={slyleNames[1]}/>)
+  } else if (element == 'Works.html') {
+    return (<OurWorks wrpinncls={slyleNames[0]}/>)
+  } else return (<Contacts wrpinncls={slyleNames[0]}/>)
+}
 
 export default class Wrapper extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {page: 'Index.html'};
+  }
+
   render() {
     return (
-      <div className="wrapper">
-          <div className="wrapper__content">
-            <div className="wrapper__inner">
-              <Greeting name={users[6]} />
-              {infoabout.map(props =>
-                <div className={infodivclass} key={props.id}>
-                  <div className={infodivinnerclass}>
-                    <img className={infodivimgclass} src={imgpath} alt="noimage"/>
-                  </div>
-                  <div className={infodivinnerclass}>
-                    <p>Имя: {props.name}</p>
-                    <p>Год рождения {props.bio}</p>
-                    <p>Возраст: {date.getFullYear() - props.bio}</p>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+      <div className="wrapper" style={this.props.content == 'Index.html' ? {marginTop: '0px'} : {marginTop: this.props.topmargin + 'px'}} >
+        <div className="wrapper__content">
+          {/* <Greeting name={users[6]} /> */}
+          {ContentChoice(this.props.content)}
+        </div>
       </div>
     );
   }
