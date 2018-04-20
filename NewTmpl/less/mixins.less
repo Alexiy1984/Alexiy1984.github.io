@@ -17,7 +17,19 @@
   }
   .generate-child3(@i + 1);
 }
+.generate-child4(@i: 1, @child-count: 10, @child-prop: transition-delay,@child-mult: 0.1) when (@i =< @child-count) {
+  &:@{child-name}(@{i}) {
+    @{child-prop}: unit((@i * @child-mult),s);
+  }
+  .generate-child4(@i + 1);
+}
 
+.generate-child5(@i: 1, @child-count: 10, @child-prop: transition-delay,@child-mult: 0.1) when (@i =< @child-count) {
+  &:@{child-name}(@{i}) {
+    @{child-prop}: unit((@i * @child-mult + 0.1),s);
+  }
+  .generate-child5(@i + 1);
+}
 
 .transition-prfx (@trans-prop: transform, @trans-time: 1s, @trans-tf: ease-in-out) {
   -webkit-transition: @trans-prop @trans-time @trans-tf;
