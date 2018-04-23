@@ -1,0 +1,50 @@
+@import '../mixins.scss';
+.contact-list {
+  list-style: none;
+  padding: 2.5rem 3.5rem;
+  @include block-child-margin(1.5rem);
+  &__item {
+    @include block-child-margin(0.25rem);
+    &-drop-shadow {
+      @include box-shadow(3px, 3px, 10px, 0, rgba(0,0,0,0.35));
+    }
+    &__row {
+      display: flex;
+      padding: 0.25rem 0.5rem;
+      &-colored {
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: rgba(90, 173, 221, 0.45);
+      }
+      &-underlined {
+        border-bottom: 1px solid rgba(100,100,100,0.45); 
+      }
+    }
+    &__col {
+      &-xs {
+        width: 3rem; 
+      }
+      &-sm {
+        width: 5rem;   
+      }
+      &-md {
+        width: 8rem;   
+      }
+      &-lg {
+        width: 10rem; 
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .contact-list {
+    padding: 2.5rem 1.5rem;
+  }  
+}
+
+@media (max-width: 480px) {
+  .contact-list {
+    padding: 1.5rem 0.5rem;
+  }  
+}

@@ -9,3 +9,9 @@
     }
   }
 }
+
+@mixin box-shadow($shiftX:0, $shiftY:0, $blurRadius:10px, $stretching: 0,$color: rgba(0,0,0,0.5)) {
+  box-shadow:         $shiftX $shiftY $blurRadius $stretching $color;
+  -moz-box-shadow:    $shiftX $shiftY $blurRadius $stretching $color;
+  -webkit-box-shadow: $shiftX $shiftY $blurRadius $stretching $color;
+}
