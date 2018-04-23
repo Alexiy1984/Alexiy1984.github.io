@@ -243,6 +243,11 @@ html {
   html {
     font-size: 10pt;
   }
+  .row{
+    &__inner {
+      padding-left: 10%;
+    }
+  }
   .svg-circle {
     visibility: hidden;
   }
@@ -263,21 +268,23 @@ html {
       visibility: hidden;
     }
      &:hover {
-    .anim-group{
-      &__text-container {
-        &__char {
+      .anim-group{
+        &__text-container {
+          &__char {
+            left: 0;
+          }
+        }
+        &__right-arrow {
           left: 0;
         }
       }
-      &__right-arrow {
-        left: 0;
-      }
     }
-  }
   }
 }
 @media (max-width: 360px) {
   html {
     font-size: 10pt;
+  }
+  .anim-group {
   }
 }

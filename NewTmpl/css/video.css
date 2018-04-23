@@ -56,9 +56,9 @@
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url('../media/images/pic_fv_video1.jpg');
   background-position: 0 0, center;
   color: #fff;
-  max-width: 100%;
   width: 25rem;
   height: 25rem;
+  max-width: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -235,5 +235,17 @@
   }
   100% {
     transform: translateY(0rem);
+  }
+}
+@media (max-width: 480px) {
+  .video-div__centered-block {
+    width: 20rem;
+    height: 20rem;
+  }
+  .video-div__text-container {
+    font-size: 1.5em;
+  }
+  .video-div__animated-p-container {
+    font-size: 1em;
   }
 }

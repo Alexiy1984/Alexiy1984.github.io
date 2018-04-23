@@ -123,6 +123,11 @@
 .nav-menu__link__atimated-text:nth-child(10) {
   transition-delay: 0.5s;
 }
+.nav-menu__menu-button {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  display: none;
+}
 .vertical-menu {
   list-style: none;
 }
@@ -137,4 +142,32 @@
   font-weight: 300;
   color: #000;
   text-decoration: none;
+}
+@media (max-width: 860px) {
+  .nav-menu__item {
+    display: none;
+  }
+  .nav-menu__menu-button {
+    display: inline-block;
+  }
+  .nav-menu__menu-button__link {
+    display: block;
+  }
+  .nav-menu__menu-button__line {
+    position: absolute;
+    left: 9px;
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+  }
+  .nav-menu__menu-button #line-1 {
+    top: 0;
+  }
+  .nav-menu__menu-button #line-2 {
+    top: 8px;
+  }
+  .nav-menu__menu-button #line-3 {
+    top: 16px;
+  }
 }

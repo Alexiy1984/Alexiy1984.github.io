@@ -37,6 +37,11 @@
       .generate-child();
     }
   }
+  &__menu-button {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    display: none;
+  }
 }
 
 .vertical-menu {
@@ -55,3 +60,33 @@
   }
 }
 
+@media (max-width: 860px) {
+  .nav-menu {
+    &__item {
+      display: none;
+    }
+    &__menu-button {
+      display: inline-block;
+      &__link {
+        display: block;
+      }
+      &__line {
+        position: absolute;
+        left: 9px;
+        width: 20px;
+        height: 1px;
+        background-color: #fff;
+        display: inline-block;
+      }
+      #line-1 {
+        top: 0;
+      }
+      #line-2 {
+        top: 8px;
+      }
+      #line-3 {
+        top: 16px;
+      }
+    }
+  }
+}
