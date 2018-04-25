@@ -19,6 +19,9 @@ html {
   height: auto;
   font-size: 16pt;
 }
+body {
+  background-color: rgba(0,0,25,0.9);
+}
 .wrapper {
   width: 100%;
 }
@@ -83,6 +86,24 @@ html {
       }
     }
   }
+}
+.min-size-menu {
+  display: flex;
+  min-height: 100vh;
+  align-items: stretch;
+  justify-content: stretch;
+  &__header {
+    background-color: #fff;
+    padding: 7rem 5rem 4.5rem;
+  }
+  &__footer {
+    background-color: #383838;
+    flex-grow: 1;
+  }
+}  
+
+.block-hide {
+  display: none;
 }
 
 #svg-1 {
@@ -233,6 +254,9 @@ html {
     top: 68vh;
     left: calc(~"100vw - 12rem");
   }
+  .min-size-menu {
+    flex-direction: column;
+  }
 }
 @media (max-width: 680px) {
   html {
@@ -252,6 +276,7 @@ html {
     visibility: hidden;
   }
   .anim-group {
+    visibility: hidden;
     top: 60vh;
     left: 55vw;
     &__text-container {
@@ -286,5 +311,6 @@ html {
     font-size: 10pt;
   }
   .anim-group {
+    visibility: hidden;
   }
 }
