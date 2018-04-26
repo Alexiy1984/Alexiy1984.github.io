@@ -35,30 +35,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     menubutton.onclick = function() {
+
       let rowsarray = GetNumeredIds('JS-row-',3);
-      let hidrowsarr = GetNumeredIds('JS-hidden-block-',2);
+      let minsizemenu = IdGet('JS-min-size-menu');
       let menuLines = GetNumeredIds('line-',3);
+      let navmenuitems = GetNumeredIds('JS-nav-menu__item-',5);
       let logosvg = IdGet('JS-logo-svg');
       let rotatedtext = IdGet('JS-rotated-text');
       let bottomarrow = IdGet('JS-bottom-arrow');
-      let navmenu = IdGet('JS-nav-menu');
+      let hiddenanimgroup = IdGet('JS-hidden-anim-group');
+
       if (!menubuttonclicked) {
         rowsarray.forEach(element => {AddClass(element,'block-hide')});
-        hidrowsarr.forEach(element => {RemoveClass(element,'block-hide')});
+        RemoveClass(minsizemenu,'block-hide');
         menuLines.forEach(element => {AddClass(element,'nav-menu__menu-button__line_dark')});
         AddClass(rotatedtext,'block-hide');
         AddClass(bottomarrow,'block-hide');
-        AddClass(navmenu,'block-hide');
+        AddClass(hiddenanimgroup,'block-hide');
+        navmenuitems.forEach(element => {AddClass(element,'block-hide')});
         logosvg.setAttribute("style","fill: #000");
         menubuttonclicked = true;
       } 
       else {
         rowsarray.forEach(element => {RemoveClass(element,'block-hide')});
-        hidrowsarr.forEach(element => {AddClass(element,'block-hide')});
+        AddClass(minsizemenu,'block-hide');
         menuLines.forEach(element => {RemoveClass(element,'nav-menu__menu-button__line_dark')});
         RemoveClass(rotatedtext,'block-hide');
         RemoveClass(bottomarrow,'block-hide');
-        RemoveClass(navmenu,'block-hide');
+        RemoveClass(hiddenanimgroup,'block-hide');
+        navmenuitems.forEach(element => {RemoveClass(element,'block-hide')});
         logosvg.setAttribute("style","fill: #fff");
         menubuttonclicked = false;
       }  

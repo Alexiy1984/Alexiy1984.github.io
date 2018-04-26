@@ -1,5 +1,3 @@
-@import 'logo.less';
-@import 'menu.less';
 @import 'video.less';
 @import 'animation.less';
 @import 'vendprx.less';
@@ -20,11 +18,13 @@ html {
   font-size: 16pt;
 }
 body {
+  min-width: 320px;
   background-color: rgba(0,0,25,0.9);
 }
 .wrapper {
   width: 100%;
 }
+
 .header {
   width: 100%;
   position: fixed;
@@ -32,6 +32,10 @@ body {
   top: 0;
   z-index: 100;
 }
+
+@import 'logo.less';
+@import 'menu.less';
+
 .row {
   position: relative;
   display: flex;
@@ -97,10 +101,68 @@ body {
     padding: 7rem 5rem 4.5rem;
   }
   &__footer {
-    background-color: #383838;
+    background-color: #1c1c1c;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    padding: 6rem;
     flex-grow: 1;
+    &__block {
+      margin-bottom: 2.5rem;
+      &__inner {
+        margin: 2.5rem 0;
+        padding: 0;
+      }
+    }
+    &__text {
+      letter-spacing: 0.25em;
+      transition: font-size 0.5s ease;
+      &_uppercased {
+        text-transform: uppercase;
+      }
+    }
   }
 }  
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  &__col{
+    margin-right: 2rem;
+  }
+  &__heading {
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-bottom: 1.5rem;
+    transition: font-size 0.5s ease;
+  }
+  &__link {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    transition: font-size 0.5s ease;
+  }
+  &__img {
+    transition: width 0.5s ease, height 0.75s ease;
+    &_big {
+      width:  30rem;
+      height: 20rem;
+    }
+    &_medium { 
+      width:  15rem;
+      height: 10rem;
+    }
+    &_small { 
+      width:  12rem;
+      height: 8rem;
+    }
+  }
+}
+
+@import 'icons.less';
 
 .block-hide {
   display: none;
@@ -113,86 +175,8 @@ body {
   opacity: 0;
   animation: dashoffset2 1s linear;
 }
-.anim-group {
-  position: absolute;
-  top: calc(~"100vh - 13rem");
-  left: calc(~"100vw - 18rem");
-  &_hidden {
-    visibility: hidden;
-  }
-  &__text-container {
-    position: absolute;
-    left: -10.6px;
-    text-decoration: none;
-    font-size: 10px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
-    &__char {
-      position: relative;
-      color: #fff;
-      display: inline-block;
-      text-decoration: none;
-      text-transform: uppercase;
-      left: 0;
-      transition: left 0.5s ease-out;
 
-    }
-    &#cont-1 {
-      top: 30px;
-      .anim-group {
-        &__text-container {
-          &__char {
-          .generate-child4();
-          }
-        }
-      }
-    }
-    &#cont-2 {
-      top: 46px;
-       .anim-group {
-        &__text-container {
-          &__char {
-          .generate-child5();
-          }
-        }
-      }
-    }
-  }
-  &__right-arrow {
-    position: absolute;
-    top: 65px;
-    left: -10.6px;
-    width: 64px;
-    height: auto;
-    transition: left 0.5s ease-out;
-    transition-delay: 0.2s;
-  }
-  &:hover {
-    .anim-group{
-      &__text-container {
-        &__char {
-          left: 25px;
-        }
-      }
-      &__right-arrow {
-        left: 8px;
-      }
-    }
-  }
-}
-.svg-circle {
-  position: relative;
-  stroke-dasharray: 0.1;
-  stroke-dashoffset: 308;
-  transform: rotate(150deg);
-
-  &:hover #svg-2 {
-    stroke-dasharray: 308;
-    animation: dashoffset 1s linear;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
-  }
-}
+@import 'animgroup.less';
 
 .bottom-rotated-text {
   font-family: 'Josefin Sans', sans-serif;
@@ -232,27 +216,15 @@ body {
   html {
     font-size: 13pt;
   }
-  .anim-group {
-    top: 68vh;
-    left: calc(~"100vw - 18rem");
-  }
 }
 @media (max-width: 980px) {
   html {
     font-size: 11pt;
   }
-  .anim-group {
-    top: 68vh;
-    left: calc(~"100vw - 18rem");
-  }
 }
 @media (max-width: 860px) {
   html {
     font-size: 11pt;
-  }
-  .anim-group {
-    top: 68vh;
-    left: calc(~"100vw - 12rem");
   }
   .min-size-menu {
     flex-direction: column;
@@ -261,6 +233,11 @@ body {
 @media (max-width: 680px) {
   html {
     font-size: 11pt;
+  }
+  .row{
+    &__inner {
+      padding-left: 10rem;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -275,42 +252,17 @@ body {
   .svg-circle {
     visibility: hidden;
   }
-  .anim-group {
-    visibility: hidden;
-    top: 60vh;
-    left: 55vw;
-    &__text-container {
-      &#cont-1 {
-        top: 0;
-        left: -25vw;
-      }
-      &#cont-2 {
-        top: 0;
-        left: -5vw;
-      }
-    }
-    &__right-arrow {
-      visibility: hidden;
-    }
-     &:hover {
-      .anim-group{
-        &__text-container {
-          &__char {
-            left: 0;
-          }
-        }
-        &__right-arrow {
-          left: 0;
-        }
-      }
-    }
-  }
 }
 @media (max-width: 360px) {
   html {
     font-size: 10pt;
   }
-  .anim-group {
-    visibility: hidden;
+  .min-size-menu {
+    &__header {
+      padding: 5rem 3.5rem 2rem;
+    }
+    &__footer {
+      padding: 3.5rem;  
+    }
   }
 }
