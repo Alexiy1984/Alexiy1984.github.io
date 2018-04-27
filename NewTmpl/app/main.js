@@ -46,8 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
       let hiddenanimgroup = IdGet('JS-hidden-anim-group');
 
       if (!menubuttonclicked) {
+        AddClass(menubutton,'nav-menu__menu-button_nohide');
         rowsarray.forEach(element => {AddClass(element,'block-hide')});
         RemoveClass(minsizemenu,'block-hide');
+        AddClass(minsizemenu,'appeared');
         menuLines.forEach(element => {AddClass(element,'nav-menu__menu-button__line_dark')});
         AddClass(rotatedtext,'block-hide');
         AddClass(bottomarrow,'block-hide');
@@ -57,8 +59,10 @@ document.addEventListener('DOMContentLoaded', function() {
         menubuttonclicked = true;
       } 
       else {
+        RemoveClass(menubutton,'nav-menu__menu-button_nohide');
         rowsarray.forEach(element => {RemoveClass(element,'block-hide')});
         AddClass(minsizemenu,'block-hide');
+        RemoveClass(minsizemenu,'appeared');
         menuLines.forEach(element => {RemoveClass(element,'nav-menu__menu-button__line_dark')});
         RemoveClass(rotatedtext,'block-hide');
         RemoveClass(bottomarrow,'block-hide');
