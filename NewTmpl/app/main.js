@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   window.onload = function () {
 
+    let logosvg = IdGet('JS-logo-svg');
+    logosvg.setAttribute("style","fill: #fff");
+
     let menubutton = IdGet('JS-menu-button');
     let menubuttonclicked = false;
     
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let minsizemenu = IdGet('JS-min-size-menu');
       let menuLines = GetNumeredIds('line-',3);
       let navmenuitems = GetNumeredIds('JS-nav-menu__item-',5);
-      let logosvg = IdGet('JS-logo-svg');
+      // let logosvg = IdGet('JS-logo-svg');
       let rotatedtext = IdGet('JS-rotated-text');
       let bottomarrow = IdGet('JS-bottom-arrow');
       let hiddenanimgroup = IdGet('JS-hidden-anim-group');

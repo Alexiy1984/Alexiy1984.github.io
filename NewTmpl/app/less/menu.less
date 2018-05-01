@@ -9,6 +9,7 @@
 .nav-menu {
   list-style: none;
   position: absolute;
+  z-index: 300;
   top: 50px;
   right: 50px;
   &__item {
@@ -46,6 +47,9 @@
     cursor: pointer;
     &_nohide {
       display: inline-block;
+    }
+    &_right {
+      flex: right;
     }
     &__link {
       display: block;
@@ -104,7 +108,7 @@
       display: inline-block;
       &__line {
         &_dark {
-          background-color: #000;
+        background-color: #000;
         } 
       }
     }
