@@ -20,6 +20,42 @@ document.addEventListener('DOMContentLoaded', function() {
     element.className = element.className.replace(/\s+/g," ");
   }
 
+  function GetCoords(element,attr) {
+    element = IdGet(element); 
+    var box = element.getBoundingClientRect();
+    if (attr == 'left') {
+      return box.left + pageXOffset;
+    } else if (attr == 'top') {
+      return box.top + pageYOffset;
+    } else
+    return {
+      top: box.top + pageYOffset,
+      left: box.left + pageXOffset
+    };
+  }
+
+  function IsVisible(element) {
+    element = IdGet(element);
+    console.log(element);
+    let wscrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let elemotop = GetCoords(element,'top');
+    let elemotopwheight = elemoffcettop + element.offsetHeight;
+    let wscrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    return ((elemotopwheight <= wscrollTop + wscrollHeight) && (elemtop >= wscrollTop ));
+  }
+
+  function GetNumeredIds(idPrefix, num) {
+    let numeredIds = [];
+    for (let index = 1; index <= num; index++) {
+      numeredIds[index] = IdGet( idPrefix + index);
+    }
+    return numeredIds
+  }
+
   window.onload = function () {
 
     let logosvg = IdGet('JS-logo-svg');
@@ -29,14 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let menubuttonclicked = false;
     // console.log(menubuttonclicked);
     // console.log(menubutton);
-
-    function GetNumeredIds(idPrefix, num) {
-      let numeredIds = [];
-      for (let index = 1; index <= num; index++) {
-        numeredIds[index] = IdGet( idPrefix + index);
-      }
-      return numeredIds
-    }
 
     AddClass(menubutton,'nav-menu__menu-button_nohide');
 
@@ -73,5 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
   }
+
+  window.onscroll = function() {
+    let workarealinks = GetNumeredIds('JS-works-area-link-',6);
+
+      console.log(IsVisible('JS-works-area-link-1'));
+      console.log(GetCoords('JS-works-area-link-1', 'left'));
+      
+  }
+
 
 });
