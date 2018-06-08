@@ -151,11 +151,13 @@ require.register("scripts/bundles/index.bundle.js", function(exports, require, m
 document.addEventListener('DOMContentLoaded', function() {
   console.log('everything OK');
 
-  var ScrollToAnchor = require('../lib/scrolltoanchor');
-  var NavMenuActions = require('../blocks.default/nav-menu');
+  var ScrollToAnchor  = require('../lib/scrolltoanchor');
+  var NavMenuActions  = require('../blocks.default/nav-menu');
+  var IconsRecolor    = require('../blocks.default/icons');
 
   ScrollToAnchor('800');
   NavMenuActions();
+  IconsRecolor();
            
 });
 
@@ -181,14 +183,87 @@ module.exports = function ScrollToAnchor(speed) {
 
 require.register("scripts/blocks.default/nav-menu.js", function(exports, require, module) {
 module.exports = function NavMenuActions() {
-  $(".nav-menu__menu-button").click(function() {
-    $(this).toggleClass("nav-menu__menu-button_open");
+  $('.nav-menu__menu-button').click(function() {
+    $(this).toggleClass('nav-menu__menu-button_open');
+    $('.vertical-menu').toggleClass('vertical-menu__showed');
+  });
+  $(window).resize(function() {
+    $('.vertical-menu').removeClass('vertical-menu__showed');
+    $('.nav-menu__menu-button').removeClass('nav-menu__menu-button_open');
   });
 }
 
 });
 
-;require.register("___globals___", function(exports, require, module) {
+;require.register("scripts/blocks.default/icons.js", function(exports, require, module) {
+module.exports = function IconsRecolor() {
+
+  window.onload=function() {
+    
+    var iconscoll = $('.icons__svg');
+
+    for (var index = 0; index < iconscoll.length; index++) {
+      currentSvgRecolor(iconscoll[index], '#18bc9c');
+    }
+
+    function currentSvgRecolor(element, fill) {
+      var svgDoc = element.contentDocument;
+      fill = 'fill: ' + fill;
+
+      if ($('*',svgDoc).is('#path3398')) { 
+        var svgDocItem = $('#path3400', svgDoc);
+        var svgDocItem2 = $("#path3398", svgDoc);
+
+        svgDocItem.attr('style',  fill);
+        svgDocItem2.attr('style', fill);
+
+      } else if ($('*',svgDoc).is('#path3318')) {
+        var svgDocItem = $('#path3318', svgDoc);
+        var svgDocItem2 = $('#path3320', svgDoc);
+        var svgDocItem3 = $('#path3322', svgDoc);
+
+        svgDocItem.attr('style',  fill);
+        svgDocItem2.attr('style', fill);
+        svgDocItem3.attr('style', fill);
+
+      } else if ($('*',svgDoc).is('#path3176')) {
+        var svgDocItem = $('#path3176', svgDoc);
+        var svgDocItem2 = $('#path3178', svgDoc);
+
+        svgDocItem.attr('style',  fill);
+        svgDocItem2.attr('style', fill);
+      }
+    }
+
+    try {
+      $('.icons__link').mouseover(function() {
+        var currentsvg = $('.icons__svg', this);
+        console.log(currentsvg);
+        currentSvgRecolor(currentsvg, '#ffffff');
+      })
+      .mouseout(function() {
+        var currentsvg = $('.icons__svg', this);
+        console.log(currentsvg);
+        currentSvgRecolor(currentsvg, '#18bc9c');
+      });
+    } catch (error) { console.log('icons__svg not found')}
+    try {
+      //currentSvgRecolor(iconscoll, 1, '#18bc9c');
+    } catch (error) { console.log('icons__svg not found')}
+    try {
+      //currentSvgRecolor(iconscoll, 2, '#18bc9c');
+    } catch (error) { console.log('icons__svg not found')}
+    
+    
+    
+    
+
+  };
+};  
+
+});
+
+require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
 
