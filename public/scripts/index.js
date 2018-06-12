@@ -154,11 +154,13 @@ document.addEventListener('DOMContentLoaded', function() {
   var ScrollToAnchor  = require('../lib/scrolltoanchor');
   var NavMenuActions  = require('../blocks.default/nav-menu');
   var IconsRecolor    = require('../blocks.default/icons');
+  var TileOnClick     = require('../blocks.default/tile');
 
   ScrollToAnchor('800');
   NavMenuActions();
   IconsRecolor();
-           
+  TileOnClick();
+  
 });
 
 });
@@ -260,6 +262,46 @@ module.exports = function IconsRecolor() {
 
   };
 };  
+
+});
+
+require.register("scripts/blocks.default/tile.js", function(exports, require, module) {
+module.exports = function TileOnClick() {
+    
+  var tile = $('.tile');
+  var tilesc = $('.tile_switch-colors');
+  var tilescr = $('.tile_switch-colors-rev');
+
+  function ToggleDisplay(thistile) {
+    if ($('*', thistile).is('.mobile-toggle')) {
+      $('.mobile-toggle', thistile).toggleClass('mobile-show');
+      thistile.toggleClass('js_hidden-el');
+    };
+    return true;
+  };
+
+  try {
+    
+      $(tile).on( "click", function() {
+        if ($(window).width() <= 480) {
+          ToggleDisplay($(this));
+        }  
+      });
+      $(tilesc).on( "click", function() {
+        if ($(window).width() <= 480) {
+          ToggleDisplay($(this));
+        }  
+      });
+      $(tilescr).on( "click", function() {
+        if ($(window).width() <= 480) {
+          ToggleDisplay($(this));
+        }  
+      });
+  } catch (error) {
+    
+  }
+
+};
 
 });
 

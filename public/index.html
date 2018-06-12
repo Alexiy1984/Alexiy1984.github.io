@@ -49,13 +49,13 @@
       <div id="desktop-menu" class="nav-menu">
         <ul>
           <li class="nav-menu__item">
-            <a class="nav-menu__link text_uppercased" href="#Team">Команда</a>
+            <a class="nav-menu__link text" href="#Team">Команда</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link text_uppercased" href="#Works">Работы</a>
+            <a class="nav-menu__link text" href="#Works">Работы</a>
           </li>
           <li class="nav-menu__item">
-            <a class="nav-menu__link text_uppercased" href="#Contact">Контакты</a>
+            <a class="nav-menu__link text" href="#Contact">Контакты</a>
           </li>
           <!-- <li class="nav-menu__item">
             <a class="nav-menu__link text_uppercased" href="#Additional">Доп. контент</a>
@@ -107,7 +107,7 @@
               Руководитель
             </h3>
             <h3 class="text large-margin">Главный герой</h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Основатель команды.
               <br> Стар(та)пер.
               <br> Многолетний опыт програмирования.
@@ -142,7 +142,7 @@
             <h3 class="text large-margin">
               Темная лошадка.
             </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Трудолюбив, молчалив, работоспособен и ...
               <br> Саморазвитию Степана нет предела.
               <br> Гуру "тайм-менеджмента"
@@ -175,7 +175,7 @@
             <h3 class="text large-margin">
               Магистр в своем роде.
             </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Только 11 лет обучения в универе.
               <br> А еще и стаж работы...
               <br> Верный своему делу и команде,
@@ -209,7 +209,7 @@
             <h3 class="text large-margin">
               Реальный профи!
             </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Ruby ninja.
               <br> Мастер чистого кода.
               <br> Back end на 5 баллов
@@ -244,7 +244,7 @@
               Бизнес консультант
             </h3>
             <h3 class="text large-margin">Младший юнга </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               (и старший помошник главного героя)
               <br>
               <br> Учится кодить и занимается бизнес консультированием.
@@ -277,7 +277,7 @@
               Фронт-энд разработчик
             </h3>
             <h3 class="text  large-margin">Старший юнга.</h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Бывший сварщик 5-го разряда.
               <br> Около года в разработке.
               <br> Любит разводить рыбок и отечественные машины! (Не заработал пока на иномарку).
@@ -309,7 +309,7 @@
               Программист
             </h3>
             <h3 class="text large-margin">Действущий студент.</h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Но уже много что умеет:
               <br> С, С++, Payton, Ruby и ...
               <br> Мастер Data Scienice и machine learning.
@@ -339,7 +339,7 @@
               Дизайнер
             </h3>
             <h3 class="text large-margin">Худрук!</h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Когда-то получила образование
               <br> психолога.
               <br> Наш стороний креативный дизайнер. Илюстрации на сайте в стиле стимпанк 
@@ -378,7 +378,7 @@
             <h3 class="text_third-heading  large-margin">
               Сервис для поиска жилья
             </h3>
-              <p class="text_mini">
+              <p class="text_mini mobile-toggle">
                 Cайт листинг предолжений по аренде недвижимости в Чикаго.
                 <br> Сервис предоставляет пользователям возможность получить доступ к полному списку предложений риэлторов недвижимости.
                 <br> Автоматическое ежедневное обновление списка. Удобный режим работы с картами при поиске жилья.
@@ -404,7 +404,7 @@
             <h3 class="text_third-heading large-margin">
               Проект для колл-центров
             </h3>   
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Высоконагруженное пиложение для перераспределения входящих соединений(звонков) для колл-центров.
               <br>Разработка front-end-части проекта велась на: 
               <br>React / Redux 
@@ -430,7 +430,7 @@
             <h3 class="text_third-heading large-margin">
               Сервис скидок (партнерских программ)
             </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Сервис скидок и партнерских программ с мобильным приложением, для магазинов (торговых сетей) и покупателей
               с простой регистрацией и широким функционалом.
               <br> В проекте применялись: 
@@ -463,7 +463,7 @@
             <h3 class="text_third-heading large-margin">
               Сервис "напоминаний"
             </h3>
-            <p class="text_mini">
+            <p class="text_mini mobile-toggle">
               Сервис, организующий автоматическую отправку sms сообщений (напоминаний) пользователям и их клиентам,
               с возможностью настройки календаря сообщений. 
               <br> В проекте применялись: 
@@ -508,6 +508,12 @@
                 <span>email pachholder@mail.com</span>
               </li>
               <li class="contact-icons__item">
+                <svg class="contact-icons__svg">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-90c"></use>
+                </svg>
+                <span>+ 7 000 000 000</span>
+              </li>
+              <li class="contact-icons__item">
                 <a href="">
                   <svg class="contact-icons__svg_with-border">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-907"></use>
@@ -518,12 +524,6 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-985"></use>
                   </svg>
                 </a>  
-              </li>
-              <li class="contact-icons__item">
-                <svg class="contact-icons__svg">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-90c"></use>
-                </svg>
-                <span>+ 7 000 000 000</span>
               </li>
             </ul>
           </div>

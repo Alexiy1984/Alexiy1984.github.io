@@ -150,7 +150,6 @@ header {
   top: 5rem;
   right: -100vw;
   background: rgba(0, 0, 0, 0.3);
-  padding: 0.8rem;
   z-index: 100; }
   .vertical-menu__showed {
     right: 0;
@@ -160,33 +159,29 @@ header {
     transition: right 0.3s ease-in-out; }
 
 .vertical-menu__item {
-  list-style: none;
-  margin-bottom: 1rem; }
-  .vertical-menu__item:last-child {
-    margin-bottom: 0; }
+  list-style: none; }
 
 .vertical-menu__link {
   display: block;
   font-size: 1.35rem;
-  text-transform: uppercase;
   text-decoration: none;
   list-style: none;
   height: 4rem;
   width: 100%;
   line-height: 4rem;
   padding: 0 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   background-color: #2c3e50;
   color: #ffffff;
   text-decoration: none;
-  -webkit-transition: background-color 0.5s ease-in, color 0.5s ease-in, border-color 0.5s ease-in;
-  -ms-transition: background-color 0.5s ease-in, color 0.5s ease-in, border-color 0.5s ease-in;
-  -o-transition: background-color 0.5s ease-in, color 0.5s ease-in, border-color 0.5s ease-in;
-  transition: background-color 0.5s ease-in, color 0.5s ease-in, border-color 0.5s ease-in; }
+  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in; }
   .vertical-menu__link:hover {
     background-color: #18bc9c;
     color: #2c3e50;
-    border: 1px solid #2c3e50; }
+    border-bottom: 1px solid #2c3e50; }
 
 .row {
   background-color: #18bc9c;
@@ -379,7 +374,7 @@ header {
 .tile {
   display: flex;
   flex-direction: column;
-  min-height: 45rem;
+  min-height: 40rem;
   cursor: pointer; }
   .tile:hover .tile__header {
     background: url("../images/personal.png") no-repeat 50% 50%;
@@ -387,7 +382,15 @@ header {
 
 @media (max-width: 1200px) {
   .tile {
-    min-height: 48rem; } }
+    min-height: 46rem; } }
+
+@media (max-width: 680px) {
+  .tile {
+    min-height: 40rem; } }
+
+@media (max-width: 480px) {
+  .tile {
+    min-height: 30rem; } }
 
 .tile_100perc {
   margin: 2.5rem;
@@ -405,7 +408,7 @@ header {
 .tile_switch-colors {
   display: flex;
   flex-direction: column;
-  min-height: 45rem;
+  min-height: 40rem;
   cursor: pointer; }
   .tile_switch-colors .tile__body, .tile_switch-colors .tile__footer {
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
@@ -439,12 +442,20 @@ header {
 
 @media (max-width: 1200px) {
   .tile_switch-colors {
-    min-height: 48rem; } }
+    min-height: 46rem; } }
+
+@media (max-width: 680px) {
+  .tile_switch-colors {
+    min-height: 40rem; } }
+
+@media (max-width: 481px) {
+  .tile_switch-colors {
+    min-height: 30rem; } }
 
 .tile_switch-colors-rev {
   display: flex;
   flex-direction: column;
-  min-height: 45rem;
+  min-height: 40rem;
   cursor: pointer; }
   .tile_switch-colors-rev .tile__header {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -464,7 +475,15 @@ header {
 
 @media (max-width: 1200px) {
   .tile_switch-colors-rev {
-    min-height: 48rem; } }
+    min-height: 46rem; } }
+
+@media (max-width: 680px) {
+  .tile_switch-colors-rev {
+    min-height: 40rem; } }
+
+@media (max-width: 481px) {
+  .tile_switch-colors-rev {
+    min-height: 30rem; } }
 
 .tile__header {
   background: url("../images/personal.png") no-repeat 50% 50%;
@@ -559,6 +578,10 @@ header {
 .tile__link {
   color: #56565a; }
 
+@media (max-width: 480px) {
+  .js_hidden-el {
+    min-height: 40rem !important; } }
+
 .list {
   margin-left: 1.5rem; }
 
@@ -610,11 +633,15 @@ header {
   display: flex;
   align-items: center; }
   .contact-icons__item > * {
-    margin-right: 2rem; }
+    margin: 0 2rem; }
+    .contact-icons__item > *:first-child {
+      margin-left: 0; }
 
-@media (max-width: 320px) {
+@media (max-width: 480px) {
   .contact-icons__item > * {
-    margin-right: 1rem; } }
+    margin: 0 0.5rem; }
+    .contact-icons__item > *:first-child {
+      margin-left: 0; } }
 
 .contact-icons__svg {
   display: inline-block;
@@ -670,6 +697,12 @@ header {
 
 .works-img {
   background: url("../images/Works-paceholder.jpg") no-repeat 50% 50% !important; }
+
+@media (max-width: 480px) {
+  .mobile-toggle {
+    display: none; }
+  .mobile-show {
+    display: block; } }
 
 @media (max-width: 1200px) {
   html {
