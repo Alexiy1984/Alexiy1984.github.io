@@ -193,6 +193,10 @@ module.exports = function NavMenuActions() {
     $('.vertical-menu').removeClass('vertical-menu__showed');
     $('.nav-menu__menu-button').removeClass('nav-menu__menu-button_open');
   });
+  $('.vertical-menu__link').click(function() {
+    $('.nav-menu__menu-button').toggleClass('nav-menu__menu-button_open');
+    $('.vertical-menu').toggleClass('vertical-menu__showed'); 
+  });
 }
 
 });
