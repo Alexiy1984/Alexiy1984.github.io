@@ -51,12 +51,17 @@ html {
   letter-spacing: 0.075rem;
   line-height: 1.5; }
 
+.text_micro {
+  font-size: 0.7rem;
+  letter-spacing: 0.075rem;
+  line-height: 1.5; }
+
 header {
   background-color: #2c3e50;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1; }
+  z-index: 100; }
 
 .header__logo {
   float: left;
@@ -75,7 +80,7 @@ header {
 .nav-menu {
   padding: 1rem;
   position: relative;
-  z-index: 50; }
+  z-index: 150; }
 
 .nav-menu__item {
   list-style-type: none;
@@ -147,41 +152,38 @@ header {
 .vertical-menu {
   width: 100%;
   position: fixed;
-  top: 5rem;
-  right: -100vw;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 100; }
+  z-index: 50;
+  top: -16.5rem;
+  right: 0;
+  background: #2c3e50; }
   .vertical-menu__showed {
-    right: 0;
-    -webkit-transition: right 0.3s ease-in-out;
-    -moz-transition: right 0.3s ease-in-out;
-    -o-transition: right 0.3s ease-in-out;
-    transition: right 0.3s ease-in-out; }
+    top: 4.5rem;
+    -webkit-transition: top 0.3s ease-in-out;
+    -moz-transition: top 0.3s ease-in-out;
+    -o-transition: top 0.3s ease-in-out;
+    transition: top 0.3s ease-in-out; }
 
 .vertical-menu__item {
-  list-style: none; }
+  list-style: none;
+  display: block; }
 
 .vertical-menu__link {
   display: block;
   font-size: 1.35rem;
   text-decoration: none;
-  list-style: none;
   height: 4rem;
   width: 100%;
   line-height: 4rem;
   padding: 0 2.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
   background-color: #2c3e50;
   color: #ffffff;
   text-decoration: none;
-  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-  -ms-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in, border-color 0.3s ease-in; }
+  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in; }
   .vertical-menu__link:hover {
-    background-color: #18bc9c;
-    color: #2c3e50;
-    border-bottom: 1px solid #2c3e50; }
+    background-color: #4a6886; }
 
 .row {
   background-color: #18bc9c;
@@ -408,7 +410,7 @@ header {
 .tile_switch-colors {
   display: flex;
   flex-direction: column;
-  min-height: 40rem;
+  min-height: 30rem;
   cursor: pointer; }
   .tile_switch-colors .tile__body, .tile_switch-colors .tile__footer {
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
@@ -442,20 +444,20 @@ header {
 
 @media (max-width: 1200px) {
   .tile_switch-colors {
-    min-height: 46rem; } }
+    min-height: 35rem; } }
 
 @media (max-width: 680px) {
   .tile_switch-colors {
-    min-height: 40rem; } }
+    min-height: 35rem; } }
 
-@media (max-width: 481px) {
+@media (max-width: 480px) {
   .tile_switch-colors {
     min-height: 30rem; } }
 
 .tile_switch-colors-rev {
   display: flex;
   flex-direction: column;
-  min-height: 40rem;
+  min-height: 30rem;
   cursor: pointer; }
   .tile_switch-colors-rev .tile__header {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -475,11 +477,11 @@ header {
 
 @media (max-width: 1200px) {
   .tile_switch-colors-rev {
-    min-height: 46rem; } }
+    min-height: 35rem; } }
 
 @media (max-width: 680px) {
   .tile_switch-colors-rev {
-    min-height: 40rem; } }
+    min-height: 35rem; } }
 
 @media (max-width: 481px) {
   .tile_switch-colors-rev {
@@ -490,30 +492,30 @@ header {
   background-size: cover;
   display: block;
   width: 100%;
-  min-height: 20rem;
+  min-height: 17rem;
   position: relative;
   transition: filter .2s ease-in-out, background-image .2s ease-in-out;
   -webkit-transition: filter .2s ease-in-out, background-image .2s ease-in-out;
   display: flex;
   padding: 0.5rem 1rem;
   color: #56565a;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: flex-end;
-  -ms-justify-content: flex-end;
-  justify-content: flex-end;
-  -webkit-align-items: flex-start;
-  -ms-align-items: flex-start;
-  align-items: flex-start; }
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -ms-align-items: flex-end;
+  align-items: flex-end; }
 
 @media (max-width: 1200px) {
   .tile__header {
-    min-height: 22rem; } }
+    min-height: 19rem; } }
 
 .tile__body {
   font-size: 1.2rem;
-  padding: 1rem 1rem 1.5rem;
+  padding: 1rem;
   background: #ffffff;
   color: #56565a;
   flex-grow: 1;
@@ -526,7 +528,7 @@ header {
 
 .tile__body_dark {
   font-size: 1.2rem;
-  padding: 1rem 1rem 1.5rem;
+  padding: 1rem;
   background: #56565a;
   color: #ffffff;
   flex-grow: 1;
@@ -539,7 +541,7 @@ header {
 
 .tile__body_green {
   font-size: 1.2rem;
-  padding: 1rem 1rem 1.5rem;
+  padding: 1rem;
   background: #18bc9c;
   color: #ffffff;
   flex-grow: 1;
@@ -551,20 +553,18 @@ header {
     margin: 0.5rem 0 1rem; }
 
 .tile__footer {
-  padding: 1rem;
+  padding: 0 1rem;
   background: #ffffff;
   color: #56565a;
-  min-height: 10%;
+  min-height: 5%;
   text-align: left;
   overflow: hidden; }
   .tile__footer > * {
-    margin: 0.5rem 0; }
-    .tile__footer > *:first-child {
-      margin: 0 0 1rem; }
+    margin: 0 0 1rem; }
 
 .tile__body_transparent {
   font-size: 1.2rem;
-  padding: 1rem 1rem 1.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.4);
   color: #56565a;
   flex-grow: 1;
@@ -580,7 +580,33 @@ header {
 
 @media (max-width: 480px) {
   .js_hidden-el {
-    min-height: 40rem !important; } }
+    min-height: 32rem !important; } }
+
+.vertical-icons-list {
+  list-style: none; }
+
+.vertical-icons-list__item {
+  margin-bottom: 0.5rem; }
+  .vertical-icons-list__item:last-child {
+    margin-bottom: 0; }
+
+.vertical-icons-list__link {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.25rem;
+  border: 1px solid #56565a;
+  border-radius: 50%; }
+  .vertical-icons-list__link:hover {
+    border-color: #8c8c92;
+    background: rgba(255, 255, 255, 0.3); }
+    .vertical-icons-list__link:hover > * {
+      fill: #8c8c92; }
+
+.vertical-icons-list__svg {
+  width: 100%;
+  height: 100%;
+  fill: #56565a; }
 
 .list {
   margin-left: 1.5rem; }
