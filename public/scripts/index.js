@@ -280,6 +280,7 @@ module.exports = function TileOnClick() {
     if ($('*', thistile).is('.mobile-toggle')) {
       $('.mobile-toggle', thistile).toggleClass('mobile-show');
       thistile.toggleClass('js_hidden-el');
+      thistile.toggleClass('js_hidden-el_clicked'); 
     };
     return true;
   };
@@ -287,17 +288,17 @@ module.exports = function TileOnClick() {
   try {
     
       $(tile).on( "click", function() {
-        if ($(window).width() <= 480) {
+        if ($(window).width() <= 768) {
           ToggleDisplay($(this));
         }  
       });
       $(tilesc).on( "click", function() {
-        if ($(window).width() <= 480) {
+        if ($(window).width() <= 768) {
           ToggleDisplay($(this));
         }  
       });
       $(tilescr).on( "click", function() {
-        if ($(window).width() <= 480) {
+        if ($(window).width() <= 768) {
           ToggleDisplay($(this));
         }  
       });
