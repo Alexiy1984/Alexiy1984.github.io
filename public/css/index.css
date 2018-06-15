@@ -56,6 +56,11 @@ html {
   letter-spacing: 0.075rem;
   line-height: 1.5; }
 
+.text_big {
+  font-size: 1.1rem;
+  letter-spacing: 0.075rem;
+  line-height: 1.35; }
+
 header {
   background-color: #2c3e50;
   width: 100%;
@@ -418,7 +423,8 @@ header {
   display: flex;
   flex-direction: column;
   min-height: 30rem;
-  cursor: pointer; }
+  cursor: pointer;
+  background: #2c3e50; }
   .tile_switch-colors .tile__body, .tile_switch-colors .tile__footer {
     transition: color .2s ease-in-out, background-color .2s ease-in-out;
     background: #2c3e50;
@@ -435,19 +441,21 @@ header {
   .tile_switch-colors .contact-icons__svg_with-border {
     fill: #ffffff;
     border-color: #ffffff; }
-  .tile_switch-colors:hover .tile__body, .tile_switch-colors:hover .tile__footer {
-    background: #ffffff;
-    color: #56565a; }
-  .tile_switch-colors:hover .tile__hr {
-    background: rgba(86, 86, 90, 0.25); }
-  .tile_switch-colors:hover .tile__link {
-    color: #56565a; }
-  .tile_switch-colors:hover .contact-icons__svg_with-border {
-    fill: #56565a;
-    border-color: #56565a; }
-    .tile_switch-colors:hover .contact-icons__svg_with-border:hover {
-      fill: #8c8c92;
-      border-color: #8c8c92; }
+  .tile_switch-colors:hover {
+    background: #ffffff; }
+    .tile_switch-colors:hover .tile__body, .tile_switch-colors:hover .tile__footer {
+      background: #ffffff;
+      color: #56565a; }
+    .tile_switch-colors:hover .tile__hr {
+      background: rgba(86, 86, 90, 0.25); }
+    .tile_switch-colors:hover .tile__link {
+      color: #56565a; }
+    .tile_switch-colors:hover .contact-icons__svg_with-border {
+      fill: #56565a;
+      border-color: #56565a; }
+      .tile_switch-colors:hover .contact-icons__svg_with-border:hover {
+        fill: #8c8c92;
+        border-color: #8c8c92; }
 
 @media (max-width: 1200px) {
   .tile_switch-colors {
@@ -466,6 +474,7 @@ header {
   display: flex;
   flex-direction: column;
   min-height: 30rem;
+  background: #2c3e50;
   cursor: pointer; }
   .tile_switch-colors-rev .tile__header {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -479,9 +488,11 @@ header {
     background: rgba(255, 255, 255, 0.125); }
   .tile_switch-colors-rev .tile__link {
     color: #ffffff; }
-  .tile_switch-colors-rev:hover .tile__body, .tile_switch-colors-rev:hover .tile__footer {
-    background: #18bc9c;
-    color: #ffffff; }
+  .tile_switch-colors-rev:hover {
+    background: #18bc9c; }
+    .tile_switch-colors-rev:hover .tile__body, .tile_switch-colors-rev:hover .tile__footer {
+      background: #18bc9c;
+      color: #ffffff; }
 
 @media (max-width: 1200px) {
   .tile_switch-colors-rev {
@@ -807,6 +818,11 @@ header {
     display: none; }
   .mobile-show {
     display: block; } }
+
+._no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
 
 @media (max-width: 1200px) {
   html {
