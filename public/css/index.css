@@ -290,51 +290,51 @@ header {
     width: 28rem; } }
 
 .img-switch:nth-child(1) .tile__header {
-  background: url("../images/tl_avatar.jpeg") no-repeat 50% 50%;
+  background: url("../images/tl.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(1):hover .tile__header {
-  background: url("../images/tl_avatar.jpeg") no-repeat 50% 50%;
+  background: url("../images/tl.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(2) .tile__header {
-  background: url("../images/people.jpeg") no-repeat 50% 50%;
+  background: url("../images/bed01.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(2):hover .tile__header {
-  background: url("../images/people.jpeg") no-repeat 50% 50%;
+  background: url("../images/bed01.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(3) .tile__header {
-  background: url("../images/people.jpeg") no-repeat 50% 50%;
+  background: url("../images/fed01.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(3):hover .tile__header {
-  background: url("../images/people.jpeg") no-repeat 50% 50%;
+  background: url("../images/fed01.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(4) .tile__header {
-  background: url("../images/pm_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/pm.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(4):hover .tile__header {
-  background: url("../images/pm_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/pm.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(5) .tile__header {
-  background: url("../images/fe2_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/fed02.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(5):hover .tile__header {
-  background: url("../images/fe2_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/fed02.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(6) .tile__header {
-  background: url("../images/pr_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/bed02.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(6):hover .tile__header {
-  background: url("../images/pr_avatar.jpg") no-repeat 50% 50%;
+  background: url("../images/bed02.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(7) .tile__header {
