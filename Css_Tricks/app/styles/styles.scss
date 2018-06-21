@@ -1,0 +1,33 @@
+.main {
+  
+}
+
+.translated-list {
+  list-style: none;
+  &__item {
+    margin: 0;
+  }
+  &__link {
+    text-decoration: none;
+    color: red;
+    &__char {
+      transition: left 2s ease-out;
+      position: relative;
+      display: inline-block;
+      //left: 0;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) { transition-delay: 0.025s * $i; }
+      }
+    }
+  }
+  &:hover {
+    .translated-list {
+      &__link {
+        &__char {
+          left: 20px;
+          color: blue;
+        }
+      }  
+    }
+  }
+}
