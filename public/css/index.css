@@ -290,7 +290,7 @@ header {
     width: 28rem; } }
 
 .img-switch:nth-child(1) .tile__header {
-  background: url("../images/tl.jpg") no-repeat 50% 50%;
+  background: url("../images/tlg.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(1):hover .tile__header {
@@ -298,7 +298,7 @@ header {
   background-size: cover; }
 
 .img-switch:nth-child(2) .tile__header {
-  background: url("../images/bed01.jpg") no-repeat 50% 50%;
+  background: url("../images/bed01g.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(2):hover .tile__header {
@@ -306,7 +306,7 @@ header {
   background-size: cover; }
 
 .img-switch:nth-child(3) .tile__header {
-  background: url("../images/fed01.jpg") no-repeat 50% 50%;
+  background: url("../images/fed01g.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(3):hover .tile__header {
@@ -314,7 +314,7 @@ header {
   background-size: cover; }
 
 .img-switch:nth-child(4) .tile__header {
-  background: url("../images/pm.jpg") no-repeat 50% 50%;
+  background: url("../images/pmg.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(4):hover .tile__header {
@@ -322,7 +322,7 @@ header {
   background-size: cover; }
 
 .img-switch:nth-child(5) .tile__header {
-  background: url("../images/fed02.jpg") no-repeat 50% 50%;
+  background: url("../images/fed02g.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(5):hover .tile__header {
@@ -330,7 +330,7 @@ header {
   background-size: cover; }
 
 .img-switch:nth-child(6) .tile__header {
-  background: url("../images/bed02.jpg") no-repeat 50% 50%;
+  background: url("../images/bed02g.jpg") no-repeat 50% 50%;
   background-size: cover; }
 
 .img-switch:nth-child(6):hover .tile__header {
